@@ -630,6 +630,96 @@
     letter-spacing: 0.15em;
   }
 
+  /* ── CERTIFICAZIONI ── */
+  #certs {
+    padding: 6rem 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .cert-issuer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--cyan);
+  }
+  .cert-issuer-logo { font-size: 1.5rem; }
+  .cert-issuer-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    color: #e8f4ff;
+  }
+  .cert-issuer-course {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-top: 0.2rem;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  .cert-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .cert-card:hover { border-color: rgba(0,229,255,0.35); transform: translateY(-3px); }
+
+  .cert-module {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--cyan);
+    border: 1px solid rgba(0,229,255,0.3);
+    width: fit-content;
+    padding: 0.1rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .cert-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .cert-date {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+  .cert-bar {
+    height: 2px;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .cert-card:hover .cert-bar { transform: scaleX(1); }
+
+  @media (max-width: 900px) {
+    #certs { padding: 4rem 1.5rem; }
+    .certs-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .certs-grid { grid-template-columns: 1fr; }
+  }
+
   /* ── REVEAL ANIMATION ── */
   .reveal {
     opacity: 0;
@@ -668,6 +758,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#labs">Labs</a></li>
+    <li><a href="#certs">Certificazioni</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -912,11 +1003,61 @@
   </div>
 </section>
 
+<!-- CERTIFICAZIONI -->
+<section id="certs">
+  <div class="section-header reveal">
+    <span class="section-num">// 05</span>
+    <h2 class="section-title">Certificazioni</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="cert-issuer reveal">
+    <span class="cert-issuer-logo">⚡</span>
+    <div>
+      <div class="cert-issuer-name">EPICODE Institute of Technology</div>
+      <div class="cert-issuer-course">Cybersecurity &amp; Ethical Hacking — 2026</div>
+    </div>
+  </div>
+
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-module">M0</div>
+      <div class="cert-title">Cybersecurity Basics</div>
+      <div class="cert-date">05 / 04 / 2026</div>
+      <div class="cert-bar"></div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-module">M1</div>
+      <div class="cert-title">Networking / Ethical Hacking</div>
+      <div class="cert-date">10 / 04 / 2026</div>
+      <div class="cert-bar"></div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-module">M2</div>
+      <div class="cert-title">C / Python</div>
+      <div class="cert-date">17 / 04 / 2026</div>
+      <div class="cert-bar"></div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-module">M3</div>
+      <div class="cert-title">Python / Ethical Hacking</div>
+      <div class="cert-date">24 / 04 / 2026</div>
+      <div class="cert-bar"></div>
+    </div>
+    <div class="cert-card reveal" style="--cert-accent: var(--green)">
+      <div class="cert-module" style="color: var(--green); border-color: var(--green)">M4</div>
+      <div class="cert-title">Assessment / Penetration Testing</div>
+      <div class="cert-date">08 / 05 / 2026</div>
+      <div class="cert-bar" style="background: var(--green)"></div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div>
     <div class="section-header reveal">
-      <span class="section-num">// 05</span>
+      <span class="section-num">// 06</span>
       <h2 class="section-title">Contatti</h2>
       <div class="section-line"></div>
     </div>
