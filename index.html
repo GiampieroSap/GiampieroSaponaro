@@ -232,7 +232,7 @@
   </div>
 
   <div class="labs-grid">
-    <div class="lab-card reveal" data-num="01">
+    <div class="lab-card reveal" data-num="01" onclick="window.open('dvwa-report.pdf','_blank')" style="cursor:pointer;">
       <span class="lab-status done">Completato</span>
       <div class="lab-title">DVWA HTTP Interception</div>
       <p class="lab-desc">Intercettazione di credenziali HTTP con Burp Suite su DVWA. Configurazione proxy, analisi del traffico in chiaro e simulazione di attacco Man-in-the-Middle in ambiente controllato.</p>
@@ -243,9 +243,10 @@
         <span class="lab-tag">MITM</span>
         <span class="lab-tag">Kali Linux</span>
       </div>
+      <div class="lab-pdf-hint">📄 Visualizza Report</div>
     </div>
 
-    <div class="lab-card reveal" data-num="02">
+    <div class="lab-card reveal" data-num="02" onclick="window.open('nmap-report.pdf','_blank')" style="cursor:pointer;">
       <span class="lab-status done">Completato</span>
       <div class="lab-title">Network Scanning & Recon</div>
       <p class="lab-desc">Attività di ricognizione su rete locale con Nmap: port scanning, OS fingerprinting, rilevamento di servizi attivi e identificazione di potenziali vettori d'attacco.</p>
@@ -255,9 +256,26 @@
         <span class="lab-tag">Recon</span>
         <span class="lab-tag">Linux</span>
       </div>
+      <div class="lab-pdf-hint">📄 Visualizza Report</div>
     </div>
 
-    <div class="lab-card reveal" data-num="03">
+    <div class="lab-card reveal" data-num="03" onclick="window.open('cybersniffer-report.pdf','_blank')" style="cursor:pointer;">
+      <span class="lab-status done">Completato</span>
+      <div class="lab-title">CyberSniffer — Compagnia Theta</div>
+      <p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani, 120 postazioni. Firewall pfSense, DMZ, VLAN, IDS/IPS e sviluppo di tool Python custom: port scanner, HTTP tester e network sniffer.</p>
+      <div class="lab-tech">
+        <span class="lab-tag">pfSense</span>
+        <span class="lab-tag">DMZ</span>
+        <span class="lab-tag">VLAN</span>
+        <span class="lab-tag">IDS/IPS</span>
+        <span class="lab-tag">Python</span>
+        <span class="lab-tag">DVWA</span>
+        <span class="lab-tag">Metasploitable</span>
+      </div>
+      <div class="lab-pdf-hint">📄 Visualizza Report</div>
+    </div>
+
+    <div class="lab-card reveal" data-num="04">
       <span class="lab-status wip">In Corso</span>
       <div class="lab-title">CTF — TryHackMe / HackTheBox</div>
       <p class="lab-desc">Partecipazione a challenge Capture The Flag su piattaforme dedicate per consolidare competenze offensive e difensive in scenari realistici.</p>
@@ -269,7 +287,7 @@
       </div>
     </div>
 
-    <div class="lab-card reveal" data-num="04">
+    <div class="lab-card reveal" data-num="05">
       <span class="lab-status plan">Pianificato</span>
       <div class="lab-title">Home SOC Lab</div>
       <p class="lab-desc">Setup di un laboratorio SOC domestico con Splunk/ELK Stack per raccolta log, creazione di regole di detection e simulazione di scenari di incident response.</p>

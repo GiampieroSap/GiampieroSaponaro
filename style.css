@@ -471,7 +471,7 @@ section { position: relative; z-index: 2; }
 }
 .labs-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .lab-card {
@@ -533,6 +533,17 @@ section { position: relative; z-index: 2; }
   color: var(--cyan);
   text-transform: uppercase;
 }
+
+.lab-pdf-hint {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.15em;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.lab-card:hover .lab-pdf-hint { opacity: 1; }
 
 /* ── CERTIFICAZIONI ── */
 #certs {
@@ -703,12 +714,13 @@ footer span {
   #about, #skills, #tools, #labs, #contact, #certs { padding: 4rem 1.5rem; }
   #about, #contact { grid-template-columns: 1fr; gap: 2.5rem; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
-  .labs-grid { grid-template-columns: 1fr; }
+  .labs-grid { grid-template-columns: repeat(2, 1fr); }
   .certs-grid { grid-template-columns: repeat(2, 1fr); }
   footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
 }
 @media (max-width: 600px) {
   .skills-grid { grid-template-columns: 1fr; }
+  .labs-grid { grid-template-columns: 1fr; }
   .hero-name { font-size: 4.5rem; }
   .nav-links { display: none; }
   .certs-grid { grid-template-columns: 1fr; }
