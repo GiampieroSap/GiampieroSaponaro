@@ -1,4 +1,3 @@
-
 (function() {
   const u = 'g.saponaro99';
   const d = 'hotmail.com';
@@ -49,7 +48,7 @@ setInterval(drawMatrix, 55);
 const phrases = [
   'whoami → junior_pentester',
   'nmap -sV -O target.local',
-  'hydra -l admin -P rockyou.txt ssh://target',
+  'hydra -l admin -P rockyou.txt ssh:
   'cat /etc/passwd | grep root',
   'nc -lvnp 4444  # listening...',
 ];
