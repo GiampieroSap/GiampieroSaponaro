@@ -4,7 +4,7 @@
     const email = u + '@' + d;
 
     const oggetto = "Richiesta Informazioni";
-    const testo automatico = "Cara cara Società,\n\nVi scrivo con la penna ancora calda e il calamaio colmo di segreti. \n Colui che cercate.. il misterioso Giampiero, è al momento impegnato in faccende di cui la Società non è ancora a conoscenza. Che si tratti di intrighi digitali o di affari di grande rilievo, questo umile croniste non è in grado di dilo con certezza.\n Ciò che posso assicurarvi è questo: il vostro messaggio è stato ricevuto, custodito con iscrezione e, a tempo debito, riceverà la risposta che merita.\nVi prego di non cedere all'impazienza. Le cose migliori, si sa,  richiedono il loro tempo.\n Fino ad allora, rimanete curiosi.\nCon affetto e un pizzico di mistero,\nSig.BlackUtopia";
+    const testo automatico = "Cara cara Società,\n\nVi scrivo con la penna ancora calda e il calamaio colmo di segreti. \nColui che cercate.. il misterioso Giampiero, è al momento impegnato in faccende di cui la Società non è ancora a conoscenza. Che si tratti di intrighi digitali o di affari di grande rilievo, questo umile croniste non è in grado di dilo con certezza.\nCiò che posso assicurarvi è questo: il vostro messaggio è stato ricevuto, custodito con iscrezione e, a tempo debito, riceverà la risposta che merita.\nVi prego di non cedere all'impazienza. Le cose migliori, si sa,  richiedono il loro tempo.\nFino ad allora, rimanete curiosi.\nCon affetto e un pizzico di mistero,\nSig.BlackUtopia";
   
     const subjectEncoded = encodeURIComponent(oggetto);
     const bodyEncoded = encodeURIComponent(testo automatico);
