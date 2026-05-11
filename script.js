@@ -1,12 +1,4 @@
-/* ══════════════════════════════════════════
-   BlackUtopia — Cybersecurity Portfolio
-   script.js
-   ══════════════════════════════════════════ */
 
-/* ── EMAIL OBFUSCATION ──
-   L'email non è mai scritta in chiaro nell'HTML.
-   I bot spam scansionano il DOM e raccolgono indirizzi in chiaro.
-   Qui la ricostruiamo via JS solo a runtime, invisibile ai crawler. */
 (function() {
   const u = 'g.saponaro99';
   const d = 'hotmail.com';
@@ -26,7 +18,6 @@
   }
 })();
 
-/* ── MATRIX RAIN ── */
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 let cols, drops;
@@ -55,7 +46,6 @@ function drawMatrix() {
 }
 setInterval(drawMatrix, 55);
 
-/* ── TYPING EFFECT ── */
 const phrases = [
   'whoami → junior_pentester',
   'nmap -sV -O target.local',
@@ -80,7 +70,6 @@ function type() {
 }
 setTimeout(type, 800);
 
-/* ── SCROLL REVEAL ── */
 const obs = new IntersectionObserver(entries => {
   entries.forEach((e) => {
     if (e.isIntersecting) {
