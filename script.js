@@ -11,10 +11,17 @@
   const u = 'g.saponaro99';
   const d = 'hotmail.com';
   const email = u + '@' + d;
+
+  const oggetto = "Richiesta Informazioni";
+  const testoAutomatico = "Cara Società,\n\nVi scrivo con la penna ancora calda e il calamaio colmo di segreti.\nColui che cercate... il misterioso Giampiero, è al momento impegnato in faccende di cui la Società non è ancora a conoscenza. Che si tratti di intrighi digitali o di affari di grande rilievo, questo umile cronista non è in grado di dirlo con certezza.\nCiò che posso assicurarvi è questo: il vostro messaggio è stato ricevuto, custodito con discrezione e, a tempo debito, riceverà la risposta che merita.\nVi prego di non cedere all'impazienza. Le cose migliori, si sa, richiedono il loro tempo.\nFino ad allora, rimanete curiosi.\nCon affetto e un pizzico di mistero,\nSig. BlackUtopia";
+
+  const subjectEncoded = encodeURIComponent(oggetto);
+  const bodyEncoded    = encodeURIComponent(testoAutomatico);
+
   const link = document.getElementById('email-link');
   const val  = document.getElementById('email-val');
   if (link && val) {
-    link.setAttribute('href', 'mailto:' + email);
+    link.setAttribute('href', 'mailto:' + email + '?subject=' + subjectEncoded + '&body=' + bodyEncoded);
     val.textContent = email;
   }
 })();
