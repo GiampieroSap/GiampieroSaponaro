@@ -84,3 +84,7 @@ document.querySelectorAll('.reveal').forEach((elem) => {
   elem.style.transitionDelay = (idx * 80) + 'ms';
   obs.observe(elem);
 });
+
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}, 1500);
