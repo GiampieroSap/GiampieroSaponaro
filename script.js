@@ -1,12 +1,3 @@
-/* ══════════════════════════════════════════
-   BlackUtopia — Cybersecurity Portfolio
-   script.js
-   ══════════════════════════════════════════ */
-
-/* ── EMAIL OBFUSCATION ──
-   L'email non è mai scritta in chiaro nell'HTML.
-   I bot spam scansionano il DOM e raccolgono indirizzi in chiaro.
-   Qui la ricostruiamo via JS solo a runtime, invisibile ai crawler. */
 (function() {
   const u = 'g.saponaro99';
   const d = 'hotmail.com';
