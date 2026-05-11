@@ -48,9 +48,9 @@ setInterval(drawMatrix, 55);
 const phrases = [
   'whoami → junior_pentester',
   'nmap -sV -O target.local',
-  'hydra -l admin -P rockyou.txt ssh:
+  'hydra -l admin -P rockyou.txt ssh://target',
   'cat /etc/passwd | grep root',
-  'nc -lvnp 4444  # listening...',
+  'nc -lvnp 4444',
 ];
 let pi = 0, ci = 0, deleting = false;
 const el = document.getElementById('typed-text');
@@ -78,9 +78,9 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach((el) => {
-  const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
-  const idx = siblings.indexOf(el);
-  el.style.transitionDelay = (idx * 80) + 'ms';
-  obs.observe(el);
+document.querySelectorAll('.reveal').forEach((elem) => {
+  const siblings = [...elem.parentElement.children].filter(c => c.classList.contains('reveal'));
+  const idx = siblings.indexOf(elem);
+  elem.style.transitionDelay = (idx * 80) + 'ms';
+  obs.observe(elem);
 });
