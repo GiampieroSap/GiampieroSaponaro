@@ -10,7 +10,6 @@
   }
 })();
 
-/* ── MATRIX RAIN ── */
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 let cols, drops;
@@ -39,7 +38,6 @@ function drawMatrix() {
 }
 setInterval(drawMatrix, 55);
 
-/* ── TYPING EFFECT ── */
 const phrases = [
   'whoami → junior_pentester',
   'nmap -sV -O target.local',
@@ -64,7 +62,6 @@ function type() {
 }
 setTimeout(type, 800);
 
-/* ── SCROLL REVEAL ── */
 const obs = new IntersectionObserver(entries => {
   entries.forEach((e) => {
     if (e.isIntersecting) {
