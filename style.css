@@ -1,3 +1,9 @@
+/* ══════════════════════════════════════════
+   BlackUtopia — Cybersecurity Portfolio
+   style.css
+   ══════════════════════════════════════════ */
+
+/* ── NO COPY PROTECTION ── */
 *, *::before, *::after {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -8,6 +14,7 @@
   box-sizing: border-box;
 }
 
+/* ── CSS VARIABLES ── */
 :root {
   --green: #00ff88;
   --cyan: #00e5ff;
@@ -31,6 +38,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ── CANVAS BG ── */
 #matrix-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -40,6 +48,7 @@ body {
   z-index: 0;
 }
 
+/* ── SCAN LINE OVERLAY ── */
 body::before {
   content: '';
   position: fixed;
@@ -55,6 +64,7 @@ body::before {
   z-index: 1;
 }
 
+/* ── NAV ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -98,8 +108,10 @@ nav {
 .nav-links a:hover { color: var(--green); }
 .nav-links a:hover::after { width: 100%; }
 
+/* ── SECTIONS ── */
 section { position: relative; z-index: 2; }
 
+/* ── HERO ── */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -253,6 +265,7 @@ section { position: relative; z-index: 2; }
   background: linear-gradient(to bottom, var(--muted), transparent);
 }
 
+/* ── SECTION HEADER ── */
 .section-header {
   display: flex;
   align-items: center;
@@ -278,6 +291,7 @@ section { position: relative; z-index: 2; }
   background: linear-gradient(to right, var(--border), transparent);
 }
 
+/* ── ABOUT ── */
 #about {
   padding: 6rem 4rem;
   display: grid;
@@ -323,6 +337,7 @@ section { position: relative; z-index: 2; }
   display: block;
 }
 
+/* ── SKILLS ── */
 #skills {
   padding: 6rem 4rem;
   border-top: 1px solid var(--border);
@@ -388,6 +403,7 @@ section { position: relative; z-index: 2; }
   color: var(--text);
 }
 
+/* ── TOOLS ── */
 #tools {
   padding: 6rem 4rem;
   border-top: 1px solid var(--border);
@@ -448,6 +464,7 @@ section { position: relative; z-index: 2; }
 }
 .tool-item:hover .tool-bar { transform: scaleX(1); }
 
+/* ── LABS ── */
 #labs {
   padding: 6rem 4rem;
   border-top: 1px solid var(--border);
@@ -528,6 +545,7 @@ section { position: relative; z-index: 2; }
 }
 .lab-card:hover .lab-pdf-hint { opacity: 1; }
 
+/* ── CERTIFICAZIONI ── */
 #certs {
   padding: 6rem 4rem;
   border-top: 1px solid var(--border);
@@ -606,6 +624,7 @@ section { position: relative; z-index: 2; }
 }
 .cert-card:hover .cert-bar { transform: scaleX(1); }
 
+/* ── CONTACT ── */
 #contact {
   padding: 6rem 4rem;
   border-top: 1px solid var(--border);
@@ -663,6 +682,7 @@ section { position: relative; z-index: 2; }
 }
 .contact-link:hover .contact-link-val { color: var(--link-color, var(--green)); }
 
+/* ── FOOTER ── */
 footer {
   position: relative; z-index: 2;
   padding: 2rem 4rem;
@@ -678,6 +698,7 @@ footer span {
   letter-spacing: 0.15em;
 }
 
+/* ── REVEAL ANIMATION ── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -685,6 +706,7 @@ footer span {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1.5rem; }
