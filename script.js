@@ -4,7 +4,7 @@
   const email = u + '@' + d;
 
   const oggetto = "Richiesta Informazioni";
-  const testoAutomatico = "Cara Società,\n\nVi scrivo con la penna ancora calda e il calamaio colmo di segreti.\nColui che cercate... il misterioso Giampiero, è al momento impegnato in faccende di cui la Società non è ancora a conoscenza. Che si tratti di intrighi digitali o di affari di grande rilievo, questo umile cronista non è in grado di dirlo con certezza.\nCiò che posso assicurarvi è questo: il vostro messaggio è stato ricevuto, custodito con discrezione e, a tempo debito, riceverà la risposta che merita.\nVi prego di non cedere all'impazienza. Le cose migliori, si sa, richiedono il loro tempo.\nFino ad allora, rimanete curiosi.\nCon affetto e un pizzico di mistero,\nSig. BlackUtopia";
+  const testoAutomatico = "Gentilissimo Sig. BlackUtopia,\n\nCon il permesso di presentarmi con la dovuta grazia, mi rivolgo a Voi nella speranza che questa missiva giunga gradita.\n\n— Chi scrive:\nNome e Cognome: [il vostro nome]\nAzienda o Ente: [qualora vi rappresentiate sotto un blasone]\n\n— Il motivo di questa missiva:\n[Esponete pure con libertà la ragione che vi ha condotti fin qui]\n\n— Come raggiungervi:\nNumero di telefono: [se desiderate essere contattati con la voce]\nIndirizzo PEC: [per le comunicazioni di natura più formale, qualora ne foste in possesso]\n\nIn attesa di una vostra risposta, vi porgo i miei più distinti ossequi.\n\nVostro/Vostra devotamente,\nMessere/Madame [il vostro nome]";
 
   const subjectEncoded = encodeURIComponent(oggetto);
   const bodyEncoded    = encodeURIComponent(testoAutomatico);
