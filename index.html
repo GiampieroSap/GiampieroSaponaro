@@ -4,415 +4,493 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackUtopia — Cybersecurity Portfolio</title>
-
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
-  script-src 'self' 'unsafe-inline';
-  img-src 'self' data:;
-  connect-src 'none';
-  frame-ancestors 'none';
-  upgrade-insecure-requests;
+default-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+script-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+connect-src 'none';
+frame-ancestors 'none';
+upgrade-insecure-requests;
 ">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
+<style>
+/* Curriculum Vitae section */
+#cv .cv-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+  margin-top:30px;
+}
+.cv-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  padding:28px 26px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(0,229,255,0.18);
+  border-left:3px solid var(--cyan,#00e5ff);
+  border-radius:6px;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease;
+  overflow:hidden;
+}
+.cv-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,229,255,0.06),transparent 60%);
+  opacity:0;
+  transition:opacity .25s ease;
+  pointer-events:none;
+}
+.cv-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--cyan,#00e5ff);
+  background:rgba(0,229,255,0.04);
+  box-shadow:0 10px 30px rgba(0,229,255,0.12);
+}
+.cv-card:hover::before{opacity:1;}
+.cv-flag{font-size:38px;line-height:1;}
+.cv-lang{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:24px;
+  letter-spacing:1.5px;
+  color:var(--cyan,#00e5ff);
+}
+.cv-sub{
+  font-size:13px;
+  opacity:.7;
+  font-family:'Rajdhani',sans-serif;
+}
+.cv-action{
+  margin-top:10px;
+  font-family:'Share Tech Mono',monospace;
+  font-size:12px;
+  color:var(--green,#00ff88);
+  border-top:1px dashed rgba(255,255,255,0.08);
+  padding-top:10px;
+  width:100%;
+}
+</style>
 </head>
 <body>
-
 <canvas id="matrix-canvas"></canvas>
-
 <nav>
-  <div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#labs">Labs</a></li>
-    <li><a href="#certs">Certificazioni</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#labs">Labs</a></li>
+<li><a href="#certs">Certificazioni</a></li>
+<li><a href="#cv">CV</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-
 <section id="hero">
-  <div class="hero-tag">Cybersecurity Portfolio</div>
-  <div class="hero-name">
-    <div class="glitch-wrap" data-text="BLACKUTOPIA">BLACKUTOPIA</div>
-  </div>
-  <div class="hero-realname">Giampiero Saponaro</div>
-
-  <div class="hero-titles">
-    <span class="hero-role r1">Junior Pentester</span>
-    <span class="hero-sep">/</span>
-    <span class="hero-role r2">SOC Analyst</span>
-    <span class="hero-sep">/</span>
-    <span class="hero-role r3">Sys/Net Junior</span>
-  </div>
-
-  <div class="terminal-line">
-    <span class="prompt">root@kali:~$</span>
-    <span id="typed-text"></span>
-    <span class="cursor"></span>
-  </div>
-
-  <div class="hero-scroll">scroll</div>
+<div class="hero-tag">Cybersecurity Portfolio</div>
+<div class="hero-name">
+<div class="glitch-wrap" data-text="BLACKUTOPIA">BLACKUTOPIA</div>
+</div>
+<div class="hero-realname">Giampiero Saponaro</div>
+<div class="hero-titles">
+<span class="hero-role r1">Junior Pentester</span>
+<span class="hero-sep">/</span>
+<span class="hero-role r2">SOC Analyst</span>
+<span class="hero-sep">/</span>
+<span class="hero-role r3">Sys/Net Junior</span>
+</div>
+<div class="terminal-line">
+<span class="prompt">root@kali:~$</span>
+<span id="typed-text"></span>
+<span class="cursor"></span>
+</div>
+<div class="hero-scroll">scroll</div>
 </section>
-
 <section id="about">
-  <div>
-    <div class="section-header reveal">
-      <span class="section-num">// 01</span>
-      <h2 class="section-title">About</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="about-text reveal">
-      <p>Studente di <strong>Cybersecurity</strong> con una forte passione per l'ethical hacking, l'analisi delle minacce e la protezione delle infrastrutture digitali.</p>
-      <p>Opero quotidianamente in ambienti <strong>Linux e Windows</strong>, con Kali Linux come piattaforma principale per i lab pratici. Ho esperienza con strumenti di penetration testing reali come Burp Suite su ambienti vulnerabili.</p>
-      <p>Cerco opportunità per crescere come <strong>Junior Pentester</strong>, <strong>SOC Analyst</strong> o in ruoli di <strong>System/Network Security</strong> dove poter contribuire e imparare.</p>
-    </div>
-  </div>
-
-  <div class="about-stats reveal">
-    <div class="stat-box">
-      <span class="stat-num">24/7</span>
-      <span class="stat-label">Monitoring mindset</span>
-    </div>
-    <div class="stat-box">
-      <span class="stat-num">CTF</span>
-      <span class="stat-label">Challenge driven</span>
-    </div>
-    <div class="stat-box">
-      <span class="stat-num">0day</span>
-      <span class="stat-label">Curiosity level</span>
-    </div>
-    <div class="stat-box">
-      <span class="stat-num">100%</span>
-      <span class="stat-label">Hands-on approach</span>
-    </div>
-  </div>
+<div>
+<div class="section-header reveal">
+<span class="section-num">// 01</span>
+<h2 class="section-title">About</h2>
+<div class="section-line"></div>
+</div>
+<div class="about-text reveal">
+<p>Studente di <strong>Cybersecurity</strong> con una forte passione per l'ethical hacking, l'analisi delle minacce e la protezione delle infrastrutture digitali.</p>
+<p>Opero quotidianamente in ambienti <strong>Linux e Windows</strong>, con Kali Linux come piattaforma principale per i lab pratici. Ho esperienza con strumenti di penetration testing reali come Burp Suite su ambienti vulnerabili.</p>
+<p>Cerco opportunità per crescere come <strong>Junior Pentester</strong>, <strong>SOC Analyst</strong> o in ruoli di <strong>System/Network Security</strong> dove poter contribuire e imparare.</p>
+</div>
+</div>
+<div class="about-stats reveal">
+<div class="stat-box">
+<span class="stat-num">24/7</span>
+<span class="stat-label">Monitoring mindset</span>
+</div>
+<div class="stat-box">
+<span class="stat-num">CTF</span>
+<span class="stat-label">Challenge driven</span>
+</div>
+<div class="stat-box">
+<span class="stat-num">0day</span>
+<span class="stat-label">Curiosity level</span>
+</div>
+<div class="stat-box">
+<span class="stat-num">100%</span>
+<span class="stat-label">Hands-on approach</span>
+</div>
+</div>
 </section>
-
 <section id="skills">
-  <div class="section-header reveal">
-    <span class="section-num">// 02</span>
-    <h2 class="section-title">Competenze</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-card reveal" style="--accent: var(--green)">
-      <span class="skill-icon">🔓</span>
-      <div class="skill-card-title">Penetration Testing</div>
-      <p>Analisi di vulnerabilità, exploitation controllato e reportistica. Esperienza su ambienti simulati come DVWA e macchine CTF.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Web App</span>
-        <span class="skill-tag">OWASP Top 10</span>
-        <span class="skill-tag">MITM</span>
-        <span class="skill-tag">SQLi</span>
-        <span class="skill-tag">XSS</span>
-      </div>
-    </div>
-
-    <div class="skill-card reveal" style="--accent: var(--cyan)">
-      <span class="skill-icon">🛡️</span>
-      <div class="skill-card-title">SOC & Blue Team</div>
-      <p>Monitoraggio di eventi di sicurezza, analisi di log, incident response e comprensione degli attacchi per una difesa proattiva.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Log Analysis</span>
-        <span class="skill-tag">SIEM</span>
-        <span class="skill-tag">Triage</span>
-        <span class="skill-tag">Threat Intel</span>
-      </div>
-    </div>
-
-    <div class="skill-card reveal" style="--accent: #ff8800">
-      <span class="skill-icon">🌐</span>
-      <div class="skill-card-title">Network & Systems</div>
-      <p>Conoscenza delle architetture di rete, protocolli, firewall e sistemi operativi Windows e Linux a livello sistemistico.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">TCP/IP</span>
-        <span class="skill-tag">Firewalling</span>
-        <span class="skill-tag">Linux Admin</span>
-        <span class="skill-tag">Virtualizzazione</span>
-      </div>
-    </div>
-  </div>
+<div class="section-header reveal">
+<span class="section-num">// 02</span>
+<h2 class="section-title">Competenze</h2>
+<div class="section-line"></div>
+</div>
+<div class="skills-grid">
+<div class="skill-card reveal" style="--accent: var(--green)">
+<span class="skill-icon">🔓</span>
+<div class="skill-card-title">Penetration Testing</div>
+<p>Analisi di vulnerabilità, exploitation controllato e reportistica. Esperienza su ambienti simulati come DVWA e macchine CTF.</p>
+<div class="skill-tags">
+<span class="skill-tag">Web App</span>
+<span class="skill-tag">OWASP Top 10</span>
+<span class="skill-tag">MITM</span>
+<span class="skill-tag">SQLi</span>
+<span class="skill-tag">XSS</span>
+</div>
+</div>
+<div class="skill-card reveal" style="--accent: var(--cyan)">
+<span class="skill-icon">🛡️</span>
+<div class="skill-card-title">SOC & Blue Team</div>
+<p>Monitoraggio di eventi di sicurezza, analisi di log, incident response e comprensione degli attacchi per una difesa proattiva.</p>
+<div class="skill-tags">
+<span class="skill-tag">Log Analysis</span>
+<span class="skill-tag">SIEM</span>
+<span class="skill-tag">Triage</span>
+<span class="skill-tag">Threat Intel</span>
+</div>
+</div>
+<div class="skill-card reveal" style="--accent: #ff8800">
+<span class="skill-icon">🌐</span>
+<div class="skill-card-title">Network & Systems</div>
+<p>Conoscenza delle architetture di rete, protocolli, firewall e sistemi operativi Windows e Linux a livello sistemistico.</p>
+<div class="skill-tags">
+<span class="skill-tag">TCP/IP</span>
+<span class="skill-tag">Firewalling</span>
+<span class="skill-tag">Linux Admin</span>
+<span class="skill-tag">Virtualizzazione</span>
+</div>
+</div>
+</div>
 </section>
-
 <section id="tools">
-  <div class="section-header reveal">
-    <span class="section-num">// 03</span>
-    <h2 class="section-title">Arsenale</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="tools-grid">
-    <div class="tool-item reveal" style="--tool-color: #ff6633">
-      <span class="tool-logo">🔥</span>
-      <div class="tool-name">Burp Suite</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #00e5ff">
-      <span class="tool-logo">🦈</span>
-      <div class="tool-name">Wireshark</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #00ff88">
-      <span class="tool-logo">💻</span>
-      <div class="tool-name">Kali Linux</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #ff3b5c">
-      <span class="tool-logo">🗺️</span>
-      <div class="tool-name">Nmap</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #ff8800">
-      <span class="tool-logo">🔍</span>
-      <div class="tool-name">Metasploit</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #a855f7">
-      <span class="tool-logo">📡</span>
-      <div class="tool-name">Netcat</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #00e5ff">
-      <span class="tool-logo">🐉</span>
-      <div class="tool-name">Hydra</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #00ff88">
-      <span class="tool-logo">🧱</span>
-      <div class="tool-name">iptables</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #ff6633">
-      <span class="tool-logo">🕷️</span>
-      <div class="tool-name">DVWA</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #00e5ff">
-      <span class="tool-logo">🔑</span>
-      <div class="tool-name">John the Ripper</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #ff3b5c">
-      <span class="tool-logo">📊</span>
-      <div class="tool-name">Splunk</div>
-      <span class="tool-bar"></span>
-    </div>
-    <div class="tool-item reveal" style="--tool-color: #ff8800">
-      <span class="tool-logo">🖥️</span>
-      <div class="tool-name">VirtualBox</div>
-      <span class="tool-bar"></span>
-    </div>
-  </div>
+<div class="section-header reveal">
+<span class="section-num">// 03</span>
+<h2 class="section-title">Arsenale</h2>
+<div class="section-line"></div>
+</div>
+<div class="tools-grid">
+<div class="tool-item reveal" style="--tool-color: #ff6633">
+<span class="tool-logo">🔥</span>
+<div class="tool-name">Burp Suite</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #00e5ff">
+<span class="tool-logo">🦈</span>
+<div class="tool-name">Wireshark</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #00ff88">
+<span class="tool-logo">💻</span>
+<div class="tool-name">Kali Linux</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #ff3b5c">
+<span class="tool-logo">🗺️</span>
+<div class="tool-name">Nmap</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #ff8800">
+<span class="tool-logo">🔍</span>
+<div class="tool-name">Metasploit</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #a855f7">
+<span class="tool-logo">📡</span>
+<div class="tool-name">Netcat</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #00e5ff">
+<span class="tool-logo">🐉</span>
+<div class="tool-name">Hydra</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #00ff88">
+<span class="tool-logo">🧱</span>
+<div class="tool-name">iptables</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #ff6633">
+<span class="tool-logo">🕷️</span>
+<div class="tool-name">DVWA</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #00e5ff">
+<span class="tool-logo">🔑</span>
+<div class="tool-name">John the Ripper</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #ff3b5c">
+<span class="tool-logo">📊</span>
+<div class="tool-name">Splunk</div>
+<span class="tool-bar"></span>
+</div>
+<div class="tool-item reveal" style="--tool-color: #ff8800">
+<span class="tool-logo">🖥️</span>
+<div class="tool-name">VirtualBox</div>
+<span class="tool-bar"></span>
+</div>
+</div>
 </section>
-
 <section id="labs">
-  <div class="section-header reveal">
-    <span class="section-num">// 04</span>
-    <h2 class="section-title">Lab & Progetti</h2>
-    <div class="section-line"></div>
-  </div>
+<div class="section-header reveal">
+<span class="section-num">// 04</span>
+<h2 class="section-title">Lab & Progetti</h2>
+<div class="section-line"></div>
+</div>
+<div class="labs-grid">
+<div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/SETTIMANA%203/Report%20S3.L3%20BurpSuite.pdf','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">DVWA HTTP Interception</div>
+<p class="lab-desc">Intercettazione di credenziali HTTP con Burp Suite su DVWA. Configurazione proxy, analisi del traffico in chiaro e simulazione di attacco Man-in-the-Middle in ambiente controllato.</p>
+<div class="lab-tech">
+<span class="lab-tag">Burp Suite</span>
+<span class="lab-tag">DVWA</span>
+<span class="lab-tag">HTTP</span>
+<span class="lab-tag">MITM</span>
+<span class="lab-tag">Kali Linux</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
+</div>
+<div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">Network Scanning & Recon</div>
+<p class="lab-desc">Attività di ricognizione su rete locale con Nmap: port scanning, OS fingerprinting, rilevamento di servizi attivi e identificazione di potenziali vettori d'attacco.</p>
+<div class="lab-tech">
+<span class="lab-tag">Nmap</span>
+<span class="lab-tag">Network</span>
+<span class="lab-tag">Recon</span>
+<span class="lab-tag">Linux</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
+</div>
+<div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">Compagnia Theta</div>
+<p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani, 120 postazioni. Firewall pfSense, DMZ, VLAN, IDS/IPS e sviluppo di tool Python custom: port scanner, HTTP tester e network sniffer.</p>
+<div class="lab-tech">
+<span class="lab-tag">pfSense</span>
+<span class="lab-tag">DMZ</span>
+<span class="lab-tag">VLAN</span>
+<span class="lab-tag">IDS/IPS</span>
+<span class="lab-tag">Python</span>
+<span class="lab-tag">DVWA</span>
+<span class="lab-tag">Metasploitable</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
+</div>
+<div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/Report_progetto_phishing_gophish%20S5_L5.pdf','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">Campagna Phishing — GoPhish</div>
+<p class="lab-desc">Simulazione di campagna phishing in ambiente controllato tramite GoPhish. Creazione di template email, landing page clone, tracciamento click e analisi dei risultati per valutare la consapevolezza degli utenti.</p>
+<div class="lab-tech">
+<span class="lab-tag">GoPhish</span>
+<span class="lab-tag">Phishing</span>
+<span class="lab-tag">Social Engineering</span>
+<span class="lab-tag">Email Spoofing</span>
+<span class="lab-tag">Awareness</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
+</div>
+<div class="lab-card reveal" data-num="05">
+<span class="lab-status wip">In Corso</span>
+<div class="lab-title">CTF — TryHackMe / HackTheBox</div>
+<p class="lab-desc">Partecipazione a challenge Capture The Flag su piattaforme dedicate per consolidare competenze offensive e difensive in scenari realistici.</p>
+<div class="lab-tech">
+<span class="lab-tag">TryHackMe</span>
+<span class="lab-tag">HackTheBox</span>
+<span class="lab-tag">CTF</span>
+<span class="lab-tag">Metasploit</span>
+</div>
+</div>
+<div class="lab-card reveal" data-num="06">
+<span class="lab-status plan">Pianificato</span>
+<div class="lab-title">Home SOC Lab</div>
+<p class="lab-desc">Setup di un laboratorio SOC domestico con Splunk/ELK Stack per raccolta log, creazione di regole di detection e simulazione di scenari di incident response.</p>
+<div class="lab-tech">
+<span class="lab-tag">Splunk</span>
+<span class="lab-tag">ELK Stack</span>
+<span class="lab-tag">SIEM</span>
+<span class="lab-tag">Detection</span>
+</div>
+</div>
+</div>
+</section>
+<section id="certs">
+<div class="section-header reveal">
+<span class="section-num">// 05</span>
+<h2 class="section-title">Certificazioni</h2>
+<div class="section-line"></div>
+</div>
 
-  <div class="labs-grid">
-    <div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/SETTIMANA%203/Report%20S3.L3%20BurpSuite.pdf','_blank')" style="cursor:pointer;">
-      <span class="lab-status done">Completato</span>
-      <div class="lab-title">DVWA HTTP Interception</div>
-      <p class="lab-desc">Intercettazione di credenziali HTTP con Burp Suite su DVWA. Configurazione proxy, analisi del traffico in chiaro e simulazione di attacco Man-in-the-Middle in ambiente controllato.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">Burp Suite</span>
-        <span class="lab-tag">DVWA</span>
-        <span class="lab-tag">HTTP</span>
-        <span class="lab-tag">MITM</span>
-        <span class="lab-tag">Kali Linux</span>
-      </div>
-      <div class="lab-pdf-hint">📄 Visualizza Report</div>
-    </div>
+<div class="cert-issuer reveal">
+<span class="cert-issuer-logo">🌐</span>
+<div>
+<div class="cert-issuer-name">Cisco Networking Academy</div>
+<div class="cert-issuer-course">Networking &amp; Cybersecurity — 2026</div>
+</div>
+</div>
+<div class="certs-grid">
+<div class="cert-card reveal" onclick="window.open('assets/certs/cisco_intro_cybersecurity.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-module">C1</div>
+<div class="cert-title">Introduction to Cybersecurity</div>
+<div class="cert-date">14 / 05 / 2026</div>
+<div class="cert-bar"></div>
+</div>
+<div class="cert-card reveal" onclick="window.open('assets/certs/cisco_networking_basics.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-module">C2</div>
+<div class="cert-title">Networking Basics</div>
+<div class="cert-date">14 / 05 / 2026</div>
+<div class="cert-bar"></div>
+</div>
+<div class="cert-card reveal" onclick="window.open('assets/certs/cisco_ethical_hacker.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
+<div class="cert-module" style="color: var(--green); border-color: var(--green)">C3</div>
+<div class="cert-title">Ethical Hacker</div>
+<div class="cert-date">22 / 05 / 2026</div>
+<div class="cert-bar" style="background: var(--green)"></div>
+</div>
+</div>
 
-    <div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
-      <span class="lab-status done">Completato</span>
-      <div class="lab-title">Network Scanning & Recon</div>
-      <p class="lab-desc">Attività di ricognizione su rete locale con Nmap: port scanning, OS fingerprinting, rilevamento di servizi attivi e identificazione di potenziali vettori d'attacco.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">Nmap</span>
-        <span class="lab-tag">Network</span>
-        <span class="lab-tag">Recon</span>
-        <span class="lab-tag">Linux</span>
-      </div>
-      <div class="lab-pdf-hint">📄 Visualizza Report</div>
-    </div>
-
-    <div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
-      <span class="lab-status done">Completato</span>
-      <div class="lab-title">Compagnia Theta</div>
-      <p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani, 120 postazioni. Firewall pfSense, DMZ, VLAN, IDS/IPS e sviluppo di tool Python custom: port scanner, HTTP tester e network sniffer.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">pfSense</span>
-        <span class="lab-tag">DMZ</span>
-        <span class="lab-tag">VLAN</span>
-        <span class="lab-tag">IDS/IPS</span>
-        <span class="lab-tag">Python</span>
-        <span class="lab-tag">DVWA</span>
-        <span class="lab-tag">Metasploitable</span>
-      </div>
-      <div class="lab-pdf-hint">📄 Visualizza Report</div>
-    </div>
-
-    <div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/Report_progetto_phishing_gophish%20S5_L5.pdf','_blank')" style="cursor:pointer;">
-      <span class="lab-status done">Completato</span>
-      <div class="lab-title">Campagna Phishing — GoPhish</div>
-      <p class="lab-desc">Simulazione di campagna phishing in ambiente controllato tramite GoPhish. Creazione di template email, landing page clone, tracciamento click e analisi dei risultati per valutare la consapevolezza degli utenti.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">GoPhish</span>
-        <span class="lab-tag">Phishing</span>
-        <span class="lab-tag">Social Engineering</span>
-        <span class="lab-tag">Email Spoofing</span>
-        <span class="lab-tag">Awareness</span>
-      </div>
-      <div class="lab-pdf-hint">📄 Visualizza Report</div>
-    </div>
-
-    <div class="lab-card reveal" data-num="05">
-      <span class="lab-status wip">In Corso</span>
-      <div class="lab-title">CTF — TryHackMe / HackTheBox</div>
-      <p class="lab-desc">Partecipazione a challenge Capture The Flag su piattaforme dedicate per consolidare competenze offensive e difensive in scenari realistici.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">TryHackMe</span>
-        <span class="lab-tag">HackTheBox</span>
-        <span class="lab-tag">CTF</span>
-        <span class="lab-tag">Metasploit</span>
-      </div>
-    </div>
-
-    <div class="lab-card reveal" data-num="06">
-      <span class="lab-status plan">Pianificato</span>
-      <div class="lab-title">Home SOC Lab</div>
-      <p class="lab-desc">Setup di un laboratorio SOC domestico con Splunk/ELK Stack per raccolta log, creazione di regole di detection e simulazione di scenari di incident response.</p>
-      <div class="lab-tech">
-        <span class="lab-tag">Splunk</span>
-        <span class="lab-tag">ELK Stack</span>
-        <span class="lab-tag">SIEM</span>
-        <span class="lab-tag">Detection</span>
-      </div>
-    </div>
-  </div>
+<div class="cert-issuer reveal" style="margin-top: 40px;">
+<span class="cert-issuer-logo">🛡️</span>
+<div>
+<div class="cert-issuer-name">Security Blue Team</div>
+<div class="cert-issuer-course">Offensive &amp; Intelligence Foundations — 2026</div>
+</div>
+</div>
+<div class="certs-grid">
+<div class="cert-card reveal" onclick="window.open('assets/certs/sbt_intro_pentest.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-module">S1</div>
+<div class="cert-title">Introduction to Penetration Testing</div>
+<div class="cert-date">21 / 05 / 2026</div>
+<div class="cert-bar"></div>
+</div>
+<div class="cert-card reveal" onclick="window.open('assets/certs/sbt_intro_darkweb.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-module">S2</div>
+<div class="cert-title">Introduction to Dark Web Operations</div>
+<div class="cert-date">21 / 05 / 2026</div>
+<div class="cert-bar"></div>
+</div>
+<div class="cert-card reveal" onclick="window.open('assets/certs/sbt_intro_osint.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-module">S3</div>
+<div class="cert-title">Introduction to OSINT</div>
+<div class="cert-date">22 / 05 / 2026</div>
+<div class="cert-bar"></div>
+</div>
+</div>
 </section>
 
-<section id="certs">
-  <div class="section-header reveal">
-    <span class="section-num">// 05</span>
-    <h2 class="section-title">Certificazioni</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="cert-issuer reveal">
-    <span class="cert-issuer-logo">⚡</span>
-    <div>
-      <div class="cert-issuer-name">EPICODE Institute of Technology</div>
-      <div class="cert-issuer-course">Cybersecurity &amp; Ethical Hacking — 2026</div>
-    </div>
-  </div>
-
-  <div class="certs-grid">
-    <div class="cert-card reveal">
-      <div class="cert-module">M0</div>
-      <div class="cert-title">Cybersecurity Basics</div>
-      <div class="cert-date">05 / 04 / 2026</div>
-      <div class="cert-bar"></div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-module">M1</div>
-      <div class="cert-title">Networking / Ethical Hacking</div>
-      <div class="cert-date">10 / 04 / 2026</div>
-      <div class="cert-bar"></div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-module">M2</div>
-      <div class="cert-title">C / Python</div>
-      <div class="cert-date">17 / 04 / 2026</div>
-      <div class="cert-bar"></div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-module">M3</div>
-      <div class="cert-title">Python / Ethical Hacking</div>
-      <div class="cert-date">24 / 04 / 2026</div>
-      <div class="cert-bar"></div>
-    </div>
-    <div class="cert-card reveal" style="--cert-accent: var(--green)">
-      <div class="cert-module" style="color: var(--green); border-color: var(--green)">M4</div>
-      <div class="cert-title">Assessment / Penetration Testing</div>
-      <div class="cert-date">08 / 05 / 2026</div>
-      <div class="cert-bar" style="background: var(--green)"></div>
-    </div>
-  </div>
+<section id="cv">
+<div class="section-header reveal">
+<span class="section-num">// 06</span>
+<h2 class="section-title">Curriculum Vitae</h2>
+<div class="section-line"></div>
+</div>
+<div class="cv-grid">
+<a class="cv-card reveal" href="assets/cv/CV_EN.pdf" target="_blank" rel="noopener noreferrer" download>
+<span class="cv-flag">🇬🇧</span>
+<div class="cv-lang">English CV</div>
+<div class="cv-sub">Curriculum in inglese</div>
+<div class="cv-action">📄 Apri / Download</div>
+</a>
+<a class="cv-card reveal" href="assets/cv/CV_ES.pdf" target="_blank" rel="noopener noreferrer" download>
+<span class="cv-flag">🇪🇸</span>
+<div class="cv-lang">CV Español</div>
+<div class="cv-sub">Curriculum in spagnolo</div>
+<div class="cv-action">📄 Abrir / Descargar</div>
+</a>
+<a class="cv-card reveal" href="assets/cv/CV_IT.pdf" target="_blank" rel="noopener noreferrer" download>
+<span class="cv-flag">🇮🇹</span>
+<div class="cv-lang">CV Italiano</div>
+<div class="cv-sub">Curriculum in italiano</div>
+<div class="cv-action">📄 Apri / Download</div>
+</a>
+</div>
 </section>
 
 <section id="contact">
-  <div>
-    <div class="section-header reveal">
-      <span class="section-num">// 06</span>
-      <h2 class="section-title">Contatti</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-cta reveal">
-      Pronto per la<br><span>prossima sfida</span>
-    </div>
-    <p class="contact-sub reveal">Disponibile per stage, tirocini e opportunità entry-level nel campo della sicurezza informatica. Parliamone.</p>
-  </div>
-
-  <div class="contact-links">
-    <a class="contact-link reveal" id="email-link" href="#" style="--link-color: var(--green)">
-      <span class="contact-link-icon">✉</span>
-      <div>
-        <span class="contact-link-label">Email</span>
-        <span class="contact-link-val" id="email-val">[caricamento...]</span>
-      </div>
-    </a>
-    <a class="contact-link reveal" href="https://wa.me/393318331155?text=Gentilissimo%20Sig.%20BlackUtopia%2C%0A%0ACon%20il%20permesso%20di%20presentarmi%20con%20la%20dovuta%20grazia%2C%20mi%20rivolgo%20a%20Voi%20nella%20speranza%20che%20questa%20missiva%20giunga%20gradita.%0A%0A%E2%80%94%20Chi%20scrive%3A%0ANome%20e%20Cognome%3A%20%5Bil%20vostro%20nome%5D%0AAzienda%20o%20Ente%3A%20%5Bqualora%20vi%20rappresentiate%20sotto%20un%20blasone%5D%0A%0A%E2%80%94%20Il%20motivo%20di%20questa%20missiva%3A%0A%5BEsponete%20pure%20con%20libert%C3%A0%20la%20ragione%20che%20vi%20ha%20condotti%20fin%20qui%5D%0A%0A%E2%80%94%20Come%20raggiungervi%3A%0ANumero%20di%20telefono%3A%20%5Bse%20desiderate%20essere%20contattati%20con%20la%20voce%5D%0AIndirizzo%20PEC%3A%20%5Bper%20le%20comunicazioni%20di%20natura%20pi%C3%B9%20formale%2C%20qualora%20ne%20foste%20in%20possesso%5D%0A%0AVostro%2FVostra%20devotamente%2C%0AMessere%2FMadame%20%5Bil%20vostro%20nome%5D" target="_blank" rel="noopener noreferrer" style="--link-color: #25d366">
-      <span class="contact-link-icon">💬</span>
-      <div>
-        <span class="contact-link-label">WhatsApp</span>
-        <span class="contact-link-val">+39 331 833 1155</span>
-      </div>
-    </a>
-    <a class="contact-link reveal" href="https://www.linkedin.com/in/giampiero-saponaro-9b2391215/" target="_blank" rel="noopener noreferrer" style="--link-color: #0077b5">
-      <span class="contact-link-icon">in</span>
-      <div>
-        <span class="contact-link-label">LinkedIn</span>
-        <span class="contact-link-val">linkedin.com/in/giampiero-saponaro</span>
-      </div>
-    </a>
-    <a class="contact-link reveal" href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer" style="--link-color: #e8f4ff">
-      <span class="contact-link-icon">⌥</span>
-      <div>
-        <span class="contact-link-label">GitHub</span>
-        <span class="contact-link-val">github.com/GiampieroSap</span>
-      </div>
-    </a>
-    <a class="contact-link reveal" href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer" style="--link-color: var(--red)">
-      <span class="contact-link-icon">⚑</span>
-      <div>
-        <span class="contact-link-label">TryHackMe</span>
-        <span class="contact-link-val">tryhackme.com/p/BlackUtopia</span>
-      </div>
-    </a>
-  </div>
+<div>
+<div class="section-header reveal">
+<span class="section-num">// 07</span>
+<h2 class="section-title">Contatti</h2>
+<div class="section-line"></div>
+</div>
+<div class="contact-cta reveal">
+Pronto per la<br><span>prossima sfida</span>
+</div>
+<p class="contact-sub reveal">Disponibile per stage, tirocini e opportunità entry-level nel campo della sicurezza informatica. Parliamone.</p>
+</div>
+<div class="contact-links">
+<a class="contact-link reveal" id="email-link" href="#" style="--link-color: var(--green)">
+<span class="contact-link-icon">✉</span>
+<div>
+<span class="contact-link-label">Email</span>
+<span class="contact-link-val" id="email-val">[caricamento...]</span>
+</div>
+</a>
+<a class="contact-link reveal" href="https://wa.me/393318331155?text=Gentilissimo%20Sig.%20BlackUtopia%2C%0A%0ACon%20il%20permesso%20di%20presentarmi%20con%20la%20dovuta%20grazia%2C%20mi%20rivolgo%20a%20Voi%20nella%20speranza%20che%20questa%20missiva%20giunga%20gradita.%0A%0A%E2%80%94%20Chi%20scrive%3A%0ANome%20e%20Cognome%3A%20%5Bil%20vostro%20nome%5D%0AAzienda%20o%20Ente%3A%20%5Bqualora%20vi%20rappresentiate%20sotto%20un%20blasone%5D%0A%0A%E2%80%94%20Il%20motivo%20di%20questa%20missiva%3A%0A%5BEsponete%20pure%20con%20libert%C3%A0%20la%20ragione%20che%20vi%20ha%20condotti%20fin%20qui%5D%0A%0A%E2%80%94%20Come%20raggiungervi%3A%0ANumero%20di%20telefono%3A%20%5Bse%20desiderate%20essere%20contattati%20con%20la%20voce%5D%0AIndirizzo%20PEC%3A%20%5Bper%20le%20comunicazioni%20di%20natura%20pi%C3%B9%20formale%2C%20qualora%20ne%20foste%20in%20possesso%5D%0A%0AVostro%2FVostra%20devotamente%2C%0AMessere%2FMadame%20%5Bil%20vostro%20nome%5D" target="_blank" rel="noopener noreferrer" style="--link-color: #25d366">
+<span class="contact-link-icon">💬</span>
+<div>
+<span class="contact-link-label">WhatsApp</span>
+<span class="contact-link-val">+39 331 833 1155</span>
+</div>
+</a>
+<a class="contact-link reveal" href="https://www.linkedin.com/in/giampiero-saponaro-9b2391215/" target="_blank" rel="noopener noreferrer" style="--link-color: #0077b5">
+<span class="contact-link-icon">in</span>
+<div>
+<span class="contact-link-label">LinkedIn</span>
+<span class="contact-link-val">linkedin.com/in/giampiero-saponaro</span>
+</div>
+</a>
+<a class="contact-link reveal" href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer" style="--link-color: #e8f4ff">
+<span class="contact-link-icon">⌥</span>
+<div>
+<span class="contact-link-label">GitHub</span>
+<span class="contact-link-val">github.com/GiampieroSap</span>
+</div>
+</a>
+<a class="contact-link reveal" href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer" style="--link-color: var(--red)">
+<span class="contact-link-icon">⚑</span>
+<div>
+<span class="contact-link-label">TryHackMe</span>
+<span class="contact-link-val">tryhackme.com/p/BlackUtopia</span>
+</div>
+</a>
+</div>
 </section>
-
 <footer>
-  <span>© 2026 BlackUtopia — Giampiero Saponaro</span>
-  <span>Built with 💀 and too much caffeine</span>
-  <span style="color: var(--green)">[ OPEN TO WORK ]</span>
+<span>© 2026 BlackUtopia — Giampiero Saponaro</span>
+<span>Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)">[ OPEN TO WORK ]</span>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
