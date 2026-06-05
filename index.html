@@ -267,81 +267,137 @@ upgrade-insecure-requests;
 <div class="section-line"></div>
 </div>
 <div class="labs-grid">
-<div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/SETTIMANA%203/Report%20S3.L3%20BurpSuite.pdf','_blank')" style="cursor:pointer;">
+
+<div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done">Completato</span>
-<div class="lab-title">DVWA HTTP Interception</div>
-<p class="lab-desc">Intercettazione di credenziali HTTP con Burp Suite su DVWA. Configurazione proxy, analisi del traffico in chiaro e simulazione di attacco Man-in-the-Middle in ambiente controllato.</p>
+<div class="lab-title">DVWA — Web App Vulnerabilities</div>
+<p class="lab-desc">Sfruttamento delle principali vulnerabilità OWASP su DVWA: SQL Injection UNION-based per estrazione credenziali, XSS Reflected e Stored, File Upload con bypass Content-Type tramite Burp Suite per ottenere una webshell PHP.</p>
 <div class="lab-tech">
-<span class="lab-tag">Burp Suite</span>
 <span class="lab-tag">DVWA</span>
-<span class="lab-tag">HTTP</span>
-<span class="lab-tag">MITM</span>
-<span class="lab-tag">Kali Linux</span>
+<span class="lab-tag">SQLi</span>
+<span class="lab-tag">XSS</span>
+<span class="lab-tag">File Upload</span>
+<span class="lab-tag">Burp Suite</span>
+<span class="lab-tag">PHP Webshell</span>
 </div>
 <div class="lab-pdf-hint">📄 Visualizza Report</div>
 </div>
-<div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
+
+<div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done">Completato</span>
-<div class="lab-title">Network Scanning & Recon</div>
-<p class="lab-desc">Attività di ricognizione su rete locale con Nmap: port scanning, OS fingerprinting, rilevamento di servizi attivi e identificazione di potenziali vettori d'attacco.</p>
+<div class="lab-title">Metasploit Exploitation Suite</div>
+<p class="lab-desc">Catena di exploit con Metasploit Framework: EternalBlue (MS17-010) su Windows 10 con SYSTEM shell e dump credenziali Tomcat, exploit Icecast su Win10 con post-exploitation Meterpreter, Java RMI su Metasploitable 2, e PostgreSQL con privilege escalation via SUID su nmap.</p>
 <div class="lab-tech">
-<span class="lab-tag">Nmap</span>
-<span class="lab-tag">Network</span>
-<span class="lab-tag">Recon</span>
-<span class="lab-tag">Linux</span>
+<span class="lab-tag">Metasploit</span>
+<span class="lab-tag">EternalBlue</span>
+<span class="lab-tag">Meterpreter</span>
+<span class="lab-tag">Java RMI</span>
+<span class="lab-tag">PostgreSQL</span>
+<span class="lab-tag">Privilege Escalation</span>
 </div>
 <div class="lab-pdf-hint">📄 Visualizza Report</div>
 </div>
-<div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
+
+<div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done">Completato</span>
-<div class="lab-title">Compagnia Theta</div>
-<p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani, 120 postazioni. Firewall pfSense, DMZ, VLAN, IDS/IPS e sviluppo di tool Python custom: port scanner, HTTP tester e network sniffer.</p>
+<div class="lab-title">CTF — BSides Vancouver 2018 (VulnHub)</div>
+<p class="lab-desc">Penetration test completo blackbox: host discovery, enumerazione utenti WordPress, brute force con Hydra sulla password dell'utente "john", upload di webshell PHP via tema WordPress, reverse shell con mkfifo + netcat, e privilege escalation a root sfruttando un crontab vulnerabile.</p>
+<div class="lab-tech">
+<span class="lab-tag">VulnHub</span>
+<span class="lab-tag">WordPress</span>
+<span class="lab-tag">Hydra</span>
+<span class="lab-tag">Reverse Shell</span>
+<span class="lab-tag">Cron Privesc</span>
+<span class="lab-tag">Root Achieved</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
+</div>
+
+<div class="lab-card reveal" data-num="04">
+<span class="lab-status wip">In Corso</span>
+<div class="lab-title">CTF — Jangow01 (VulnHub)</div>
+<p class="lab-desc">Box VulnHub in lavorazione: reverse shell stabile su porta 443 ottenuta, lavoro sull'exploit kernel CVE-2017-16995 per privilege escalation. Sfide tecniche su trasferimento file con restrizioni egress firewall (no gateway, no FTP, no curl/wget standard).</p>
+<div class="lab-tech">
+<span class="lab-tag">VulnHub</span>
+<span class="lab-tag">CVE-2017-16995</span>
+<span class="lab-tag">Kernel Exploit</span>
+<span class="lab-tag">Reverse Shell</span>
+<span class="lab-tag">Firewall Bypass</span>
+</div>
+</div>
+
+<div class="lab-card reveal" data-num="05" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">Compagnia Theta — Network Design</div>
+<p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani, 120 postazioni. Firewall pfSense, DMZ, segmentazione VLAN, posizionamento IDS/IPS, configurazione Router-on-a-Stick in Cisco Packet Tracer e sviluppo di tool Python custom (port scanner, HTTP tester, network sniffer).</p>
 <div class="lab-tech">
 <span class="lab-tag">pfSense</span>
 <span class="lab-tag">DMZ</span>
 <span class="lab-tag">VLAN</span>
 <span class="lab-tag">IDS/IPS</span>
+<span class="lab-tag">Cisco Packet Tracer</span>
 <span class="lab-tag">Python</span>
-<span class="lab-tag">DVWA</span>
-<span class="lab-tag">Metasploitable</span>
 </div>
 <div class="lab-pdf-hint">📄 Visualizza Report</div>
 </div>
-<div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/Report_progetto_phishing_gophish%20S5_L5.pdf','_blank')" style="cursor:pointer;">
+
+<div class="lab-card reveal" data-num="06" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
 <span class="lab-status done">Completato</span>
-<div class="lab-title">Campagna Phishing — GoPhish</div>
-<p class="lab-desc">Simulazione di campagna phishing in ambiente controllato tramite GoPhish. Creazione di template email, landing page clone, tracciamento click e analisi dei risultati per valutare la consapevolezza degli utenti.</p>
+<div class="lab-title">Nmap — Vulnerability Assessment</div>
+<p class="lab-desc">Attività di ricognizione e vulnerability assessment con Nmap: port scanning avanzato, OS fingerprinting, version detection sui servizi, esecuzione di NSE scripts per identificare vulnerabilità note e mappare i potenziali vettori d'attacco.</p>
 <div class="lab-tech">
-<span class="lab-tag">GoPhish</span>
-<span class="lab-tag">Phishing</span>
-<span class="lab-tag">Social Engineering</span>
-<span class="lab-tag">Email Spoofing</span>
-<span class="lab-tag">Awareness</span>
+<span class="lab-tag">Nmap</span>
+<span class="lab-tag">NSE Scripts</span>
+<span class="lab-tag">OS Fingerprinting</span>
+<span class="lab-tag">Service Enum</span>
 </div>
 <div class="lab-pdf-hint">📄 Visualizza Report</div>
 </div>
-<div class="lab-card reveal" data-num="05">
-<span class="lab-status wip">In Corso</span>
-<div class="lab-title">CTF — TryHackMe / HackTheBox</div>
-<p class="lab-desc">Partecipazione a challenge Capture The Flag su piattaforme dedicate per consolidare competenze offensive e difensive in scenari realistici.</p>
+
+<div class="lab-card reveal" data-num="07" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">Windows Security — Audit Login/Logoff</div>
+<p class="lab-desc">Configurazione di auditing avanzato su Windows 11 Pro tramite secpol.msc per il monitoraggio di accessi e disconnessioni. Generazione e analisi degli Event ID 4624 (logon riusciti) e 4625 (logon falliti), parsing dei log via Get-WinEvent in PowerShell elevato.</p>
 <div class="lab-tech">
-<span class="lab-tag">TryHackMe</span>
-<span class="lab-tag">HackTheBox</span>
-<span class="lab-tag">CTF</span>
-<span class="lab-tag">Metasploit</span>
+<span class="lab-tag">Windows 11</span>
+<span class="lab-tag">Event Viewer</span>
+<span class="lab-tag">PowerShell</span>
+<span class="lab-tag">Blue Team</span>
+<span class="lab-tag">Log Analysis</span>
 </div>
+<div class="lab-pdf-hint">📄 Visualizza Report</div>
 </div>
-<div class="lab-card reveal" data-num="06">
-<span class="lab-status plan">Pianificato</span>
-<div class="lab-title">Home SOC Lab</div>
-<p class="lab-desc">Setup di un laboratorio SOC domestico con Splunk/ELK Stack per raccolta log, creazione di regole di detection e simulazione di scenari di incident response.</p>
+
+<div class="lab-card reveal" data-num="08" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">OSINT Recon Toolkit</div>
+<p class="lab-desc">Tool Python sviluppato in proprio per attività di OSINT: enumerazione DNS, query WHOIS, oltre 35 Google Dorks pre-configurati, analisi del rischio assistita via AI con Claude API ed esportazione strutturata dei risultati in JSON/TXT per la fase di reporting.</p>
 <div class="lab-tech">
-<span class="lab-tag">Splunk</span>
-<span class="lab-tag">ELK Stack</span>
-<span class="lab-tag">SIEM</span>
-<span class="lab-tag">Detection</span>
+<span class="lab-tag">Python</span>
+<span class="lab-tag">OSINT</span>
+<span class="lab-tag">Google Dorks</span>
+<span class="lab-tag">WHOIS</span>
+<span class="lab-tag">Claude API</span>
+<span class="lab-tag">Custom Tool</span>
 </div>
+<div class="lab-pdf-hint">📄 Visualizza Repo</div>
 </div>
+
+<div class="lab-card reveal" data-num="09" onclick="window.open('https://github.com/GiampieroSap','_blank')" style="cursor:pointer;">
+<span class="lab-status done">Completato</span>
+<div class="lab-title">AI Red Team Lab</div>
+<p class="lab-desc">Laboratorio interattivo per il red teaming di Large Language Model costruito in React: 7 tecniche di prompt injection (jailbreak, role-play, system override, etc.), livelli di difesa configurabili e valutazione automatica del verdetto tramite Anthropic API. Focus su OWASP LLM Top 10.</p>
+<div class="lab-tech">
+<span class="lab-tag">React</span>
+<span class="lab-tag">LLM Security</span>
+<span class="lab-tag">Prompt Injection</span>
+<span class="lab-tag">OWASP LLM01</span>
+<span class="lab-tag">Anthropic API</span>
+<span class="lab-tag">Red Team</span>
+</div>
+<div class="lab-pdf-hint">📄 Visualizza Progetto</div>
+</div>
+
 </div>
 </section>
 <section id="certs">
@@ -359,19 +415,19 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('Introduction%20to%20Cybersecurity.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_intro_cybersecurity.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">C1</div>
 <div class="cert-title">Introduction to Cybersecurity</div>
 <div class="cert-date">14 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('NetworkingBasics.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_networking_basic.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">C2</div>
 <div class="cert-title">Networking Basics</div>
 <div class="cert-date">14 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('Ethical%20Hacker.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_ethical_hacker.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
 <div class="cert-module" style="color: var(--green); border-color: var(--green)">C3</div>
 <div class="cert-title">Ethical Hacker</div>
 <div class="cert-date">22 / 05 / 2026</div>
@@ -387,19 +443,19 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('Introduction%20to%20Penetration%20Testing.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_pentest.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S1</div>
 <div class="cert-title">Introduction to Penetration Testing</div>
 <div class="cert-date">21 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('Introduction%20to%20Dark%20Web%20Operations.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_darkweb.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S2</div>
 <div class="cert-title">Introduction to Dark Web Operations</div>
 <div class="cert-date">21 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('Introduction%20to%20OSINT.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_osint.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S3</div>
 <div class="cert-title">Introduction to OSINT</div>
 <div class="cert-date">22 / 05 / 2026</div>
@@ -415,19 +471,19 @@ upgrade-insecure-requests;
 <div class="section-line"></div>
 </div>
 <div class="cv-grid">
-<a class="cv-card reveal" href="CV_EN.pdf" target="_blank" rel="noopener noreferrer" download>
+<a class="cv-card reveal" href="assets/CV/CV_EN.pdf" target="_blank" rel="noopener noreferrer" download>
 <span class="cv-flag">🇬🇧</span>
 <div class="cv-lang">English CV</div>
 <div class="cv-sub">Curriculum in inglese</div>
 <div class="cv-action">📄 Apri / Download</div>
 </a>
-<a class="cv-card reveal" href="CV_ES.pdf" target="_blank" rel="noopener noreferrer" download>
+<a class="cv-card reveal" href="assets/CV/CV_ES.pdf" target="_blank" rel="noopener noreferrer" download>
 <span class="cv-flag">🇪🇸</span>
 <div class="cv-lang">CV Español</div>
 <div class="cv-sub">Curriculum in spagnolo</div>
 <div class="cv-action">📄 Abrir / Descargar</div>
 </a>
-<a class="cv-card reveal" href="CV_IT.pdf" target="_blank" rel="noopener noreferrer" download>
+<a class="cv-card reveal" href="assets/CV/CV_IT.pdf" target="_blank" rel="noopener noreferrer" download>
 <span class="cv-flag">🇮🇹</span>
 <div class="cv-lang">CV Italiano</div>
 <div class="cv-sub">Curriculum in italiano</div>
