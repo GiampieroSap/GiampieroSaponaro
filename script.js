@@ -1,9 +1,98 @@
+
+/* ============================================================
+   I18N — applicazione delle traduzioni
+   ============================================================ */
+var LANG_META = {
+  it: { flag: '\ud83c\uddee\ud83c\uddf9', code: 'IT' },
+  en: { flag: '\ud83c\uddec\ud83c\udde7', code: 'EN' },
+  es: { flag: '\ud83c\uddea\ud83c\uddf8', code: 'ES' },
+  fr: { flag: '\ud83c\uddeb\ud83c\uddf7', code: 'FR' }
+};
+
+function getLang() {
+  var saved = null;
+  try { saved = localStorage.getItem('bu_lang'); } catch (e) {}
+  if (saved && LANG_META[saved]) return saved;
+  var nav = (navigator.language || 'it').slice(0, 2).toLowerCase();
+  return LANG_META[nav] ? nav : 'it';
+}
+
+function applyLang(lang) {
+  if (!window.I18N || !LANG_META[lang]) return;
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var entry = window.I18N[el.getAttribute('data-i18n')];
+    if (entry && entry[lang]) el.innerHTML = entry[lang];
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+    var entry = window.I18N[el.getAttribute('data-i18n-aria')];
+    if (entry && entry[lang]) el.setAttribute('aria-label', entry[lang].replace(/<[^>]*>/g, ''));
+  });
+
+  var titleKey = document.body.getAttribute('data-page-title');
+  if (titleKey && window.I18N[titleKey]) {
+    var txt = window.I18N[titleKey][lang];
+    if (txt) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = txt;
+      document.title = tmp.textContent + ' \u2014 BlackUtopia';
+    }
+  }
+
+  var btnFlag = document.querySelector('.lang-btn .lang-flag');
+  var btnCode = document.querySelector('.lang-btn .lang-code');
+  if (btnFlag) btnFlag.textContent = LANG_META[lang].flag;
+  if (btnCode) btnCode.textContent = LANG_META[lang].code;
+
+  document.querySelectorAll('.lang-menu button').forEach(function (b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+
+  try { localStorage.setItem('bu_lang', lang); } catch (e) {}
+}
+
+(function () {
+  var current = getLang();
+  applyLang(current);
+
+  var wrap = document.querySelector('.lang-switch');
+  var btn = document.querySelector('.lang-btn');
+  if (!wrap || !btn) return;
+
+  function setOpen(open) {
+    wrap.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(!wrap.classList.contains('open'));
+  });
+
+  wrap.querySelectorAll('.lang-menu button').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      applyLang(b.getAttribute('data-lang'));
+      setOpen(false);
+    });
+  });
+
+  document.addEventListener('click', function () { setOpen(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();
+
 /* ============================================================
    MENU FULLSCREEN — Opzione C
    ============================================================ */
 (function () {
-  const toggle = document.querySelector('.menu-toggle');
-  const overlay = document.querySelector('.menu-overlay');
+  var toggle = document.querySelector('.menu-toggle');
+  var overlay = document.querySelector('.menu-overlay');
+  var closeBtn = document.querySelector('.menu-close');
   if (!toggle || !overlay) return;
 
   function setOpen(open) {
@@ -11,12 +100,22 @@
     document.body.style.overflow = open ? 'hidden' : '';
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-  toggle.addEventListener('click', function () {
+
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
     setOpen(!document.body.classList.contains('menu-open'));
   });
+
+  if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) setOpen(false);
+  });
+
   overlay.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () { setOpen(false); });
   });
+
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') setOpen(false);
   });
@@ -26,18 +125,16 @@
    EMAIL OFFUSCATA
    ============================================================ */
 (function () {
-  const link = document.getElementById('email-link');
-  const val = document.getElementById('email-val');
+  var link = document.getElementById('email-link');
+  var val = document.getElementById('email-val');
   if (!link || !val) return;
 
-  const u = 'g.saponaro99';
-  const d = 'hotmail.com';
-  const email = u + '@' + d;
-
-  const oggetto = "Richiesta Informazioni";
-  const testoAutomatico = "Gentilissimo Sig. BlackUtopia,\n\nCon il permesso di presentarmi con la dovuta grazia, mi rivolgo a Voi nella speranza che questa missiva giunga gradita.\n\n— Chi scrive:\nNome e Cognome: [il vostro nome]\nAzienda o Ente: [qualora vi rappresentiate sotto un blasone]\n\n— Il motivo di questa missiva:\n[Esponete pure con libertà la ragione che vi ha condotti fin qui]\n\n— Come raggiungervi:\nNumero di telefono: [se desiderate essere contattati con la voce]\nIndirizzo PEC: [per le comunicazioni di natura più formale, qualora ne foste in possesso]\n\nIn attesa di una vostra risposta, vi porgo i miei più distinti ossequi.\n\nVostro/Vostra devotamente,\nMessere/Madame [il vostro nome]";
+  var email = 'g.saponaro99' + '@' + 'hotmail.com';
+  var oggetto = 'Richiesta Informazioni';
+  var testoAutomatico = "Gentilissimo Sig. BlackUtopia,\n\nCon il permesso di presentarmi con la dovuta grazia, mi rivolgo a Voi nella speranza che questa missiva giunga gradita.\n\n\u2014 Chi scrive:\nNome e Cognome: [il vostro nome]\nAzienda o Ente: [qualora vi rappresentiate sotto un blasone]\n\n\u2014 Il motivo di questa missiva:\n[Esponete pure con libert\u00e0 la ragione che vi ha condotti fin qui]\n\n\u2014 Come raggiungervi:\nNumero di telefono: [se desiderate essere contattati con la voce]\nIndirizzo PEC: [per le comunicazioni di natura pi\u00f9 formale, qualora ne foste in possesso]\n\nIn attesa di una vostra risposta, vi porgo i miei pi\u00f9 distinti ossequi.\n\nVostro/Vostra devotamente,\nMessere/Madame [il vostro nome]";
 
   link.setAttribute('href', 'mailto:' + email + '?subject=' + encodeURIComponent(oggetto) + '&body=' + encodeURIComponent(testoAutomatico));
+  val.removeAttribute('data-i18n');
   val.textContent = email;
 })();
 
@@ -45,17 +142,17 @@
    MATRIX RAIN
    ============================================================ */
 (function () {
-  const canvas = document.getElementById('matrix-canvas');
+  var canvas = document.getElementById('matrix-canvas');
   if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEF';
-  let cols, drops;
+  var ctx = canvas.getContext('2d');
+  var chars = '01\u30a2\u30a4\u30a6\u30a8\u30aa\u30ab\u30ad\u30af\u30b1\u30b3\u30b5\u30b7\u30b9\u30bb\u30bd\u30bf\u30c1\u30c4\u30c6\u30c8\u30ca\u30cb\u30cc\u30cd\u30ceABCDEF';
+  var cols, drops;
 
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     cols = Math.floor(canvas.width / 18);
-    drops = Array(cols).fill(0).map(() => Math.random() * -50);
+    drops = Array(cols).fill(0).map(function () { return Math.random() * -50; });
   }
   resize();
   window.addEventListener('resize', resize);
@@ -65,32 +162,32 @@
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#00ff88';
     ctx.font = '13px Share Tech Mono, monospace';
-    drops.forEach(function (y, i) {
-      const ch = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(ch, i * 18, y * 18);
-      if (y * 18 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-      drops[i] += 0.5;
+    drops.forEach(function (y, idx) {
+      var ch = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(ch, idx * 18, y * 18);
+      if (y * 18 > canvas.height && Math.random() > 0.975) drops[idx] = 0;
+      drops[idx] += 0.5;
     });
   }, 55);
 })();
 
 /* ============================================================
-   TYPING TERMINALE (solo dove esiste l'hero)
+   TYPING TERMINALE
    ============================================================ */
 (function () {
-  const el = document.getElementById('typed-text');
+  var el = document.getElementById('typed-text');
   if (!el) return;
-  const phrases = [
-    'whoami → junior_soc_analyst',
+  var phrases = [
+    'whoami \u2192 junior_soc_analyst',
     'nmap -sV -O target.local',
     'index=main sourcetype=WinEventLog EventCode=4625',
     'bloodyAD --host dc01 get children',
-    'nc -lvnp 4444',
+    'nc -lvnp 4444'
   ];
-  let pi = 0, ci = 0, deleting = false;
+  var pi = 0, ci = 0, deleting = false;
 
   function type() {
-    const phrase = phrases[pi];
+    var phrase = phrases[pi];
     if (!deleting) {
       el.textContent = phrase.slice(0, ++ci);
       if (ci === phrase.length) { deleting = true; setTimeout(type, 2200); return; }
@@ -108,20 +205,22 @@
    SCROLL REVEAL
    ============================================================ */
 (function () {
-  const items = document.querySelectorAll('.reveal');
+  var items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
-  const obs = new IntersectionObserver(function (entries) {
+  var obs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
-        const delay = parseFloat(e.target.style.transitionDelay) || 0;
+        var delay = parseFloat(e.target.style.transitionDelay) || 0;
         setTimeout(function () { e.target.classList.add('visible'); }, delay);
       }
     });
   }, { threshold: 0.12 });
 
   items.forEach(function (elem) {
-    const siblings = [...elem.parentElement.children].filter(c => c.classList.contains('reveal'));
+    var siblings = [].slice.call(elem.parentElement.children).filter(function (c) {
+      return c.classList.contains('reveal');
+    });
     elem.style.transitionDelay = (siblings.indexOf(elem) * 80) + 'ms';
     obs.observe(elem);
   });

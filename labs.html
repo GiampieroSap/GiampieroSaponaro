@@ -21,43 +21,61 @@ upgrade-insecure-requests;
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title="labs.title">
 <canvas id="matrix-canvas"></canvas>
 <nav>
 <div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
-<button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+<div class="nav-actions">
+<div class="lang-switch">
+<button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
+<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▾</span>
+</button>
+<ul class="lang-menu">
+<li><button data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button></li>
+<li><button data-lang="en"><span class="lang-flag">🇬🇧</span>English</button></li>
+<li><button data-lang="es"><span class="lang-flag">🇪🇸</span>Español</button></li>
+<li><button data-lang="fr"><span class="lang-flag">🇫🇷</span>Français</button></li>
+</ul>
+</div>
+<button class="menu-toggle" aria-label="Apri il menu" data-i18n-aria="menu.open_aria" aria-expanded="false">
 <span></span><span></span><span></span>
 </button>
+</div>
 </nav>
 <div class="menu-overlay">
-<div class="menu-label">// navigazione</div>
+<div class="menu-top">
+<div class="menu-label" data-i18n="menu.label">// navigazione</div>
+<button class="menu-close">
+<span class="menu-close-x">&times;</span><span data-i18n="menu.close">chiudi</span>
+</button>
+</div>
 <ul class="menu-list">
-<li><a href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">&rarr;</span></a></li>
-<li class="current"><a href="labs.html"><span class="menu-num">02</span><span class="menu-text">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="index.html"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="labs.html"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
 <a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
 <a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
-<a href="contact.html">Scrivimi</a>
+<a href="contact.html" data-i18n="menu.write">Scrivimi</a>
 </div>
 </div>
 <header class="page-head">
 <div class="page-kicker">// 01</div>
-<h1 class="page-title">Lab &amp; Progetti</h1>
-<p class="page-lead">Laboratori pratici e assessment documentati passo per passo. Ogni card apre il report tecnico corrispondente, pubblicato sui repository Cybersecurity-Reports ed Esercizi-Epicode.</p>
-<a class="back-home" href="index.html">&larr; torna alla home</a>
+<h1 class="page-title" data-i18n="labs.title">Lab &amp; Progetti</h1>
+<p class="page-lead" data-i18n="labs.lead">Laboratori pratici e assessment documentati passo per passo. Ogni card apre il report tecnico corrispondente, pubblicato sui repository Cybersecurity-Reports ed Esercizi-Epicode.</p>
+<a class="back-home" href="index.html" data-i18n="nav.back">&larr; torna alla home</a>
 </header>
 <section id="labs" class="page-section">
 <div class="labs-grid">
 <div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Attacchi ad Active Directory</div>
-<p class="lab-desc">Catene di attacco complete in ambienti Windows Server su Hack The Box: recupero di oggetti eliminati con BloodyAD, Kerberoasting, abuso di badSuccessor ed estrazione di hash NTLM con Rubeus e secretsdump fino alla compromissione del dominio. Ogni passaggio documentato in report pubblici.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab1.title">Attacchi ad Active Directory</div>
+<p class="lab-desc" data-i18n="lab1.desc">Catene di attacco complete in ambienti Windows Server su Hack The Box: recupero di oggetti eliminati con BloodyAD, Kerberoasting, abuso di badSuccessor ed estrazione di hash NTLM con Rubeus e secretsdump fino alla compromissione del dominio. Ogni passaggio documentato in report pubblici.</p>
 <div class="lab-tech">
 <span class="lab-tag">BloodyAD</span>
 <span class="lab-tag">Rubeus</span>
@@ -66,13 +84,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">secretsdump</span>
 <span class="lab-tag">NTLM</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Deployment e uso di SIEM (Wazuh &amp; Splunk)</div>
-<p class="lab-desc">Installazione di Wazuh SIEM con enrollment degli agenti, configurazione di dashboard e regole di correlazione e analisi degli eventi. Ingestione e ricerca di log con Splunk, triage delle alert e distinzione tra eventi reali, falsi positivi e anomalie, con report tecnici a corredo.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab2.title">Deployment e uso di SIEM (Wazuh &amp; Splunk)</div>
+<p class="lab-desc" data-i18n="lab2.desc">Installazione di Wazuh SIEM con enrollment degli agenti, configurazione di dashboard e regole di correlazione e analisi degli eventi. Ingestione e ricerca di log con Splunk, triage delle alert e distinzione tra eventi reali, falsi positivi e anomalie, con report tecnici a corredo.</p>
 <div class="lab-tech">
 <span class="lab-tag">Wazuh</span>
 <span class="lab-tag">Splunk</span>
@@ -80,13 +98,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">Correlation Rules</span>
 <span class="lab-tag">Alert Triage</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Analisi malware e incident response</div>
-<p class="lab-desc">Analisi di malware e ransomware (WannaCry, DanaBot) in sandbox tria.ge e in FlareVM con FakeNet-NG e Wireshark. Estrazione di IOC e analisi forense del traffico di rete su cattura PCAP.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab3.title">Analisi malware e incident response</div>
+<p class="lab-desc" data-i18n="lab3.desc">Analisi di malware e ransomware (WannaCry, DanaBot) in sandbox tria.ge e in FlareVM con FakeNet-NG e Wireshark. Estrazione di IOC e analisi forense del traffico di rete su cattura PCAP.</p>
 <div class="lab-tech">
 <span class="lab-tag">WannaCry</span>
 <span class="lab-tag">DanaBot</span>
@@ -96,13 +114,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">PCAP</span>
 <span class="lab-tag">IOC</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Pentesting su rete multi-host</div>
-<p class="lab-desc">Assessment di reti segmentate su Hack The Box e TryHackMe: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali con Hashcat e pivoting verso segmenti interni tramite proxy SOCKS. Metodologia allineata all'eJPT.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab4.title">Pentesting su rete multi-host</div>
+<p class="lab-desc" data-i18n="lab4.desc">Assessment di reti segmentate su Hack The Box e TryHackMe: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali con Hashcat e pivoting verso segmenti interni tramite proxy SOCKS. Metodologia allineata all'eJPT.</p>
 <div class="lab-tech">
 <span class="lab-tag">Nmap</span>
 <span class="lab-tag">Metasploit</span>
@@ -110,13 +128,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">SOCKS Proxy</span>
 <span class="lab-tag">Privilege Escalation</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="05" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Compagnia Theta &mdash; Network Design</div>
-<p class="lab-desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani e 120 postazioni. Firewall pfSense, DMZ, segmentazione VLAN, posizionamento IDS/IPS, configurazione Router-on-a-Stick in Cisco Packet Tracer e sviluppo di tool Python custom (port scanner, HTTP tester, network sniffer).</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab5.title">Compagnia Theta &mdash; Network Design</div>
+<p class="lab-desc" data-i18n="lab5.desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani e 120 postazioni. Firewall pfSense, DMZ, segmentazione VLAN, posizionamento IDS/IPS, configurazione Router-on-a-Stick in Cisco Packet Tracer e sviluppo di tool Python custom (port scanner, HTTP tester, network sniffer).</p>
 <div class="lab-tech">
 <span class="lab-tag">pfSense</span>
 <span class="lab-tag">DMZ</span>
@@ -125,26 +143,26 @@ upgrade-insecure-requests;
 <span class="lab-tag">Cisco Packet Tracer</span>
 <span class="lab-tag">Python</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="06" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Nmap &mdash; Vulnerability Assessment</div>
-<p class="lab-desc">Attività di ricognizione e vulnerability assessment con Nmap: port scanning avanzato, OS fingerprinting, version detection sui servizi ed esecuzione di NSE scripts per identificare vulnerabilità note e mappare i potenziali vettori d'attacco.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab6.title">Nmap &mdash; Vulnerability Assessment</div>
+<p class="lab-desc" data-i18n="lab6.desc">Attività di ricognizione e vulnerability assessment con Nmap: port scanning avanzato, OS fingerprinting, version detection sui servizi ed esecuzione di NSE scripts per identificare vulnerabilità note e mappare i potenziali vettori d'attacco.</p>
 <div class="lab-tech">
 <span class="lab-tag">Nmap</span>
 <span class="lab-tag">NSE Scripts</span>
 <span class="lab-tag">OS Fingerprinting</span>
 <span class="lab-tag">Service Enum</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="07" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">DVWA &mdash; Web App Vulnerabilities</div>
-<p class="lab-desc">Sfruttamento delle principali vulnerabilità OWASP su DVWA: SQL Injection UNION-based per l'estrazione di credenziali, XSS Reflected e Stored, File Upload con bypass del Content-Type tramite Burp Suite per ottenere una webshell PHP.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab7.title">DVWA &mdash; Web App Vulnerabilities</div>
+<p class="lab-desc" data-i18n="lab7.desc">Sfruttamento delle principali vulnerabilità OWASP su DVWA: SQL Injection UNION-based per l'estrazione di credenziali, XSS Reflected e Stored, File Upload con bypass del Content-Type tramite Burp Suite per ottenere una webshell PHP.</p>
 <div class="lab-tech">
 <span class="lab-tag">DVWA</span>
 <span class="lab-tag">SQLi</span>
@@ -153,13 +171,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">Burp Suite</span>
 <span class="lab-tag">PHP Webshell</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="08" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Metasploit Exploitation Suite</div>
-<p class="lab-desc">Catena di exploit con Metasploit Framework: EternalBlue (MS17-010) su Windows 10 con SYSTEM shell e dump delle credenziali Tomcat, exploit Icecast con post-exploitation Meterpreter, Java RMI su Metasploitable 2 e PostgreSQL con privilege escalation via SUID su nmap.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab8.title">Metasploit Exploitation Suite</div>
+<p class="lab-desc" data-i18n="lab8.desc">Catena di exploit con Metasploit Framework: EternalBlue (MS17-010) su Windows 10 con SYSTEM shell e dump delle credenziali Tomcat, exploit Icecast con post-exploitation Meterpreter, Java RMI su Metasploitable 2 e PostgreSQL con privilege escalation via SUID su nmap.</p>
 <div class="lab-tech">
 <span class="lab-tag">Metasploit</span>
 <span class="lab-tag">EternalBlue</span>
@@ -167,13 +185,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">Java RMI</span>
 <span class="lab-tag">PostgreSQL</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="09" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">CTF &mdash; BSides Vancouver 2018 (VulnHub)</div>
-<p class="lab-desc">Penetration test completo in blackbox: host discovery, enumerazione utenti WordPress, brute force con Hydra, upload di webshell PHP via tema WordPress, reverse shell con mkfifo e netcat, privilege escalation a root sfruttando un crontab vulnerabile.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab9.title">CTF &mdash; BSides Vancouver 2018 (VulnHub)</div>
+<p class="lab-desc" data-i18n="lab9.desc">Penetration test completo in blackbox: host discovery, enumerazione utenti WordPress, brute force con Hydra, upload di webshell PHP via tema WordPress, reverse shell con mkfifo e netcat, privilege escalation a root sfruttando un crontab vulnerabile.</p>
 <div class="lab-tech">
 <span class="lab-tag">VulnHub</span>
 <span class="lab-tag">WordPress</span>
@@ -181,13 +199,13 @@ upgrade-insecure-requests;
 <span class="lab-tag">Reverse Shell</span>
 <span class="lab-tag">Cron Privesc</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
 <div class="lab-card reveal" data-num="10" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
-<span class="lab-status done">Completato</span>
-<div class="lab-title">Windows Security &mdash; Audit Login/Logoff</div>
-<p class="lab-desc">Configurazione di auditing avanzato su Windows 11 Pro tramite secpol.msc per il monitoraggio di accessi e disconnessioni. Generazione e analisi degli Event ID 4624 e 4625, parsing dei log via Get-WinEvent in PowerShell elevato.</p>
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab10.title">Windows Security &mdash; Audit Login/Logoff</div>
+<p class="lab-desc" data-i18n="lab10.desc">Configurazione di auditing avanzato su Windows 11 Pro tramite secpol.msc per il monitoraggio di accessi e disconnessioni. Generazione e analisi degli Event ID 4624 e 4625, parsing dei log via Get-WinEvent in PowerShell elevato.</p>
 <div class="lab-tech">
 <span class="lab-tag">Windows 11</span>
 <span class="lab-tag">Event Viewer</span>
@@ -195,15 +213,16 @@ upgrade-insecure-requests;
 <span class="lab-tag">Blue Team</span>
 <span class="lab-tag">Log Analysis</span>
 </div>
-<div class="lab-pdf-hint">📄 Visualizza Report</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 </div>
 </section>
 <footer>
 <span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
-<span>Built with 💀 and too much caffeine</span>
-<span style="color: var(--green)">[ OPEN TO WORK ]</span>
+<span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
 </footer>
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

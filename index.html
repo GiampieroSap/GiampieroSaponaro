@@ -21,106 +21,112 @@ upgrade-insecure-requests;
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title="">
 <canvas id="matrix-canvas"></canvas>
 <nav>
 <div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
-<button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+<div class="nav-actions">
+<div class="lang-switch">
+<button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
+<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▾</span>
+</button>
+<ul class="lang-menu">
+<li><button data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button></li>
+<li><button data-lang="en"><span class="lang-flag">🇬🇧</span>English</button></li>
+<li><button data-lang="es"><span class="lang-flag">🇪🇸</span>Español</button></li>
+<li><button data-lang="fr"><span class="lang-flag">🇫🇷</span>Français</button></li>
+</ul>
+</div>
+<button class="menu-toggle" aria-label="Apri il menu" data-i18n-aria="menu.open_aria" aria-expanded="false">
 <span></span><span></span><span></span>
 </button>
+</div>
 </nav>
 <div class="menu-overlay">
-<div class="menu-label">// navigazione</div>
+<div class="menu-top">
+<div class="menu-label" data-i18n="menu.label">// navigazione</div>
+<button class="menu-close">
+<span class="menu-close-x">&times;</span><span data-i18n="menu.close">chiudi</span>
+</button>
+</div>
 <ul class="menu-list">
-<li class="current"><a href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="index.html"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
 <a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
 <a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
-<a href="contact.html">Scrivimi</a>
+<a href="contact.html" data-i18n="menu.write">Scrivimi</a>
 </div>
 </div>
 <section id="hero">
-<div class="hero-tag">Cybersecurity Portfolio</div>
+<div class="hero-tag" data-i18n="hero.tag">Cybersecurity Portfolio</div>
 <div class="hero-name">
 <div class="glitch-wrap" data-text="BLACKUTOPIA">BLACKUTOPIA</div>
 </div>
 <div class="hero-realname">Giampiero Saponaro</div>
 <div class="hero-titles">
-<span class="hero-role r1">Junior SOC Analyst</span>
+<span class="hero-role r1" data-i18n="hero.role1">Junior SOC Analyst</span>
 <span class="hero-sep">/</span>
-<span class="hero-role r2">Junior Pentester (eJPT)</span>
+<span class="hero-role r2" data-i18n="hero.role2">Junior Pentester (eJPT)</span>
 <span class="hero-sep">/</span>
-<span class="hero-role r3">Blue Team</span>
+<span class="hero-role r3" data-i18n="hero.role3">Blue Team</span>
 </div>
 <div class="terminal-line">
 <span class="prompt">root@kali:~$</span>
 <span id="typed-text"></span>
 <span class="cursor"></span>
 </div>
-<div class="hero-scroll">scroll</div>
+<div class="hero-scroll" data-i18n="hero.scroll">scroll</div>
 </section>
 
 <div class="subnav">
-<a href="#about">// about</a>
-<a href="#skills">// competenze</a>
-<a href="#tools">// arsenale</a>
-<a href="#cv">// cv</a>
-<a href="labs.html">// lab</a>
-<a href="certs.html">// certificazioni</a>
-<a href="contact.html">// contatti</a>
+<a href="#about" data-i18n="sub.about">// about</a>
+<a href="#skills" data-i18n="sub.skills">// competenze</a>
+<a href="#tools" data-i18n="sub.tools">// arsenale</a>
+<a href="#cv" data-i18n="sub.cv">// cv</a>
+<a href="labs.html" data-i18n="sub.labs">// lab</a>
+<a href="certs.html" data-i18n="sub.certs">// certificazioni</a>
+<a href="contact.html" data-i18n="sub.contact">// contatti</a>
 </div>
 
 <section id="about">
 <div>
 <div class="section-header reveal">
 <span class="section-num">// 01</span>
-<h2 class="section-title">About</h2>
+<h2 class="section-title" data-i18n="about.title">About</h2>
 <div class="section-line"></div>
 </div>
 <div class="about-text reveal">
-<p>Analista di <strong>cybersecurity</strong> con formazione intensiva in <strong>Blue Team e Security Operations</strong> e certificazione <strong>eJPT</strong> in penetration testing, conseguita ad agosto 2026.</p>
-<p>Competenze pratiche in monitoraggio e analisi di eventi di sicurezza, triage delle alert e gestione degli incidenti, con esperienza di laboratorio su <strong>SIEM (Wazuh, Splunk)</strong>, analisi di log e malware e attacchi ad <strong>Active Directory</strong>.</p>
-<p>Precisione, capacità analitica e reattività sviluppate anche in ruoli operativi. Cerco opportunità come <strong>Junior SOC Analyst</strong> o <strong>Junior Penetration Tester</strong>: disponibile al trasferimento e al lavoro in presenza.</p>
+<p data-i18n="about.p1">Analista di <strong>cybersecurity</strong> con formazione intensiva in <strong>Blue Team e Security Operations</strong> e certificazione <strong>eJPT</strong> in penetration testing, conseguita ad agosto 2026.</p>
+<p data-i18n="about.p2">Competenze pratiche in monitoraggio e analisi di eventi di sicurezza, triage delle alert e gestione degli incidenti, con esperienza di laboratorio su <strong>SIEM (Wazuh, Splunk)</strong>, analisi di log e malware e attacchi ad <strong>Active Directory</strong>.</p>
+<p data-i18n="about.p3">Precisione, capacità analitica e reattività sviluppate anche in ruoli operativi. Cerco opportunità come <strong>Junior SOC Analyst</strong> o <strong>Junior Penetration Tester</strong>: disponibile al trasferimento e al lavoro in presenza.</p>
 </div>
 </div>
 <div class="about-stats reveal">
-<div class="stat-box">
-<span class="stat-num">eJPT</span>
-<span class="stat-label">Certificato ago 2026</span>
-</div>
-<div class="stat-box">
-<span class="stat-num">SIEM</span>
-<span class="stat-label">Wazuh &amp; Splunk</span>
-</div>
-<div class="stat-box">
-<span class="stat-num">AD</span>
-<span class="stat-label">Attack chains</span>
-</div>
-<div class="stat-box">
-<span class="stat-num">100%</span>
-<span class="stat-label">Hands-on approach</span>
-</div>
+<div class="stat-box"><span class="stat-num">eJPT</span><span class="stat-label" data-i18n="about.stat1">Certificato ago 2026</span></div>
+<div class="stat-box"><span class="stat-num">SIEM</span><span class="stat-label" data-i18n="about.stat2">Wazuh &amp; Splunk</span></div>
+<div class="stat-box"><span class="stat-num">AD</span><span class="stat-label" data-i18n="about.stat3">Attack chains</span></div>
+<div class="stat-box"><span class="stat-num">100%</span><span class="stat-label" data-i18n="about.stat4">Hands-on approach</span></div>
 </div>
 </section>
 
 <section id="skills">
 <div class="section-header reveal">
 <span class="section-num">// 02</span>
-<h2 class="section-title">Competenze</h2>
+<h2 class="section-title" data-i18n="skills.title">Competenze</h2>
 <div class="section-line"></div>
 </div>
 <div class="skills-grid">
 <div class="skill-card reveal" style="--accent: var(--cyan)">
 <span class="skill-icon">🛡️</span>
-<div class="skill-card-title">SOC &amp; Blue Team</div>
-<p>Monitoraggio di eventi di sicurezza, triage delle alert e distinzione tra eventi reali, falsi positivi e anomalie. Deployment di Wazuh con enrollment degli agenti, dashboard e regole di correlazione; ingestione e ricerca di log con Splunk.</p>
+<div class="skill-card-title" data-i18n="skills.c1.title">SOC &amp; Blue Team</div>
+<p data-i18n="skills.c1.desc">Monitoraggio di eventi di sicurezza, triage delle alert e distinzione tra eventi reali, falsi positivi e anomalie. Deployment di Wazuh con enrollment degli agenti, dashboard e regole di correlazione; ingestione e ricerca di log con Splunk.</p>
 <div class="skill-tags">
 <span class="skill-tag">Wazuh</span>
 <span class="skill-tag">Splunk</span>
@@ -131,8 +137,8 @@ upgrade-insecure-requests;
 </div>
 <div class="skill-card reveal" style="--accent: var(--green)">
 <span class="skill-icon">🔓</span>
-<div class="skill-card-title">Penetration Testing</div>
-<p>Assessment di reti segmentate con metodologia allineata all'eJPT: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali e pivoting verso segmenti interni tramite proxy SOCKS.</p>
+<div class="skill-card-title" data-i18n="skills.c2.title">Penetration Testing</div>
+<p data-i18n="skills.c2.desc">Assessment di reti segmentate con metodologia allineata all'eJPT: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali e pivoting verso segmenti interni tramite proxy SOCKS.</p>
 <div class="skill-tags">
 <span class="skill-tag">Nmap</span>
 <span class="skill-tag">Metasploit</span>
@@ -143,8 +149,8 @@ upgrade-insecure-requests;
 </div>
 <div class="skill-card reveal" style="--accent: #ff8800">
 <span class="skill-icon">🪟</span>
-<div class="skill-card-title">Active Directory &amp; Malware</div>
-<p>Catene di attacco complete in ambienti Windows Server: Kerberoasting, abuso di badSuccessor, recupero di oggetti eliminati ed estrazione di hash NTLM fino alla compromissione del dominio. Analisi di malware e ransomware in sandbox con estrazione di IOC.</p>
+<div class="skill-card-title" data-i18n="skills.c3.title">Active Directory &amp; Malware</div>
+<p data-i18n="skills.c3.desc">Catene di attacco complete in ambienti Windows Server: Kerberoasting, abuso di badSuccessor, recupero di oggetti eliminati ed estrazione di hash NTLM fino alla compromissione del dominio. Analisi di malware e ransomware in sandbox con estrazione di IOC.</p>
 <div class="skill-tags">
 <span class="skill-tag">BloodyAD</span>
 <span class="skill-tag">Rubeus</span>
@@ -159,7 +165,7 @@ upgrade-insecure-requests;
 <section id="tools">
 <div class="section-header reveal">
 <span class="section-num">// 03</span>
-<h2 class="section-title">Arsenale</h2>
+<h2 class="section-title" data-i18n="tools.title">Arsenale</h2>
 <div class="section-line"></div>
 </div>
 <div class="tools-grid">
@@ -181,35 +187,36 @@ upgrade-insecure-requests;
 <section id="cv">
 <div class="section-header reveal">
 <span class="section-num">// 04</span>
-<h2 class="section-title">Curriculum Vitae</h2>
+<h2 class="section-title" data-i18n="cv.title">Curriculum Vitae</h2>
 <div class="section-line"></div>
 </div>
 <div class="cv-grid">
 <a class="cv-card reveal" href="assets/CV/CV_IT.pdf" target="_blank" rel="noopener noreferrer">
 <span class="cv-flag">🇮🇹</span>
-<div class="cv-lang">CV Italiano</div>
-<div class="cv-sub">Curriculum in italiano</div>
-<div class="cv-action">📄 Apri / Download</div>
+<div class="cv-lang" data-i18n="cv.it.lang">CV Italiano</div>
+<div class="cv-sub" data-i18n="cv.it.sub">Curriculum in italiano</div>
+<div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
 </a>
 <a class="cv-card reveal" href="assets/CV/CV_EN.pdf" target="_blank" rel="noopener noreferrer">
 <span class="cv-flag">🇬🇧</span>
-<div class="cv-lang">English CV</div>
-<div class="cv-sub">Curriculum in inglese</div>
-<div class="cv-action">📄 Open / Download</div>
+<div class="cv-lang" data-i18n="cv.en.lang">English CV</div>
+<div class="cv-sub" data-i18n="cv.en.sub">Curriculum in inglese</div>
+<div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
 </a>
 <a class="cv-card reveal" href="assets/CV/CV_ES.pdf" target="_blank" rel="noopener noreferrer">
 <span class="cv-flag">🇪🇸</span>
-<div class="cv-lang">CV Espa&ntilde;ol</div>
-<div class="cv-sub">Curriculum in spagnolo</div>
-<div class="cv-action">📄 Abrir / Descargar</div>
+<div class="cv-lang" data-i18n="cv.es.lang">CV Espa&ntilde;ol</div>
+<div class="cv-sub" data-i18n="cv.es.sub">Curriculum in spagnolo</div>
+<div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
 </a>
 </div>
 </section>
 <footer>
 <span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
-<span>Built with 💀 and too much caffeine</span>
-<span style="color: var(--green)">[ OPEN TO WORK ]</span>
+<span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
 </footer>
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1042,3 +1042,126 @@ body.menu-open .menu-footer { opacity: 1; }
   #labs, #certs, #contact, #skills, #tools, #about, #cv { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   #contact { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
 }
+
+/* ============================================================
+   FIX MENU: nav sopra l'overlay quando è aperto
+   ============================================================ */
+body.menu-open nav {
+  z-index: 300;
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+}
+body.menu-open .nav-logo { color: var(--green); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+/* Header dell'overlay con pulsante di chiusura esplicito */
+.menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.menu-top .menu-label { margin-bottom: 0; }
+.menu-close {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .45rem .9rem;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  transition: color .2s, border-color .2s;
+}
+.menu-close:hover { color: var(--green); border-color: var(--green); }
+.menu-close-x { font-size: 1.1rem; line-height: 1; }
+
+/* ============================================================
+   SELETTORE LINGUA
+   ============================================================ */
+.lang-switch { position: relative; }
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .35rem .6rem;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  transition: color .2s, border-color .2s;
+}
+.lang-btn:hover { color: var(--green); border-color: var(--green); }
+.lang-flag { font-size: 1rem; line-height: 1; }
+.lang-caret { font-size: .6rem; transition: transform .25s; }
+.lang-switch.open .lang-btn { color: var(--green); border-color: var(--green); }
+.lang-switch.open .lang-caret { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + .5rem);
+  right: 0;
+  min-width: 168px;
+  list-style: none;
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: .35rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+  box-shadow: 0 14px 34px rgba(0,0,0,.5);
+}
+.lang-switch.open .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-menu button {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .5rem .65rem;
+  border-radius: 4px;
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: .9rem;
+  text-align: left;
+  transition: background .18s, color .18s;
+}
+.lang-menu button:hover { background: rgba(0,255,136,.08); color: var(--green); }
+.lang-menu button.active { color: var(--green); }
+.lang-menu button.active::after {
+  content: '✓';
+  margin-left: auto;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .75rem;
+}
+
+@media (max-width: 700px) {
+  .nav-actions { gap: .8rem; }
+  .lang-btn { padding: .3rem .5rem; }
+  .lang-code { display: none; }
+}
