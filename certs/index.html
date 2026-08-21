@@ -19,7 +19,7 @@ upgrade-insecure-requests;
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body data-page-title="certs.title">
 <canvas id="matrix-canvas"></canvas>
@@ -50,26 +50,26 @@ upgrade-insecure-requests;
 </button>
 </div>
 <ul class="menu-list">
-<li><a href="./"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
-<li class="current"><a href="certs.html"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="blog.html"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="contact.html"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../labs/"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../bootcamp/"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../github/"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="../certs/"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../blog/"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../contact/"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
 <a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
 <a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
-<a href="contact.html" data-i18n="menu.write">Scrivimi</a>
+<a href="../contact/" data-i18n="menu.write">Scrivimi</a>
 </div>
 </div>
 <header class="page-head">
 <div class="page-kicker">// 02</div>
 <h1 class="page-title" data-i18n="certs.title">Certificazioni</h1>
 <p class="page-lead" data-i18n="certs.lead">Certificazioni conseguite tra maggio e agosto 2026. Ogni card apre il certificato originale in PDF. In corso: CompTIA Security+.</p>
-<a class="back-home" href="./" data-i18n="nav.back">&larr; torna alla home</a>
+<a class="back-home" href="../" data-i18n="nav.back">&larr; torna alla home</a>
 </header>
 <section id="certs" class="page-section">
 <div class="cert-issuer reveal">
@@ -80,7 +80,7 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('assets/Certs/ine_ejpt.pdf','_blank')" style="--cert-accent: var(--red); cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/ine_ejpt.pdf','_blank')" style="--cert-accent: var(--red); cursor:pointer;">
 <div class="cert-module" style="color: var(--red); border-color: var(--red)">eJPT</div>
 <div class="cert-title">eJPT v2 &mdash; Junior Penetration Tester</div>
 <div class="cert-date">03 / 08 / 2026</div>
@@ -95,13 +95,13 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('assets/Certs/epicode_graduation.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/epicode_graduation.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
 <div class="cert-module" style="color: var(--green); border-color: var(--green)">E1</div>
 <div class="cert-title">Graduation Certificate &mdash; Cybersecurity Specialist</div>
 <div class="cert-date">01 / 07 / 2026</div>
 <div class="cert-bar" style="background: var(--green)"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/epicode_python_intermediate.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/epicode_python_intermediate.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">E2</div>
 <div class="cert-title">Python Intermediate</div>
 <div class="cert-date">23 / 07 / 2026</div>
@@ -116,19 +116,19 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_intro_cybersecurity.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/cisco_intro_cybersecurity.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">C1</div>
 <div class="cert-title">Introduction to Cybersecurity</div>
 <div class="cert-date">14 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_networking_basic.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/cisco_networking_basic.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">C2</div>
 <div class="cert-title">Networking Basics</div>
 <div class="cert-date">14 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/cisco_ethical_hacker.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/cisco_ethical_hacker.pdf','_blank')" style="--cert-accent: var(--green); cursor:pointer;">
 <div class="cert-module" style="color: var(--green); border-color: var(--green)">C3</div>
 <div class="cert-title">Ethical Hacker</div>
 <div class="cert-date">22 / 05 / 2026</div>
@@ -143,25 +143,25 @@ upgrade-insecure-requests;
 </div>
 </div>
 <div class="certs-grid">
-<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_digital_forensics.pdf','_blank')" style="--cert-accent: var(--cyan); cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/sbt_digital_forensics.pdf','_blank')" style="--cert-accent: var(--cyan); cursor:pointer;">
 <div class="cert-module" style="color: var(--cyan); border-color: var(--cyan)">S1</div>
 <div class="cert-title">Introduction to Digital Forensics</div>
 <div class="cert-date">21 / 06 / 2026</div>
 <div class="cert-bar" style="background: var(--cyan)"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_pentest.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/sbt_intro_pentest.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S2</div>
 <div class="cert-title">Introduction to Penetration Testing</div>
 <div class="cert-date">21 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_darkweb.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/sbt_intro_darkweb.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S3</div>
 <div class="cert-title">Introduction to Dark Web Operations</div>
 <div class="cert-date">21 / 05 / 2026</div>
 <div class="cert-bar"></div>
 </div>
-<div class="cert-card reveal" onclick="window.open('assets/Certs/sbt_intro_osint.pdf','_blank')" style="cursor:pointer;">
+<div class="cert-card reveal" onclick="window.open('../assets/Certs/sbt_intro_osint.pdf','_blank')" style="cursor:pointer;">
 <div class="cert-module">S4</div>
 <div class="cert-title">Introduction to OSINT</div>
 <div class="cert-date">22 / 05 / 2026</div>
@@ -174,7 +174,7 @@ upgrade-insecure-requests;
 <span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
 <span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
 </footer>
-<script src="i18n.js"></script>
-<script src="script.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
