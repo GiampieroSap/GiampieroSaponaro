@@ -623,5 +623,47 @@ window.I18N = {
   "en": "[loading...]",
   "es": "[cargando...]",
   "fr": "[chargement...]"
+ },
+ "menu.blog": {
+  "it": "Blog",
+  "en": "Blog",
+  "es": "Blog",
+  "fr": "Blog"
+ },
+ "blog.title": {
+  "it": "Blog",
+  "en": "Blog",
+  "es": "Blog",
+  "fr": "Blog"
+ },
+ "blog.lead": {
+  "it": "Appunti e approfondimenti su cybersecurity: tecniche viste nei lab, analisi di attacchi, strumenti e note di studio. Scrivo quello che avrei voluto leggere quando ho iniziato.",
+  "en": "Notes and deep dives on cybersecurity: techniques from the labs, attack analysis, tools and study notes. I write what I would have wanted to read when I started.",
+  "es": "Apuntes y análisis sobre ciberseguridad: técnicas vistas en los labs, análisis de ataques, herramientas y notas de estudio. Escribo lo que me habría gustado leer cuando empecé.",
+  "fr": "Notes et analyses sur la cybersécurité : techniques vues en laboratoire, analyses d'attaques, outils et notes d'étude. J'écris ce que j'aurais aimé lire à mes débuts."
+ },
+ "blog.empty.title": {
+  "it": "Primi post in arrivo",
+  "en": "First posts coming soon",
+  "es": "Primeros posts en camino",
+  "fr": "Premiers articles à venir"
+ },
+ "blog.empty.desc": {
+  "it": "Sto preparando i primi articoli. Nel frattempo trovi i report tecnici completi nella sezione Lab &amp; Progetti e sul repository Cybersecurity-Reports.",
+  "en": "I am preparing the first articles. In the meantime you can find the full technical reports in the Labs &amp; Projects section and on the Cybersecurity-Reports repository.",
+  "es": "Estoy preparando los primeros artículos. Mientras tanto, encontrarás los informes técnicos completos en la sección Labs y Proyectos y en el repositorio Cybersecurity-Reports.",
+  "fr": "Je prépare les premiers articles. En attendant, vous trouverez les rapports techniques complets dans la section Labs &amp; Projets et sur le dépôt Cybersecurity-Reports."
+ },
+ "blog.empty.cta": {
+  "it": "&rarr; Vai ai Lab &amp; Progetti",
+  "en": "&rarr; Go to Labs &amp; Projects",
+  "es": "&rarr; Ir a Labs y Proyectos",
+  "fr": "&rarr; Aller aux Labs &amp; Projets"
+ },
+ "blog.read": {
+  "it": "Leggi &rarr;",
+  "en": "Read &rarr;",
+  "es": "Leer &rarr;",
+  "fr": "Lire &rarr;"
  }
 };

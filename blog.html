@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GitHub &mdash; BlackUtopia</title>
-<meta name="description" content="Repository pubblici di Giampiero Saponaro: report di cybersecurity, lab e progetti di codice.">
+<title>Blog &mdash; BlackUtopia</title>
+<meta name="description" content="Articoli e approfondimenti di cybersecurity di Giampiero Saponaro.">
 <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -21,7 +21,7 @@ upgrade-insecure-requests;
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-page-title="gh.title">
+<body data-page-title="blog.title">
 <canvas id="matrix-canvas"></canvas>
 <nav>
 <div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
@@ -53,9 +53,9 @@ upgrade-insecure-requests;
 <li><a href="index.html"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
 <li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
 <li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li class="current"><a href="github.html"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
 <li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="blog.html"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="blog.html"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
 <li><a href="contact.html"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
@@ -66,55 +66,17 @@ upgrade-insecure-requests;
 </div>
 </div>
 <header class="page-head">
-<div class="page-kicker">// 04</div>
-<h1 class="page-title" data-i18n="gh.title">GitHub</h1>
-<p class="page-lead" data-i18n="gh.lead">I repository pubblici dove finisce il lavoro tecnico: report di lab e CTF, tooling e il codice di questo sito. Profilo completo su github.com/GiampieroSap.</p>
+<div class="page-kicker">// 05</div>
+<h1 class="page-title" data-i18n="blog.title">Blog</h1>
+<p class="page-lead" data-i18n="blog.lead">Appunti e approfondimenti su cybersecurity: tecniche viste nei lab, analisi di attacchi, strumenti e note di studio. Scrivo quello che avrei voluto leggere quando ho iniziato.</p>
 <a class="back-home" href="index.html" data-i18n="nav.back">&larr; torna alla home</a>
 </header>
 <section id="labs" class="page-section">
-<div class="repo-grid">
-<a class="repo-card featured reveal" href="https://github.com/GiampieroSap/Cybersecurity-Reports" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--green)">
-<span class="repo-flag" data-i18n="repo.flag.featured">In evidenza</span>
-<div class="repo-name">Cybersecurity-Reports</div>
-<div class="repo-path">github.com/GiampieroSap/Cybersecurity-Reports</div>
-<p class="repo-desc" data-i18n="repo.reports.desc">Report tecnici sui lab e sulle challenge CTF risolte. Ogni report spiega <em>perché</em> una tecnica funziona, non solo che funziona: catene di attacco ad Active Directory, pentesting su reti multi-host, analisi malware e attività SIEM. Disponibili in inglese, spagnolo e italiano.</p>
-<div class="repo-meta">
-<span class="repo-tag">Hack The Box</span>
-<span class="repo-tag">TryHackMe</span>
-<span class="repo-tag">Active Directory</span>
-<span class="repo-tag">SIEM</span>
-<span class="repo-tag">EN / ES / IT</span>
-</div>
-<div class="repo-open" data-i18n="repo.open">&rarr; Apri il repository</div>
-</a>
-
-<a class="repo-card reveal" href="https://github.com/GiampieroSap/Esercizi-Epicode" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--cyan)">
-<span class="repo-flag" data-i18n="repo.flag.bootcamp">Bootcamp</span>
-<div class="repo-name">Esercizi-Epicode</div>
-<div class="repo-path">github.com/GiampieroSap/Esercizi-Epicode</div>
-<p class="repo-desc" data-i18n="repo.epicode.desc.gh">Esercizi, lab e report del percorso Cybersecurity Specialist di EPICODE, organizzati per unità e settimana. Dettagli e contesto nella sezione dedicata al bootcamp.</p>
-<div class="repo-meta">
-<span class="repo-tag">Report PDF</span>
-<span class="repo-tag">Nmap</span>
-<span class="repo-tag">Metasploit</span>
-<span class="repo-tag">DVWA</span>
-</div>
-<div class="repo-open" data-i18n="repo.open">&rarr; Apri il repository</div>
-</a>
-
-<a class="repo-card reveal" href="https://github.com/GiampieroSap/GiampieroSaponaro" target="_blank" rel="noopener noreferrer" style="--repo-accent: #a855f7">
-<span class="repo-flag" data-i18n="repo.flag.site">Sito</span>
-<div class="repo-name">GiampieroSaponaro</div>
-<div class="repo-path">github.com/GiampieroSap/GiampieroSaponaro</div>
-<p class="repo-desc" data-i18n="repo.site.desc">Il codice sorgente di questo portfolio: HTML, CSS e JavaScript scritti a mano, senza framework. Include gli header di sicurezza (CSP, X-Frame-Options, nosniff) e l'offuscamento dell'indirizzo email lato client.</p>
-<div class="repo-meta">
-<span class="repo-tag">HTML</span>
-<span class="repo-tag">CSS</span>
-<span class="repo-tag">JavaScript</span>
-<span class="repo-tag">GitHub Pages</span>
-</div>
-<div class="repo-open" data-i18n="repo.open">&rarr; Apri il repository</div>
-</a>
+<div class="blog-empty reveal">
+<div class="blog-empty-icon">&#9634;</div>
+<h3 class="blog-empty-title" data-i18n="blog.empty.title">Primi post in arrivo</h3>
+<p class="blog-empty-desc" data-i18n="blog.empty.desc">Sto preparando i primi articoli. Nel frattempo trovi i report tecnici completi nella sezione Lab &amp; Progetti e sul repository Cybersecurity-Reports.</p>
+<a class="blog-empty-cta" href="labs.html" data-i18n="blog.empty.cta">&rarr; Vai ai Lab &amp; Progetti</a>
 </div>
 </section>
 <footer>
