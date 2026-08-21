@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootcamp EPICODE &mdash; BlackUtopia</title>
+<meta name="description" content="Il percorso Cybersecurity Specialist EPICODE di Giampiero Saponaro e i repository con esercizi e report del corso.">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+script-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+connect-src 'none';
+frame-ancestors 'none';
+upgrade-insecure-requests;
+">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<nav>
+<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="menu-overlay">
+<div class="menu-label">// navigazione</div>
+<ul class="menu-list">
+<li><a href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="github.html"><span class="menu-num">04</span><span class="menu-text">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+</ul>
+<div class="menu-footer">
+<a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+<a href="contact.html">Scrivimi</a>
+</div>
+</div>
+<header class="page-head">
+<div class="page-kicker">// 03</div>
+<h1 class="page-title">Bootcamp EPICODE</h1>
+<p class="page-lead">Il percorso Cybersecurity Specialist di EPICODE Institute of Technology, da marzo a giugno 2026 (classe CS0226IT). Qui trovi i repository con gli esercizi, i lab e i report prodotti durante il corso.</p>
+<a class="back-home" href="index.html">&larr; torna alla home</a>
+</header>
+<section id="labs" class="page-section">
+<div class="section-header reveal">
+<span class="section-num">// percorso</span>
+<h2 class="section-title">Il programma</h2>
+<div class="section-line"></div>
+</div>
+<div class="about-text reveal" style="max-width: 820px;">
+<p>Programma intensivo con formazione su <strong>Blue Team e SOC</strong>, <strong>SIEM e Log Analysis</strong>, <strong>Incident Response</strong>, <strong>Vulnerability Assessment</strong>, <strong>Malware Analysis</strong>, <strong>Cisco CyberOps</strong> ed <strong>Ethical Hacking e Penetration Testing</strong>.</p>
+<p>Il percorso si è concluso con il <strong>Graduation Certificate</strong> del 01/07/2026 e ha incluso due Build Week progettuali, oltre a esercitazioni settimanali su Windows, Linux, Python e strumenti di assessment.</p>
+</div>
+
+<div class="section-header reveal" style="margin-top: 3.5rem;">
+<span class="section-num">// repository</span>
+<h2 class="section-title">Repo del corso</h2>
+<div class="section-line"></div>
+</div>
+<div class="repo-grid">
+
+<a class="repo-card featured reveal" href="https://github.com/GiampieroSap/Esercizi-Epicode" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--green)">
+<span class="repo-flag">Principale</span>
+<div class="repo-name">Esercizi-Epicode</div>
+<div class="repo-path">github.com/GiampieroSap/Esercizi-Epicode</div>
+<p class="repo-desc">Raccolta completa degli esercizi e dei report del bootcamp, organizzata per unità e settimana. Contiene i report PDF dei lab: vulnerability assessment con Nmap, exploitation con Metasploit, DVWA, auditing su Windows e la Build Week 1 con il progetto di rete Compagnia Theta.</p>
+<div class="repo-meta">
+<span class="repo-tag">Report PDF</span>
+<span class="repo-tag">Lab</span>
+<span class="repo-tag">Build Week</span>
+<span class="repo-tag">Unità 1 &amp; 2</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+<a class="repo-card reveal" href="https://github.com/GiampieroSap/metasploitable" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--cyan)">
+<span class="repo-flag">Lab VM</span>
+<div class="repo-name">metasploitable</div>
+<div class="repo-path">github.com/GiampieroSap/metasploitable</div>
+<p class="repo-desc">Materiale del progetto EPICODE dedicato all'ambiente vulnerabile Metasploitable: configurazione della macchina virtuale, enumerazione dei servizi esposti ed exploitation guidata come palestra per il penetration testing.</p>
+<div class="repo-meta">
+<span class="repo-tag">Metasploitable</span>
+<span class="repo-tag">VirtualBox</span>
+<span class="repo-tag">Exploitation</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+</div>
+</section>
+<footer>
+<span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
+<span>Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)">[ OPEN TO WORK ]</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

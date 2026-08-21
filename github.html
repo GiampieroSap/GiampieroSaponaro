@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub &mdash; BlackUtopia</title>
+<meta name="description" content="Repository pubblici di Giampiero Saponaro: report di cybersecurity, lab e progetti di codice.">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+script-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+connect-src 'none';
+frame-ancestors 'none';
+upgrade-insecure-requests;
+">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<nav>
+<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="menu-overlay">
+<div class="menu-label">// navigazione</div>
+<ul class="menu-list">
+<li><a href="index.html"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="labs.html"><span class="menu-num">02</span><span class="menu-text">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="bootcamp.html"><span class="menu-num">03</span><span class="menu-text">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="github.html"><span class="menu-num">04</span><span class="menu-text">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="certs.html"><span class="menu-num">05</span><span class="menu-text">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="contact.html"><span class="menu-num">06</span><span class="menu-text">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+</ul>
+<div class="menu-footer">
+<a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+<a href="contact.html">Scrivimi</a>
+</div>
+</div>
+<header class="page-head">
+<div class="page-kicker">// 04</div>
+<h1 class="page-title">GitHub</h1>
+<p class="page-lead">I repository pubblici dove finisce il lavoro tecnico: report di lab e CTF, tooling e il codice di questo sito. Profilo completo su github.com/GiampieroSap.</p>
+<a class="back-home" href="index.html">&larr; torna alla home</a>
+</header>
+<section id="labs" class="page-section">
+<div class="repo-grid">
+
+<a class="repo-card featured reveal" href="https://github.com/GiampieroSap/Cybersecurity-Reports" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--green)">
+<span class="repo-flag">In evidenza</span>
+<div class="repo-name">Cybersecurity-Reports</div>
+<div class="repo-path">github.com/GiampieroSap/Cybersecurity-Reports</div>
+<p class="repo-desc">Report tecnici sui lab e sulle challenge CTF risolte. Ogni report spiega <em>perché</em> una tecnica funziona, non solo che funziona: catene di attacco ad Active Directory, pentesting su reti multi-host, analisi malware e attività SIEM. Disponibili in inglese, spagnolo e italiano.</p>
+<div class="repo-meta">
+<span class="repo-tag">Hack The Box</span>
+<span class="repo-tag">TryHackMe</span>
+<span class="repo-tag">Active Directory</span>
+<span class="repo-tag">SIEM</span>
+<span class="repo-tag">EN / ES / IT</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+<a class="repo-card reveal" href="https://github.com/GiampieroSap/Esercizi-Epicode" target="_blank" rel="noopener noreferrer" style="--repo-accent: var(--cyan)">
+<span class="repo-flag">Bootcamp</span>
+<div class="repo-name">Esercizi-Epicode</div>
+<div class="repo-path">github.com/GiampieroSap/Esercizi-Epicode</div>
+<p class="repo-desc">Esercizi, lab e report del percorso Cybersecurity Specialist di EPICODE, organizzati per unità e settimana. Dettagli e contesto nella sezione dedicata al bootcamp.</p>
+<div class="repo-meta">
+<span class="repo-tag">Report PDF</span>
+<span class="repo-tag">Nmap</span>
+<span class="repo-tag">Metasploit</span>
+<span class="repo-tag">DVWA</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+<a class="repo-card reveal" href="https://github.com/GiampieroSap/metasploitable" target="_blank" rel="noopener noreferrer" style="--repo-accent: #ff8800">
+<span class="repo-flag">Lab VM</span>
+<div class="repo-name">metasploitable</div>
+<div class="repo-path">github.com/GiampieroSap/metasploitable</div>
+<p class="repo-desc">Ambiente vulnerabile Metasploitable usato come palestra di exploitation: configurazione della VM, enumerazione dei servizi e sfruttamento guidato delle vulnerabilità esposte.</p>
+<div class="repo-meta">
+<span class="repo-tag">Metasploitable</span>
+<span class="repo-tag">VirtualBox</span>
+<span class="repo-tag">Exploitation</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+<a class="repo-card reveal" href="https://github.com/GiampieroSap/GiampieroSaponaro" target="_blank" rel="noopener noreferrer" style="--repo-accent: #a855f7">
+<span class="repo-flag">Sito</span>
+<div class="repo-name">GiampieroSaponaro</div>
+<div class="repo-path">github.com/GiampieroSap/GiampieroSaponaro</div>
+<p class="repo-desc">Il codice sorgente di questo portfolio: HTML, CSS e JavaScript scritti a mano, senza framework. Include gli header di sicurezza (CSP, X-Frame-Options, nosniff) e l'offuscamento dell'indirizzo email lato client.</p>
+<div class="repo-meta">
+<span class="repo-tag">HTML</span>
+<span class="repo-tag">CSS</span>
+<span class="repo-tag">JavaScript</span>
+<span class="repo-tag">GitHub Pages</span>
+</div>
+<div class="repo-open">&rarr; Apri il repository</div>
+</a>
+
+</div>
+</section>
+<footer>
+<span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
+<span>Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)">[ OPEN TO WORK ]</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
