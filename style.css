@@ -22,9 +22,9 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  font-size:17.5px;
-  line-height:1.62;
+  font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.66;
   -webkit-font-smoothing:antialiased;
 }
 a{color:inherit}
@@ -42,7 +42,7 @@ nav{background:var(--ink);color:#EDEFF1;position:sticky;top:0;z-index:120}
   max-width:var(--maxw);margin:0 auto;padding:13px 40px;
   display:flex;justify-content:space-between;align-items:center;
 }
-.nav-logo{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.01em;text-decoration:none}
+.nav-logo{font-family:'Open Sans',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.01em;text-decoration:none}
 .nav-logo span{color:#8A94A0;font-weight:500}
 .nav-actions{display:flex;align-items:center;gap:18px}
 
@@ -51,7 +51,7 @@ nav{background:var(--ink);color:#EDEFF1;position:sticky;top:0;z-index:120}
 .lang-btn{
   display:flex;align-items:center;gap:7px;
   background:none;border:1px solid #39434B;color:#C6CCD2;
-  font-family:'Manrope',sans-serif;font-size:11.5px;letter-spacing:.06em;
+  font-family:'Open Sans',sans-serif;font-size:11.5px;letter-spacing:.06em;
   padding:5px 9px;cursor:pointer;transition:border-color .18s,color .18s;
 }
 .lang-btn:hover,.lang-switch.open .lang-btn{border-color:#EDEFF1;color:#fff}
@@ -68,7 +68,7 @@ nav{background:var(--ink);color:#EDEFF1;position:sticky;top:0;z-index:120}
 .lang-menu button{
   width:100%;display:flex;align-items:center;gap:9px;
   background:none;border:none;cursor:pointer;padding:9px 12px;
-  font-family:'Manrope',sans-serif;font-size:13.5px;color:var(--ink);text-align:left;
+  font-family:'Open Sans',sans-serif;font-size:13.5px;color:var(--ink);text-align:left;
 }
 .lang-menu button:hover{background:var(--bg);color:var(--accent)}
 .lang-menu button.active{color:var(--accent);font-weight:500}
@@ -108,10 +108,10 @@ body.menu-open .menu-overlay{clip-path:inset(0 0 0 0);pointer-events:auto}
 .menu-inner{max-width:var(--maxw);margin:0 auto;width:100%}
 .menu-top{display:flex;justify-content:space-between;align-items:baseline;
   border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:34px}
-.menu-label{font-family:'Manrope',sans-serif;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--dim)}
+.menu-label{font-family:'Open Sans',sans-serif;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--dim)}
 .menu-close{
   background:none;border:none;cursor:pointer;color:var(--dim);
-  font-family:'Manrope',sans-serif;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
+  font-family:'Open Sans',sans-serif;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
   display:flex;align-items:center;gap:6px;transition:color .18s;
 }
 .menu-close:hover{color:var(--accent)}
@@ -130,8 +130,8 @@ body.menu-open .menu-list li:nth-child(7){transition-delay:.46s}
 .menu-list a{
   display:flex;align-items:center;justify-content:space-between;
   text-decoration:none;padding:14px 0;
-  font-family:'Manrope',sans-serif;font-weight:700;
-  font-size:clamp(26px,4.6vw,44px);letter-spacing:-.024em;line-height:1.1;
+  font-family:'Open Sans',sans-serif;font-weight:700;
+  font-size:clamp(26px,4.6vw,44px);letter-spacing:-.018em;line-height:1.1;
   transition:color .2s,padding-left .28s cubic-bezier(.7,0,.3,1);
 }
 .menu-list a:hover{color:var(--accent);padding-left:14px}
@@ -143,28 +143,28 @@ body.menu-open .menu-list li:nth-child(7){transition-delay:.46s}
   display:flex;flex-wrap:wrap;gap:22px;opacity:0;transition:opacity .4s ease .5s;
 }
 body.menu-open .menu-footer{opacity:1}
-.menu-footer a{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.12em;
+.menu-footer a{font-family:'Open Sans',sans-serif;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .18s}
 .menu-footer a:hover{color:var(--accent)}
 
 /* ---------- HERO ---------- */
 #hero{padding-top:86px;padding-bottom:8px}
-.hero-tag{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.2em;
+.hero-tag{font-family:'Open Sans',sans-serif;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--accent);margin-bottom:22px}
 .hero-name{
-  font-family:'Manrope',sans-serif;font-weight:700;
-  font-size:clamp(38px,6.6vw,74px);line-height:.98;letter-spacing:-.028em;margin-bottom:14px;
+  font-family:'Open Sans',sans-serif;font-weight:700;
+  font-size:clamp(38px,6.6vw,74px);line-height:.98;letter-spacing:-.02em;margin-bottom:14px;
 }
-.hero-realname{font-family:'Manrope',sans-serif;font-size:12.5px;color:var(--dim);margin-bottom:28px}
+.hero-realname{font-family:'Open Sans',sans-serif;font-size:12.5px;color:var(--dim);margin-bottom:28px}
 .hero-realname span{color:var(--accent)}
 .hero-titles{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;
-  font-family:'Manrope',sans-serif;font-weight:500;font-size:16px;color:var(--body)}
+  font-family:'Open Sans',sans-serif;font-weight:500;font-size:16px;color:var(--body)}
 .hero-sep{color:var(--line);font-weight:400}
 .hero-rule{height:3px;background:var(--ink);margin-top:40px}
 
 /* ---------- SUBNAV ---------- */
 .subnav{display:flex;flex-wrap:wrap;gap:20px;padding-top:16px;padding-bottom:0}
-.subnav a{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.12em;
+.subnav a{font-family:'Open Sans',sans-serif;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .18s}
 .subnav a:hover{color:var(--accent)}
 
@@ -172,9 +172,9 @@ body.menu-open .menu-footer{opacity:1}
 section{padding-top:56px;padding-bottom:56px}
 #about{padding-top:34px}
 .section-header{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
-.section-title{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;
+.section-title{font-family:'Open Sans',sans-serif;font-weight:700;font-size:14.5px;
   letter-spacing:.07em;text-transform:uppercase;font-weight:600}
-.section-kicker{font-family:'Manrope',sans-serif;font-size:10.5px;letter-spacing:.16em;
+.section-kicker{font-family:'Open Sans',sans-serif;font-size:10.5px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--accent)}
 .section-num{display:none}
 .section-line{flex:1;height:1px;background:var(--line)}
@@ -186,8 +186,8 @@ section{padding-top:56px;padding-bottom:56px}
 .about-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;
   margin-top:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stat-box{padding:18px 0}
-.stat-num{display:block;font-family:'Manrope',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em}
-.stat-label{display:block;font-family:'Manrope',sans-serif;font-size:10px;
+.stat-num{display:block;font-family:'Open Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.015em}
+.stat-label{display:block;font-family:'Open Sans',sans-serif;font-size:10px;
   letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--dim);margin-top:3px}
 
 /* ---------- CARD (skill, lab, cert, repo, post) ---------- */
@@ -205,24 +205,24 @@ section{padding-top:56px;padding-bottom:56px}
 .skill-icon,.tool-logo,.cv-flag,.cert-issuer-logo{display:none}
 
 .skill-card-title,.lab-title,.repo-name,.post-title,.cv-lang{
-  font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;
+  font-family:'Open Sans',sans-serif;font-weight:700;font-size:19px;
   letter-spacing:-.015em;margin-bottom:9px;line-height:1.22}
-.skill-card p,.lab-desc,.repo-desc,.post-summary{color:var(--body);font-size:16px}
+.skill-card p,.lab-desc,.repo-desc,.post-summary{color:var(--body);font-size:15.5px}
 .repo-path{font-size:12.5px;color:var(--dim);
   margin:-4px 0 10px;word-break:break-all}
 
 .skill-tags,.lab-tech,.repo-meta,.post-tags,.article-tags{
   display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft)}
 .skill-tag,.lab-tag,.repo-tag,.post-tag{
-  font-family:'Manrope',sans-serif;font-size:11.5px;letter-spacing:.01em;font-weight:500;
+  font-family:'Open Sans',sans-serif;font-size:11.5px;letter-spacing:.01em;font-weight:500;
   color:var(--dim);background:var(--bg);border:1px solid var(--line);padding:3px 8px}
 
 .lab-status,.repo-flag{
-  font-family:'Manrope',sans-serif;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
+  font-family:'Open Sans',sans-serif;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
   color:var(--accent);border:1px solid var(--accent);padding:2px 7px;
   display:inline-block;margin-bottom:12px}
 .lab-pdf-hint,.repo-open,.post-read,.cv-action{
-  margin-top:14px;font-family:'Manrope',sans-serif;font-size:11.5px;color:var(--accent)}
+  margin-top:14px;font-family:'Open Sans',sans-serif;font-size:11.5px;color:var(--accent)}
 
 /* ---------- STRUMENTI ---------- */
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
@@ -231,7 +231,7 @@ section{padding-top:56px;padding-bottom:56px}
   justify-content:space-between;align-items:baseline;gap:10px;transition:background .18s}
 .tool-item:hover{background:var(--bg)}
 .tool-name{font-size:14.5px;font-weight:600;letter-spacing:-.005em}
-.tool-bar{font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:.1em;
+.tool-bar{font-family:'Open Sans',sans-serif;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--dim)}
 
 /* ---------- CV ---------- */
@@ -242,24 +242,24 @@ section{padding-top:56px;padding-bottom:56px}
 .cert-issuer{display:flex;align-items:baseline;gap:12px;margin:38px 0 16px;
   padding-bottom:9px;border-bottom:1px solid var(--line)}
 .cert-issuer:first-of-type{margin-top:0}
-.cert-issuer-name{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.01em}
-.cert-issuer-course{font-family:'Manrope',sans-serif;font-size:10.5px;
+.cert-issuer-name{font-family:'Open Sans',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.01em}
+.cert-issuer-course{font-family:'Open Sans',sans-serif;font-size:10.5px;
   letter-spacing:.01em;color:var(--dim)}
-.cert-module{font-family:'Manrope',sans-serif;font-size:9.5px;letter-spacing:.14em;
+.cert-module{font-family:'Open Sans',sans-serif;font-size:9.5px;letter-spacing:.14em;
   color:var(--accent);border:1px solid var(--accent);padding:2px 7px;display:inline-block;margin-bottom:11px}
-.cert-title{font-family:'Manrope',sans-serif;font-weight:500;font-size:16.5px;
+.cert-title{font-family:'Open Sans',sans-serif;font-weight:500;font-size:16.5px;
   line-height:1.3;margin-bottom:7px}
-.cert-date{font-family:'Manrope',sans-serif;font-size:11px;color:var(--dim)}
+.cert-date{font-family:'Open Sans',sans-serif;font-size:11px;color:var(--dim)}
 .cert-bar{display:none}
 
 /* ---------- PAGINE INTERNE ---------- */
 .page-head{padding-top:70px;padding-bottom:0}
-.page-kicker{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.2em;
+.page-kicker{font-family:'Open Sans',sans-serif;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.page-title{font-family:'Manrope',sans-serif;font-weight:700;
-  font-size:clamp(32px,5.4vw,56px);line-height:1.02;letter-spacing:-.024em}
+.page-title{font-family:'Open Sans',sans-serif;font-weight:700;
+  font-size:clamp(32px,5.4vw,56px);line-height:1.02;letter-spacing:-.018em}
 .page-lead{max-width:640px;margin-top:16px;color:var(--body)}
-.back-home{display:inline-block;margin-top:24px;font-family:'Manrope',sans-serif;
+.back-home{display:inline-block;margin-top:24px;font-family:'Open Sans',sans-serif;
   font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--dim);
   text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;transition:color .18s,border-color .18s}
 .back-home:hover{color:var(--accent);border-color:var(--accent)}
@@ -269,49 +269,49 @@ section{padding-top:56px;padding-bottom:56px}
 .blog-empty{margin-top:26px;padding:44px 30px;text-align:center;
   background:var(--card);border:1px dashed var(--line)}
 .blog-empty-icon{display:none}
-.blog-empty-title{font-family:'Manrope',sans-serif;font-weight:700;font-size:22px;
+.blog-empty-title{font-family:'Open Sans',sans-serif;font-weight:700;font-size:22px;
   letter-spacing:-.02em;margin-bottom:8px}
 .blog-empty-desc{max-width:520px;margin:0 auto;color:var(--body);font-size:15.5px}
-.blog-empty-cta{display:inline-block;margin-top:20px;font-family:'Manrope',sans-serif;
+.blog-empty-cta{display:inline-block;margin-top:20px;font-family:'Open Sans',sans-serif;
   font-size:11.5px;letter-spacing:.08em;color:#fff;background:var(--accent);
   padding:9px 16px;text-decoration:none;transition:background .18s}
 .blog-empty-cta:hover{background:var(--accent-dark)}
-.post-date{font-family:'Manrope',sans-serif;font-size:10.5px;letter-spacing:.14em;
+.post-date{font-family:'Open Sans',sans-serif;font-size:10.5px;letter-spacing:.14em;
   color:var(--dim);margin-bottom:9px}
 
 /* ---------- ARTICOLO ---------- */
 .article-title{max-width:760px}
-.article-body{max-width:660px;font-size:18px;line-height:1.7}
+.article-body{max-width:660px;font-size:17.5px;line-height:1.74}
 .article-body p{margin-bottom:20px}
 .article-body strong{font-weight:600}
 .article-body em{color:var(--accent);font-style:italic}
-.article-body h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:21px;
+.article-body h2{font-family:'Open Sans',sans-serif;font-weight:700;font-size:21px;
   letter-spacing:-.02em;margin:34px 0 14px;padding-top:22px;border-top:1px solid var(--line)}
 .article-tags{max-width:660px}
-.article-note{max-width:660px;margin-top:20px;font-family:'Manrope',sans-serif;
+.article-note{max-width:660px;margin-top:20px;font-family:'Open Sans',sans-serif;
   font-size:10.5px;letter-spacing:.04em;color:var(--dim)}
 
 /* ---------- CONTATTI ---------- */
 #contact{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
-.contact-cta{font-family:'Manrope',sans-serif;font-weight:700;
-  font-size:clamp(26px,3.6vw,40px);line-height:1.06;letter-spacing:-.024em;margin-bottom:16px}
+.contact-cta{font-family:'Open Sans',sans-serif;font-weight:700;
+  font-size:clamp(26px,3.6vw,40px);line-height:1.06;letter-spacing:-.018em;margin-bottom:16px}
 .contact-cta span{color:var(--accent)}
 .contact-sub{color:var(--body);max-width:420px}
 .contact-links{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line)}
 .contact-link{display:flex;align-items:center;gap:14px;background:var(--card);
   padding:15px 18px;text-decoration:none;transition:background .18s}
 .contact-link:hover{background:var(--bg)}
-.contact-link-icon{font-family:'Manrope',sans-serif;font-size:13px;color:var(--accent);
+.contact-link-icon{font-family:'Open Sans',sans-serif;font-size:13px;color:var(--accent);
   width:20px;text-align:center;flex-shrink:0}
-.contact-link-label{display:block;font-family:'Manrope',sans-serif;font-size:9.5px;
+.contact-link-label{display:block;font-family:'Open Sans',sans-serif;font-size:9.5px;
   letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--dim)}
-.contact-link-val{display:block;font-family:'Manrope',sans-serif;font-size:14.5px;
+.contact-link-val{display:block;font-family:'Open Sans',sans-serif;font-size:14.5px;
   word-break:break-all;margin-top:2px}
 
 /* ---------- FOOTER ---------- */
 footer{padding-top:24px;padding-bottom:34px;
   border-top:3px solid var(--ink);display:flex;justify-content:space-between;
-  flex-wrap:wrap;gap:12px;font-family:'Manrope',sans-serif;font-size:11px;color:var(--dim)}
+  flex-wrap:wrap;gap:12px;font-family:'Open Sans',sans-serif;font-size:11px;color:var(--dim)}
 footer span:last-child{background:var(--accent);color:#fff;padding:2px 10px}
 
 /* ---------- REVEAL ---------- */
