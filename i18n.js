@@ -199,10 +199,10 @@ window.I18N = {
   "fr": "Langues de travail"
  },
  "about.stat4": {
-  "it": "Disponibilit&agrave;",
-  "en": "Availability",
-  "es": "Disponibilidad",
-  "fr": "Disponibilit&eacute;"
+  "it": "al trasferimento",
+  "en": "to relocate",
+  "es": "para trasladarme",
+  "fr": "&agrave; la mobilit&eacute;"
  },
  "skills.title": {
   "it": "Competenze",
@@ -697,9 +697,9 @@ window.I18N = {
   "fr": "Une enqu&ecirc;te partie du trafic brut dans Wireshark, avec une liste d'adresses IP m&eacute;ritant un examen plus pouss&eacute;. De l&agrave; est apparu le passage de malwares sur le r&eacute;seau. L'analyse s'est poursuivie dans Kibana : du tableau de bord aux alertes puis au trafic associ&eacute;, en utilisant le triage pour &eacute;valuer la dangerosit&eacute; des &eacute;chantillons et d&eacute;cider quoi cl&ocirc;turer au niveau 1 et quoi transmettre en L2 ou L3. L'important n'a pas &eacute;t&eacute; de trouver le malware, mais d'&eacute;tablir sa gravit&eacute; et &agrave; qui revenait le probl&egrave;me."
  },
  "about.stat4val": {
-  "it": "Trasferimento",
-  "en": "Relocation",
-  "es": "Traslado",
-  "fr": "Mobilit&eacute;"
+  "it": "Disponibile",
+  "en": "Available",
+  "es": "Disponible",
+  "fr": "Disponible"
  }
 };
