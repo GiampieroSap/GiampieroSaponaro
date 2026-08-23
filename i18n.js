@@ -73,16 +73,16 @@ window.I18N = {
   "fr": "&larr; retour à l'accueil"
  },
  "footer.built": {
-  "it": "Built with 💀 and too much caffeine",
-  "en": "Built with 💀 and too much caffeine",
-  "es": "Built with 💀 and too much caffeine",
-  "fr": "Built with 💀 and too much caffeine"
+  "it": "Sito scritto a mano: HTML, CSS e JavaScript, nessun framework.",
+  "en": "Hand-written site: HTML, CSS and JavaScript, no frameworks.",
+  "es": "Sitio escrito a mano: HTML, CSS y JavaScript, sin frameworks.",
+  "fr": "Site &eacute;crit &agrave; la main : HTML, CSS et JavaScript, sans framework."
  },
  "footer.open": {
-  "it": "[ OPEN TO WORK ]",
-  "en": "[ OPEN TO WORK ]",
-  "es": "[ OPEN TO WORK ]",
-  "fr": "[ OPEN TO WORK ]"
+  "it": "Disponibile",
+  "en": "Available",
+  "es": "Disponible",
+  "fr": "Disponible"
  },
  "hero.tag": {
   "it": "Cybersecurity Portfolio",
@@ -184,25 +184,25 @@ window.I18N = {
   "it": "Certificato ago 2026",
   "en": "Certified Aug 2026",
   "es": "Certificado ago 2026",
-  "fr": "Certifié août 2026"
+  "fr": "Certifi&eacute; ao&ucirc;t 2026"
  },
  "about.stat2": {
-  "it": "Wazuh &amp; Splunk",
-  "en": "Wazuh &amp; Splunk",
-  "es": "Wazuh y Splunk",
-  "fr": "Wazuh &amp; Splunk"
+  "it": "Lab documentati",
+  "en": "Documented labs",
+  "es": "Labs documentados",
+  "fr": "Labos document&eacute;s"
  },
  "about.stat3": {
-  "it": "Attack chains",
-  "en": "Attack chains",
-  "es": "Cadenas de ataque",
-  "fr": "Chaînes d'attaque"
+  "it": "Lingue di lavoro",
+  "en": "Working languages",
+  "es": "Idiomas de trabajo",
+  "fr": "Langues de travail"
  },
  "about.stat4": {
-  "it": "Hands-on approach",
-  "en": "Hands-on approach",
-  "es": "Enfoque práctico",
-  "fr": "Approche pratique"
+  "it": "Disponibilit&agrave;",
+  "en": "Availability",
+  "es": "Disponibilidad",
+  "fr": "Disponibilit&eacute;"
  },
  "skills.title": {
   "it": "Competenze",
@@ -695,5 +695,11 @@ window.I18N = {
   "en": "An investigation that started from raw traffic in Wireshark, with a list of IPs that deserved a closer look. From there the presence of malware on the network came out. The analysis continued in Kibana: from the dashboard to the alerts and on to the related traffic, using triage to assess how dangerous the samples were and to decide what to close at tier 1 and what to pass on to L2 or L3. The useful part was not finding the malware, but establishing how serious it was and whose problem it was.",
   "es": "Investigaci&oacute;n que arranc&oacute; del tr&aacute;fico en crudo en Wireshark, con una lista de IPs que merec&iacute;an una revisi&oacute;n m&aacute;s a fondo. De ah&iacute; sali&oacute; el paso de malware por la red. El an&aacute;lisis sigui&oacute; en Kibana: de la dashboard a las alertas y hasta el tr&aacute;fico relacionado, usando el triage para valorar la peligrosidad de las muestras y decidir qu&eacute; cerrar en nivel 1 y qu&eacute; pasar a L2 o L3. Lo &uacute;til no fue encontrar el malware, sino establecer cu&aacute;n grave era y de qui&eacute;n era el problema.",
   "fr": "Une enqu&ecirc;te partie du trafic brut dans Wireshark, avec une liste d'adresses IP m&eacute;ritant un examen plus pouss&eacute;. De l&agrave; est apparu le passage de malwares sur le r&eacute;seau. L'analyse s'est poursuivie dans Kibana : du tableau de bord aux alertes puis au trafic associ&eacute;, en utilisant le triage pour &eacute;valuer la dangerosit&eacute; des &eacute;chantillons et d&eacute;cider quoi cl&ocirc;turer au niveau 1 et quoi transmettre en L2 ou L3. L'important n'a pas &eacute;t&eacute; de trouver le malware, mais d'&eacute;tablir sa gravit&eacute; et &agrave; qui revenait le probl&egrave;me."
+ },
+ "about.stat4val": {
+  "it": "Trasferimento",
+  "en": "Relocation",
+  "es": "Traslado",
+  "fr": "Mobilit&eacute;"
  }
 };

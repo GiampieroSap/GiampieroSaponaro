@@ -139,69 +139,6 @@ function applyLang(lang) {
 })();
 
 /* ============================================================
-   MATRIX RAIN
-   ============================================================ */
-(function () {
-  var canvas = document.getElementById('matrix-canvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var chars = '01\u30a2\u30a4\u30a6\u30a8\u30aa\u30ab\u30ad\u30af\u30b1\u30b3\u30b5\u30b7\u30b9\u30bb\u30bd\u30bf\u30c1\u30c4\u30c6\u30c8\u30ca\u30cb\u30cc\u30cd\u30ceABCDEF';
-  var cols, drops;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    cols = Math.floor(canvas.width / 18);
-    drops = Array(cols).fill(0).map(function () { return Math.random() * -50; });
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  setInterval(function () {
-    ctx.fillStyle = 'rgba(5,10,14,0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff88';
-    ctx.font = '13px Share Tech Mono, monospace';
-    drops.forEach(function (y, idx) {
-      var ch = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(ch, idx * 18, y * 18);
-      if (y * 18 > canvas.height && Math.random() > 0.975) drops[idx] = 0;
-      drops[idx] += 0.5;
-    });
-  }, 55);
-})();
-
-/* ============================================================
-   TYPING TERMINALE
-   ============================================================ */
-(function () {
-  var el = document.getElementById('typed-text');
-  if (!el) return;
-  var phrases = [
-    'whoami \u2192 junior_soc_analyst',
-    'nmap -sV -O target.local',
-    'index=main sourcetype=WinEventLog EventCode=4625',
-    'bloodyAD --host dc01 get children',
-    'nc -lvnp 4444'
-  ];
-  var pi = 0, ci = 0, deleting = false;
-
-  function type() {
-    var phrase = phrases[pi];
-    if (!deleting) {
-      el.textContent = phrase.slice(0, ++ci);
-      if (ci === phrase.length) { deleting = true; setTimeout(type, 2200); return; }
-      setTimeout(type, 55 + Math.random() * 40);
-    } else {
-      el.textContent = phrase.slice(0, --ci);
-      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, 400); return; }
-      setTimeout(type, 25);
-    }
-  }
-  setTimeout(type, 800);
-})();
-
-/* ============================================================
    SCROLL REVEAL
    ============================================================ */
 (function () {

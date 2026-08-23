@@ -18,17 +18,17 @@ upgrade-insecure-requests;
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page-title="gh.title">
-<canvas id="matrix-canvas"></canvas>
 <nav>
-<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<div class="nav-in">
+<a class="nav-logo" href="../">Giampiero Saponaro <span>/ BlackUtopia</span></a>
 <div class="nav-actions">
 <div class="lang-switch">
 <button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
-<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▾</span>
+<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▼</span>
 </button>
 <ul class="lang-menu">
 <li><button data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button></li>
@@ -41,8 +41,10 @@ upgrade-insecure-requests;
 <span></span><span></span><span></span>
 </button>
 </div>
+</div>
 </nav>
 <div class="menu-overlay">
+<div class="menu-inner">
 <div class="menu-top">
 <div class="menu-label" data-i18n="menu.label">// navigazione</div>
 <button class="menu-close">
@@ -50,19 +52,20 @@ upgrade-insecure-requests;
 </button>
 </div>
 <ul class="menu-list">
-<li><a href="../"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="../labs/"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="../bootcamp/"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li class="current"><a href="../github/"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="../certs/"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="../blog/"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="../contact/"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../"><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../labs/"><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../bootcamp/"><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="../github/"><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../certs/"><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../blog/"><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../contact/"><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
 <a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
 <a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
 <a href="../contact/" data-i18n="menu.write">Scrivimi</a>
+</div>
 </div>
 </div>
 <header class="page-head">
@@ -118,9 +121,9 @@ upgrade-insecure-requests;
 </div>
 </section>
 <footer>
-<span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
-<span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
-<span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
+<span>&copy; 2026 Giampiero Saponaro</span>
+<span data-i18n="footer.built">Sito scritto a mano: HTML, CSS e JavaScript, nessun framework.</span>
+<span data-i18n="footer.open">Disponibile</span>
 </footer>
 <script src="../i18n.js"></script>
 <script src="../script.js"></script>

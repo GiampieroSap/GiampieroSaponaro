@@ -18,17 +18,17 @@ upgrade-insecure-requests;
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page-title="">
-<canvas id="matrix-canvas"></canvas>
 <nav>
-<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<div class="nav-in">
+<a class="nav-logo" href="./">Giampiero Saponaro <span>/ BlackUtopia</span></a>
 <div class="nav-actions">
 <div class="lang-switch">
 <button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
-<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▾</span>
+<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▼</span>
 </button>
 <ul class="lang-menu">
 <li><button data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button></li>
@@ -41,8 +41,10 @@ upgrade-insecure-requests;
 <span></span><span></span><span></span>
 </button>
 </div>
+</div>
 </nav>
 <div class="menu-overlay">
+<div class="menu-inner">
 <div class="menu-top">
 <div class="menu-label" data-i18n="menu.label">// navigazione</div>
 <button class="menu-close">
@@ -50,13 +52,13 @@ upgrade-insecure-requests;
 </button>
 </div>
 <ul class="menu-list">
-<li class="current"><a href="./"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="labs/"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="bootcamp/"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="github/"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="certs/"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="blog/"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
-<li><a href="contact/"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="./"><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="labs/"><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="bootcamp/"><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="github/"><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="certs/"><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="blog/"><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="contact/"><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
 </ul>
 <div class="menu-footer">
 <a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -65,25 +67,19 @@ upgrade-insecure-requests;
 <a href="contact/" data-i18n="menu.write">Scrivimi</a>
 </div>
 </div>
+</div>
 <section id="hero">
 <div class="hero-tag" data-i18n="hero.tag">Cybersecurity Portfolio</div>
-<div class="hero-name">
-<div class="glitch-wrap" data-text="GIAMPIERO SAPONARO">GIAMPIERO SAPONARO</div>
-</div>
+<h1 class="hero-name">Giampiero Saponaro</h1>
 <div class="hero-realname">alias <span>BlackUtopia</span></div>
 <div class="hero-titles">
-<span class="hero-role r1" data-i18n="hero.role1">Junior SOC Analyst</span>
+<span class="hero-role" data-i18n="hero.role1">Junior SOC Analyst</span>
 <span class="hero-sep">/</span>
-<span class="hero-role r2" data-i18n="hero.role2">Junior Pentester (eJPT)</span>
+<span class="hero-role" data-i18n="hero.role2">Junior Pentester (eJPT)</span>
 <span class="hero-sep">/</span>
-<span class="hero-role r3" data-i18n="hero.role3">Blue Team</span>
+<span class="hero-role" data-i18n="hero.role3">Blue Team</span>
 </div>
-<div class="terminal-line">
-<span class="prompt">root@kali:~$</span>
-<span id="typed-text"></span>
-<span class="cursor"></span>
-</div>
-<div class="hero-scroll" data-i18n="hero.scroll">scroll</div>
+<div class="hero-rule"></div>
 </section>
 
 <div class="subnav">
@@ -113,9 +109,9 @@ upgrade-insecure-requests;
 </div>
 <div class="about-stats reveal">
 <div class="stat-box"><span class="stat-num">eJPT</span><span class="stat-label" data-i18n="about.stat1">Certificato ago 2026</span></div>
-<div class="stat-box"><span class="stat-num">SIEM</span><span class="stat-label" data-i18n="about.stat2">Wazuh &amp; Splunk</span></div>
-<div class="stat-box"><span class="stat-num">AD</span><span class="stat-label" data-i18n="about.stat3">Attack chains</span></div>
-<div class="stat-box"><span class="stat-num">100%</span><span class="stat-label" data-i18n="about.stat4">Hands-on approach</span></div>
+<div class="stat-box"><span class="stat-num">11</span><span class="stat-label" data-i18n="about.stat2">Lab documentati</span></div>
+<div class="stat-box"><span class="stat-num">IT / EN / ES</span><span class="stat-label" data-i18n="about.stat3">Lingue di lavoro</span></div>
+<div class="stat-box"><span class="stat-num" data-i18n="about.stat4val">Trasferimento</span><span class="stat-label" data-i18n="about.stat4">Disponibilit&agrave;</span></div>
 </div>
 </section>
 
@@ -126,8 +122,7 @@ upgrade-insecure-requests;
 <div class="section-line"></div>
 </div>
 <div class="skills-grid">
-<div class="skill-card reveal" style="--accent: var(--cyan)">
-<span class="skill-icon">🛡️</span>
+<div class="skill-card reveal">
 <div class="skill-card-title" data-i18n="skills.c1.title">SOC &amp; Blue Team</div>
 <p data-i18n="skills.c1.desc">Monitoraggio di eventi di sicurezza e triage delle alert: distinguere un evento reale da un falso positivo, valutarne la gravit&agrave; e decidere se chiuderlo o passarlo a un livello superiore. Deployment di Wazuh con enrollment degli agenti, dashboard e regole di correlazione; ingestione e ricerca di log con Splunk; analisi su Kibana partendo dalla dashboard fino agli alert e al traffico correlato.</p>
 <div class="skill-tags">
@@ -139,8 +134,7 @@ upgrade-insecure-requests;
 <span class="skill-tag">Escalation</span>
 </div>
 </div>
-<div class="skill-card reveal" style="--accent: var(--green)">
-<span class="skill-icon">🔓</span>
+<div class="skill-card reveal">
 <div class="skill-card-title" data-i18n="skills.c2.title">Penetration Testing</div>
 <p data-i18n="skills.c2.desc">Assessment di reti segmentate con metodologia allineata all'eJPT: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali e pivoting verso segmenti interni tramite proxy SOCKS.</p>
 <div class="skill-tags">
@@ -151,8 +145,7 @@ upgrade-insecure-requests;
 <span class="skill-tag">Pivoting</span>
 </div>
 </div>
-<div class="skill-card reveal" style="--accent: #ff8800">
-<span class="skill-icon">🪟</span>
+<div class="skill-card reveal">
 <div class="skill-card-title" data-i18n="skills.c3.title">Active Directory &amp; Malware</div>
 <p data-i18n="skills.c3.desc">Catene di attacco complete in ambienti Windows Server: Kerberoasting, abuso di badSuccessor, recupero di oggetti eliminati ed estrazione di hash NTLM fino alla compromissione del dominio. Analisi di malware e ransomware in sandbox con estrazione di IOC.</p>
 <div class="skill-tags">
@@ -173,19 +166,19 @@ upgrade-insecure-requests;
 <div class="section-line"></div>
 </div>
 <div class="tools-grid">
-<div class="tool-item reveal" style="--tool-color: #00e5ff"><span class="tool-logo">🛡️</span><div class="tool-name">Wazuh</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #ff3b5c"><span class="tool-logo">📊</span><div class="tool-name">Splunk</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #00e5ff"><span class="tool-logo">🦈</span><div class="tool-name">Wireshark</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #ff3b5c"><span class="tool-logo">🗺️</span><div class="tool-name">Nmap</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #ff8800"><span class="tool-logo">🔍</span><div class="tool-name">Metasploit</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #ff6633"><span class="tool-logo">🔥</span><div class="tool-name">Burp Suite</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #00ff88"><span class="tool-logo">💻</span><div class="tool-name">Kali Linux</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #a855f7"><span class="tool-logo">🩸</span><div class="tool-name">BloodyAD</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #00e5ff"><span class="tool-logo">🎫</span><div class="tool-name">Rubeus</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #00ff88"><span class="tool-logo">🔑</span><div class="tool-name">Hashcat</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #ff8800"><span class="tool-logo">🧪</span><div class="tool-name">FlareVM</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #00e5ff"><span class="tool-logo">🛰️</span><div class="tool-name">Nessus</div><span class="tool-bar"></span></div>
-<div class="tool-item reveal" style="--tool-color: #f04e98"><span class="tool-logo">📈</span><div class="tool-name">Kibana</div><span class="tool-bar"></span></div>
+<div class="tool-item reveal"><span class="tool-name">Wazuh</span><span class="tool-bar">SIEM</span></div>
+<div class="tool-item reveal"><span class="tool-name">Kibana</span><span class="tool-bar">Elastic</span></div>
+<div class="tool-item reveal"><span class="tool-name">Splunk</span><span class="tool-bar">SIEM</span></div>
+<div class="tool-item reveal"><span class="tool-name">Wireshark</span><span class="tool-bar">Traffico / PCAP</span></div>
+<div class="tool-item reveal"><span class="tool-name">Nmap</span><span class="tool-bar">Recon</span></div>
+<div class="tool-item reveal"><span class="tool-name">Nessus</span><span class="tool-bar">Vuln. assessment</span></div>
+<div class="tool-item reveal"><span class="tool-name">Metasploit</span><span class="tool-bar">Exploitation</span></div>
+<div class="tool-item reveal"><span class="tool-name">Burp Suite</span><span class="tool-bar">Web</span></div>
+<div class="tool-item reveal"><span class="tool-name">BloodyAD</span><span class="tool-bar">Active Directory</span></div>
+<div class="tool-item reveal"><span class="tool-name">Rubeus</span><span class="tool-bar">Kerberos</span></div>
+<div class="tool-item reveal"><span class="tool-name">Hashcat</span><span class="tool-bar">Cracking</span></div>
+<div class="tool-item reveal"><span class="tool-name">FlareVM</span><span class="tool-bar">Malware analysis</span></div>
+<div class="tool-item reveal"><span class="tool-name">Kali Linux</span><span class="tool-bar">Toolkit</span></div>
 </div>
 </section>
 
@@ -197,19 +190,16 @@ upgrade-insecure-requests;
 </div>
 <div class="cv-grid">
 <a class="cv-card reveal" href="assets/CV/CV_IT.pdf" target="_blank" rel="noopener noreferrer">
-<span class="cv-flag">🇮🇹</span>
 <div class="cv-lang" data-i18n="cv.it.lang">CV Italiano</div>
 <div class="cv-sub" data-i18n="cv.it.sub">Curriculum in italiano</div>
 <div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
 </a>
 <a class="cv-card reveal" href="assets/CV/CV_EN.pdf" target="_blank" rel="noopener noreferrer">
-<span class="cv-flag">🇬🇧</span>
 <div class="cv-lang" data-i18n="cv.en.lang">English CV</div>
 <div class="cv-sub" data-i18n="cv.en.sub">Curriculum in inglese</div>
 <div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
 </a>
 <a class="cv-card reveal" href="assets/CV/CV_ES.pdf" target="_blank" rel="noopener noreferrer">
-<span class="cv-flag">🇪🇸</span>
 <div class="cv-lang" data-i18n="cv.es.lang">CV Espa&ntilde;ol</div>
 <div class="cv-sub" data-i18n="cv.es.sub">Curriculum in spagnolo</div>
 <div class="cv-action" data-i18n="cv.open">📄 Apri / Download</div>
@@ -217,9 +207,9 @@ upgrade-insecure-requests;
 </div>
 </section>
 <footer>
-<span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
-<span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
-<span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
+<span>&copy; 2026 Giampiero Saponaro</span>
+<span data-i18n="footer.built">Sito scritto a mano: HTML, CSS e JavaScript, nessun framework.</span>
+<span data-i18n="footer.open">Disponibile</span>
 </footer>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
