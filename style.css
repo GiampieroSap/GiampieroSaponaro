@@ -30,7 +30,11 @@ body{
 a{color:inherit}
 ::selection{background:var(--accent);color:#fff}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+/* contenitore: applicato direttamente agli elementi di pagina */
+.wrap,section,.page-head,.subnav,footer{
+  max-width:var(--maxw);margin-left:auto;margin-right:auto;
+  padding-left:48px;padding-right:48px;
+}
 
 /* ---------- NAV ---------- */
 nav{background:var(--ink);color:#EDEFF1;position:sticky;top:0;z-index:120}
@@ -144,7 +148,7 @@ body.menu-open .menu-footer{opacity:1}
 .menu-footer a:hover{color:var(--accent)}
 
 /* ---------- HERO ---------- */
-#hero{padding:86px 0 8px}
+#hero{padding-top:86px;padding-bottom:8px}
 .hero-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--accent);margin-bottom:22px}
 .hero-name{
@@ -159,17 +163,19 @@ body.menu-open .menu-footer{opacity:1}
 .hero-rule{height:3px;background:var(--ink);margin-top:40px}
 
 /* ---------- SUBNAV ---------- */
-.subnav{display:flex;flex-wrap:wrap;gap:20px;padding:16px 0 0}
+.subnav{display:flex;flex-wrap:wrap;gap:20px;padding-top:16px;padding-bottom:0}
 .subnav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .18s}
 .subnav a:hover{color:var(--accent)}
 
 /* ---------- SEZIONI ---------- */
-section{padding:56px 0}
+section{padding-top:56px;padding-bottom:56px}
 #about{padding-top:34px}
 .section-header{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
 .section-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14.5px;
   letter-spacing:.11em;text-transform:uppercase}
+.section-kicker{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent)}
 .section-num{display:none}
 .section-line{flex:1;height:1px;background:var(--line)}
 
@@ -247,7 +253,7 @@ section{padding:56px 0}
 .cert-bar{display:none}
 
 /* ---------- PAGINE INTERNE ---------- */
-.page-head{padding:70px 0 0}
+.page-head{padding-top:70px;padding-bottom:0}
 .page-kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .page-title{font-family:'Space Grotesk',sans-serif;font-weight:700;
@@ -303,7 +309,7 @@ section{padding:56px 0}
   word-break:break-all;margin-top:2px}
 
 /* ---------- FOOTER ---------- */
-footer{max-width:var(--maxw);margin:0 auto;padding:24px 40px 34px;
+footer{padding-top:24px;padding-bottom:34px;
   border-top:3px solid var(--ink);display:flex;justify-content:space-between;
   flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim)}
 footer span:last-child{background:var(--accent);color:#fff;padding:2px 10px}
@@ -323,7 +329,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:760px){
   body{font-size:17px}
-  .wrap,footer{padding-left:22px;padding-right:22px}
+  .wrap,section,.page-head,.subnav,footer{padding-left:22px;padding-right:22px}
   .nav-in{padding:12px 22px}
   .menu-overlay{padding:96px 22px 36px}
   #contact{grid-template-columns:1fr;gap:34px}
