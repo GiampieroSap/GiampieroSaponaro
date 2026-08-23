@@ -75,6 +75,21 @@ upgrade-insecure-requests;
 <div class="labs-grid">
 <div class="lab-card reveal" data-num="01" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
+<div class="lab-title" data-i18n="lab11.title">Dal traffico all'escalation: Wireshark e Kibana</div>
+<p class="lab-desc" data-i18n="lab11.desc">Indagine partita dal traffico grezzo su Wireshark, con una lista di IP che meritavano un controllo pi&ugrave; approfondito. Da l&igrave; &egrave; emerso il passaggio di malware sulla rete. L'analisi &egrave; proseguita su Kibana: dalla dashboard agli alert fino al traffico correlato, usando il triage per valutare la pericolosit&agrave; dei campioni e decidere cosa chiudere a livello 1 e cosa passare a L2 o L3. La parte utile non &egrave; stata trovare il malware, ma stabilire quanto fosse grave e di chi fosse il problema.</p>
+<div class="lab-tech">
+<span class="lab-tag">Wireshark</span>
+<span class="lab-tag">Kibana</span>
+<span class="lab-tag">Elastic</span>
+<span class="lab-tag">Triage</span>
+<span class="lab-tag">Malware</span>
+<span class="lab-tag">Escalation L2/L3</span>
+</div>
+<div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
+</div>
+
+<div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
+<span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab1.title">Attacchi ad Active Directory</div>
 <p class="lab-desc" data-i18n="lab1.desc">Catene di attacco complete in ambienti Windows Server su Hack The Box: recupero di oggetti eliminati con BloodyAD, Kerberoasting, abuso di badSuccessor ed estrazione di hash NTLM con Rubeus e secretsdump fino alla compromissione del dominio. Ogni passaggio documentato in report pubblici.</p>
 <div class="lab-tech">
@@ -88,7 +103,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="02" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab2.title">Deployment e uso di SIEM (Wazuh &amp; Splunk)</div>
 <p class="lab-desc" data-i18n="lab2.desc">Installazione di Wazuh SIEM con enrollment degli agenti, configurazione di dashboard e regole di correlazione e analisi degli eventi. Ingestione e ricerca di log con Splunk, triage delle alert e distinzione tra eventi reali, falsi positivi e anomalie, con report tecnici a corredo.</p>
@@ -102,7 +117,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="03" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab3.title">Analisi malware e incident response</div>
 <p class="lab-desc" data-i18n="lab3.desc">Analisi di malware e ransomware (WannaCry, DanaBot) in sandbox tria.ge e in FlareVM con FakeNet-NG e Wireshark. Estrazione di IOC e analisi forense del traffico di rete su cattura PCAP.</p>
@@ -118,7 +133,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="04" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="05" onclick="window.open('https://github.com/GiampieroSap/Cybersecurity-Reports','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab4.title">Pentesting su rete multi-host</div>
 <p class="lab-desc" data-i18n="lab4.desc">Assessment di reti segmentate su Hack The Box e TryHackMe: recon con Nmap, exploitation di applicazioni web e servizi con Metasploit, privilege escalation, cracking di credenziali con Hashcat e pivoting verso segmenti interni tramite proxy SOCKS. Metodologia allineata all'eJPT.</p>
@@ -132,10 +147,10 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="05" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="06" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%201%20epicode/BUILD%20WEEK%201/Compagnia_Theta_Report.pdf','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab5.title">Compagnia Theta &mdash; Network Design</div>
-<p class="lab-desc" data-i18n="lab5.desc">Progettazione completa di infrastruttura di rete aziendale su 6 piani e 120 postazioni. Firewall pfSense, DMZ, segmentazione VLAN, posizionamento IDS/IPS, configurazione Router-on-a-Stick in Cisco Packet Tracer e sviluppo di tool Python custom (port scanner, HTTP tester, network sniffer).</p>
+<p class="lab-desc" data-i18n="lab5.desc">Progettazione completa dell'infrastruttura di rete per un'azienda su 6 piani, 20 postazioni per piano. La parte che mi ha impegnato di pi&ugrave; non &egrave; stata la teoria delle VLAN, ma farle convivere con un solo DHCP sul router: assegnare gli indirizzi ai client di ogni piano attraverso gli switch, senza che il broadcast attraversasse i segmenti, ha richiesto diversi tentativi prima di quadrare. A questo si aggiungono firewall pfSense, DMZ, posizionamento degli IDS/IPS e Router-on-a-Stick in Cisco Packet Tracer, oltre a tool Python scritti da me: port scanner, HTTP tester e sniffer di rete.</p>
 <div class="lab-tech">
 <span class="lab-tag">pfSense</span>
 <span class="lab-tag">DMZ</span>
@@ -147,7 +162,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="06" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="07" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode/blob/main/unit%C3%A0%202%20epicode/SETTIMANA%205/vulnerability_assessment_nmap_S5_L4_Report.pdf','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab6.title">Nmap &mdash; Vulnerability Assessment</div>
 <p class="lab-desc" data-i18n="lab6.desc">Attività di ricognizione e vulnerability assessment con Nmap: port scanning avanzato, OS fingerprinting, version detection sui servizi ed esecuzione di NSE scripts per identificare vulnerabilità note e mappare i potenziali vettori d'attacco.</p>
@@ -160,7 +175,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="07" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="08" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab7.title">DVWA &mdash; Web App Vulnerabilities</div>
 <p class="lab-desc" data-i18n="lab7.desc">Sfruttamento delle principali vulnerabilità OWASP su DVWA: SQL Injection UNION-based per l'estrazione di credenziali, XSS Reflected e Stored, File Upload con bypass del Content-Type tramite Burp Suite per ottenere una webshell PHP.</p>
@@ -175,10 +190,10 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="08" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="09" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
-<div class="lab-title" data-i18n="lab8.title">Metasploit Exploitation Suite</div>
-<p class="lab-desc" data-i18n="lab8.desc">Catena di exploit con Metasploit Framework: EternalBlue (MS17-010) su Windows 10 con SYSTEM shell e dump delle credenziali Tomcat, exploit Icecast con post-exploitation Meterpreter, Java RMI su Metasploitable 2 e PostgreSQL con privilege escalation via SUID su nmap.</p>
+<div class="lab-title" data-i18n="lab8.title">Metasploit e movimento laterale</div>
+<p class="lab-desc" data-i18n="lab8.desc">Catena di exploit con Metasploit Framework: EternalBlue su Windows 10, Icecast, Java RMI su Metasploitable 2 e PostgreSQL. Ottenere la prima sessione Meterpreter &egrave; stata la parte veloce. Il tempo se lo sono preso il movimento laterale e il pivoting verso i segmenti interni, e soprattutto le credenziali: recuperare gli hash &egrave; un conto, farli cadere con Hydra e John &egrave; un altro, e l&igrave; impari che una password debole vale pi&ugrave; di un exploit.</p>
 <div class="lab-tech">
 <span class="lab-tag">Metasploit</span>
 <span class="lab-tag">EternalBlue</span>
@@ -189,7 +204,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="09" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="10" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab9.title">CTF &mdash; BSides Vancouver 2018 (VulnHub)</div>
 <p class="lab-desc" data-i18n="lab9.desc">Penetration test completo in blackbox: host discovery, enumerazione utenti WordPress, brute force con Hydra, upload di webshell PHP via tema WordPress, reverse shell con mkfifo e netcat, privilege escalation a root sfruttando un crontab vulnerabile.</p>
@@ -203,7 +218,7 @@ upgrade-insecure-requests;
 <div class="lab-pdf-hint" data-i18n="labs.report">📄 Visualizza Report</div>
 </div>
 
-<div class="lab-card reveal" data-num="10" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
+<div class="lab-card reveal" data-num="11" onclick="window.open('https://github.com/GiampieroSap/Esercizi-Epicode','_blank')" style="cursor:pointer;">
 <span class="lab-status done" data-i18n="labs.status">Completato</span>
 <div class="lab-title" data-i18n="lab10.title">Windows Security &mdash; Audit Login/Logoff</div>
 <p class="lab-desc" data-i18n="lab10.desc">Configurazione di auditing avanzato su Windows 11 Pro tramite secpol.msc per il monitoraggio di accessi e disconnessioni. Generazione e analisi degli Event ID 4624 e 4625, parsing dei log via Get-WinEvent in PowerShell elevato.</p>
