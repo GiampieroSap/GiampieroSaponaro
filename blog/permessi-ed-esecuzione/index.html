@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avere il permesso non &egrave; avere l'esecuzione &mdash; BlackUtopia</title>
+<meta name="description" content="Avevo i permessi, avevo il file al suo posto, e non succedeva niente. Il problema era la domanda che mi stavo facendo.">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+script-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+connect-src 'none';
+frame-ancestors 'none';
+upgrade-insecure-requests;
+">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body data-page-title="">
+<canvas id="matrix-canvas"></canvas>
+<nav>
+<div class="nav-logo"><span>~/</span>blackutopia<span>.sec</span></div>
+<div class="nav-actions">
+<div class="lang-switch">
+<button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
+<span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▾</span>
+</button>
+<ul class="lang-menu">
+<li><button data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button></li>
+<li><button data-lang="en"><span class="lang-flag">🇬🇧</span>English</button></li>
+<li><button data-lang="es"><span class="lang-flag">🇪🇸</span>Español</button></li>
+<li><button data-lang="fr"><span class="lang-flag">🇫🇷</span>Français</button></li>
+</ul>
+</div>
+<button class="menu-toggle" aria-label="Apri il menu" data-i18n-aria="menu.open_aria" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<div class="menu-overlay">
+<div class="menu-top">
+<div class="menu-label" data-i18n="menu.label">// navigazione</div>
+<button class="menu-close">
+<span class="menu-close-x">&times;</span><span data-i18n="menu.close">chiudi</span>
+</button>
+</div>
+<ul class="menu-list">
+<li><a href="../../"><span class="menu-num">01</span><span class="menu-text" data-i18n="menu.home">Home</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../../labs/"><span class="menu-num">02</span><span class="menu-text" data-i18n="menu.labs">Lab &amp; Progetti</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../../bootcamp/"><span class="menu-num">03</span><span class="menu-text" data-i18n="menu.bootcamp">Bootcamp EPICODE</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../../github/"><span class="menu-num">04</span><span class="menu-text" data-i18n="menu.github">GitHub</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../../certs/"><span class="menu-num">05</span><span class="menu-text" data-i18n="menu.certs">Certificazioni</span><span class="menu-arrow">&rarr;</span></a></li>
+<li class="current"><a href="../../blog/"><span class="menu-num">06</span><span class="menu-text" data-i18n="menu.blog">Blog</span><span class="menu-arrow">&rarr;</span></a></li>
+<li><a href="../../contact/"><span class="menu-num">07</span><span class="menu-text" data-i18n="menu.contact">Contatti</span><span class="menu-arrow">&rarr;</span></a></li>
+</ul>
+<div class="menu-footer">
+<a href="https://www.linkedin.com/in/giampiero-saponaro-cybersecurity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/GiampieroSap" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://tryhackme.com/p/BlackUtopia" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+<a href="../../contact/" data-i18n="menu.write">Scrivimi</a>
+</div>
+</div>
+<header class="page-head">
+<div class="page-kicker">23 / 08 / 2026</div>
+<h1 class="page-title article-title">Avere il permesso non &egrave; avere l'esecuzione</h1>
+<a class="back-home" href="../../blog/" data-i18n="post.back">&larr; tutti i post</a>
+</header>
+<section id="labs" class="page-section">
+<article class="article-body">
+<p>Su una macchina Windows in ambiente Active Directory mi sono fermato sei ore sullo stesso punto. Avevo gi&agrave; ottenuto i permessi necessari sull'account con BloodyAD, la parte che sulla carta sembrava la pi&ugrave; difficile. Poi mi sono bloccato su quella che credevo banale: far partire una shell.</p>
+
+<p>Il payload era pronto. Il file era al suo posto. Non succedeva niente.</p>
+
+<p>Ho passato le prime ore a dare la colpa al payload. L'ho rigenerato, cambiato formato, cambiato porta, riprovato. Ogni volta lo stesso silenzio dall'altra parte.</p>
+
+<p>Il problema era che stavo rispondendo alla domanda sbagliata. Continuavo a chiedermi <em>perch&eacute; il mio payload non funziona</em>, quando la domanda giusta era <strong>chi dovrebbe eseguirlo, e quando</strong>.</p>
+
+<p>Un payload non &egrave; un programma che si avvia da solo. &Egrave; codice che resta inerte finch&eacute; qualcosa nel sistema bersaglio non lo esegue: un servizio che riparte, un task pianificato che scatta, un'applicazione che carica un componente, un utente che apre qualcosa. Senza quel qualcosa, per il sistema &egrave; un file come un altro.</p>
+
+<p>Detta cos&igrave; sembra ovvia. Ma quando sei dentro da tre ore con la console aperta, l'istinto &egrave; mettere mano allo strumento che controlli, non fermarti a chiederti se il pezzo mancante sia altrove.</p>
+
+<h2>Le due met&agrave; di una catena di attacco</h2>
+
+<p>Quello che mi &egrave; rimasto va oltre la macchina. Una catena di attacco ha due met&agrave; distinte: ottenere il permesso di far eseguire qualcosa, e trovare il meccanismo che quel qualcosa lo esegue davvero. Sono problemi separati, e confonderli fa perdere ore.</p>
+
+<p>Nel mio caso la prima met&agrave; passava per BloodyAD sui permessi e Rubeus su Kerberos, cio&egrave; strumenti che agiscono sull'identit&agrave;: chi sei, cosa puoi chiedere, quali ticket riesci a ottenere. Ma un'identit&agrave; con i permessi giusti non &egrave; ancora codice in esecuzione. Serve qualcosa che quel permesso lo trasformi in azione.</p>
+
+<h2>Perch&eacute; conta anche dal lato difensivo</h2>
+
+<p>Vale anche dall'altra parte del tavolo, che &egrave; quella dove voglio lavorare. Se il meccanismo di esecuzione &egrave; ci&ograve; che rende sfruttabile un permesso, allora un SOC non deve guardare solo <em>chi pu&ograve; fare cosa</em>, ma cosa fa partire cosa: servizi che ripartono senza motivo, task pianificati comparsi dal nulla, componenti caricati da percorsi inattesi. Una richiesta Kerberos anomala &egrave; il primo segnale. L'esecuzione &egrave; dove l'attacco diventa visibile.</p>
+
+<p>Sei ore per capirlo. Ne &egrave; valsa la pena.</p>
+</article>
+<div class="article-tags">
+<span class="post-tag">Active Directory</span>
+<span class="post-tag">Kerberos</span>
+<span class="post-tag">BloodyAD</span>
+<span class="post-tag">Rubeus</span>
+<span class="post-tag">Blue Team</span>
+</div>
+<div class="article-note" data-i18n="post.lang_note">Articolo in italiano. Le altre sezioni del sito sono disponibili in quattro lingue.</div>
+</section>
+<footer>
+<span>&copy; 2026 BlackUtopia &mdash; Giampiero Saponaro</span>
+<span data-i18n="footer.built">Built with 💀 and too much caffeine</span>
+<span style="color: var(--green)" data-i18n="footer.open">[ OPEN TO WORK ]</span>
+</footer>
+<script src="../../i18n.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

@@ -1289,3 +1289,47 @@ body.menu-open .menu-list li:nth-child(7) { transition-delay: .64s; }
 @media (max-width: 520px) {
   .hero-name { font-size: clamp(2.1rem, 11vw, 3.4rem) !important; }
 }
+
+/* ============================================================
+   ARTICOLO
+   ============================================================ */
+.article-title {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.05;
+  max-width: 900px;
+}
+.article-body {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.article-body p { margin-bottom: 1.35rem; }
+.article-body strong { color: #e8f4ff; }
+.article-body em { color: var(--cyan); font-style: italic; }
+.article-body h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: .03em;
+  color: var(--green);
+  margin: 2.6rem 0 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+.article-tags {
+  max-width: 720px;
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed rgba(255,255,255,0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.article-note {
+  max-width: 720px;
+  margin-top: 1.6rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .06em;
+  color: var(--muted);
+  opacity: .75;
+}

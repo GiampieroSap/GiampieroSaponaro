@@ -665,5 +665,17 @@ window.I18N = {
   "en": "Read &rarr;",
   "es": "Leer &rarr;",
   "fr": "Lire &rarr;"
+ },
+ "post.back": {
+  "it": "&larr; tutti i post",
+  "en": "&larr; all posts",
+  "es": "&larr; todos los posts",
+  "fr": "&larr; tous les articles"
+ },
+ "post.lang_note": {
+  "it": "Articolo in italiano. Le altre sezioni del sito sono disponibili in quattro lingue.",
+  "en": "Article in Italian. The other sections of the site are available in four languages.",
+  "es": "Artículo en italiano. Las demás secciones del sitio están disponibles en cuatro idiomas.",
+  "fr": "Article en italien. Les autres sections du site sont disponibles en quatre langues."
  }
 };
