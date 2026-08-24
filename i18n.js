@@ -199,10 +199,10 @@ window.I18N = {
   "fr": "Langues de travail"
  },
  "about.stat4": {
-  "it": "al trasferimento",
-  "en": "to relocate",
-  "es": "para trasladarme",
-  "fr": "&agrave; la mobilit&eacute;"
+  "it": "Cybersecurity Specialist, EPICODE",
+  "en": "Cybersecurity Specialist, EPICODE",
+  "es": "Cybersecurity Specialist, EPICODE",
+  "fr": "Cybersecurity Specialist, EPICODE"
  },
  "skills.title": {
   "it": "Competenze",
@@ -701,5 +701,143 @@ window.I18N = {
   "en": "Available",
   "es": "Disponible",
   "fr": "Disponible"
+ },
+ "art1.title": {
+  "it": "Avere il permesso non &egrave; avere l'esecuzione",
+  "en": "Having the permission is not having the execution",
+  "es": "Tener el permiso no es tener la ejecuci&oacute;n",
+  "fr": "Avoir la permission n'est pas avoir l'ex&eacute;cution"
+ },
+ "art1.summary": {
+  "it": "Avevo i permessi, avevo il file al suo posto, e non succedeva niente. Il problema era la domanda che mi stavo facendo.",
+  "en": "I had the permissions, I had the file in place, and nothing happened. The problem was the question I was asking.",
+  "es": "Ten&iacute;a los permisos, ten&iacute;a el archivo en su sitio, y no pasaba nada. El problema era la pregunta que me estaba haciendo.",
+  "fr": "J'avais les permissions, j'avais le fichier en place, et rien ne se passait. Le probl&egrave;me &eacute;tait la question que je me posais."
+ },
+ "art1.p1": {
+  "it": "Su una macchina Windows in ambiente Active Directory mi sono fermato sei ore sullo stesso punto. Avevo gi&agrave; ottenuto i permessi necessari sull'account con BloodyAD, la parte che sulla carta sembrava la pi&ugrave; difficile. Poi mi sono bloccato su quella che credevo banale: far partire una shell.",
+  "en": "On a Windows machine in an Active Directory environment I got stuck for six hours on the same point. I had already obtained the permissions I needed on the account with BloodyAD, the part that on paper looked hardest. Then I got stuck on the one I thought was trivial: getting a shell to start.",
+  "es": "En una m&aacute;quina Windows en entorno Active Directory me qued&eacute; seis horas atascado en el mismo punto. Ya hab&iacute;a conseguido los permisos necesarios sobre la cuenta con BloodyAD, la parte que sobre el papel parec&iacute;a la m&aacute;s dif&iacute;cil. Luego me bloque&eacute; en la que cre&iacute;a trivial: arrancar una shell.",
+  "fr": "Sur une machine Windows en environnement Active Directory, je suis rest&eacute; bloqu&eacute; six heures sur le m&ecirc;me point. J'avais d&eacute;j&agrave; obtenu les permissions n&eacute;cessaires sur le compte avec BloodyAD, la partie qui semblait sur le papier la plus difficile. Puis j'ai bloqu&eacute; sur celle que je croyais triviale : lancer un shell."
+ },
+ "art1.p2": {
+  "it": "Il payload era pronto. Il file era al suo posto. Non succedeva niente.",
+  "en": "The payload was ready. The file was in place. Nothing happened.",
+  "es": "El payload estaba listo. El archivo estaba en su sitio. No pasaba nada.",
+  "fr": "Le payload &eacute;tait pr&ecirc;t. Le fichier &eacute;tait en place. Rien ne se passait."
+ },
+ "art1.p3": {
+  "it": "Ho passato le prime ore a dare la colpa al payload. L'ho rigenerato, cambiato formato, cambiato porta, riprovato. Ogni volta lo stesso silenzio dall'altra parte.",
+  "en": "I spent the first hours blaming the payload. I regenerated it, changed format, changed port, tried again. Every time the same silence from the other side.",
+  "es": "Pas&eacute; las primeras horas culpando al payload. Lo regener&eacute;, cambi&eacute; el formato, cambi&eacute; el puerto, lo volv&iacute; a intentar. Cada vez el mismo silencio desde el otro lado.",
+  "fr": "J'ai pass&eacute; les premi&egrave;res heures &agrave; accuser le payload. Je l'ai r&eacute;g&eacute;n&eacute;r&eacute;, chang&eacute; de format, chang&eacute; de port, r&eacute;essay&eacute;. &Agrave; chaque fois le m&ecirc;me silence en face."
+ },
+ "art1.p4": {
+  "it": "Il problema era che stavo rispondendo alla domanda sbagliata. Continuavo a chiedermi <em>perch&eacute; il mio payload non funziona</em>, quando la domanda giusta era <strong>chi dovrebbe eseguirlo, e quando</strong>.",
+  "en": "The problem was that I was answering the wrong question. I kept asking myself <em>why is my payload not working</em>, when the right question was <strong>who is supposed to execute it, and when</strong>.",
+  "es": "El problema era que estaba respondiendo a la pregunta equivocada. Segu&iacute;a pregunt&aacute;ndome <em>por qu&eacute; no funciona mi payload</em>, cuando la pregunta correcta era <strong>qui&eacute;n deber&iacute;a ejecutarlo, y cu&aacute;ndo</strong>.",
+  "fr": "Le probl&egrave;me, c'est que je r&eacute;pondais &agrave; la mauvaise question. Je me demandais sans cesse <em>pourquoi mon payload ne fonctionne pas</em>, alors que la bonne question &eacute;tait <strong>qui est cens&eacute; l'ex&eacute;cuter, et quand</strong>."
+ },
+ "art1.p5": {
+  "it": "Un payload non &egrave; un programma che si avvia da solo. &Egrave; codice che resta inerte finch&eacute; qualcosa nel sistema bersaglio non lo esegue: un servizio che riparte, un task pianificato che scatta, un'applicazione che carica un componente, un utente che apre qualcosa. Senza quel qualcosa, per il sistema &egrave; un file come un altro.",
+  "en": "A payload is not a program that starts by itself. It is code that stays inert until something on the target system executes it: a service that restarts, a scheduled task that fires, an application that loads a component, a user who opens something. Without that something, to the system it is a file like any other.",
+  "es": "Un payload no es un programa que se lanza solo. Es c&oacute;digo que permanece inerte hasta que algo en el sistema objetivo lo ejecuta: un servicio que se reinicia, una tarea programada que salta, una aplicaci&oacute;n que carga un componente, un usuario que abre algo. Sin ese algo, para el sistema es un archivo como cualquier otro.",
+  "fr": "Un payload n'est pas un programme qui se lance tout seul. C'est du code qui reste inerte tant que quelque chose sur le syst&egrave;me cible ne l'ex&eacute;cute pas : un service qui red&eacute;marre, une t&acirc;che planifi&eacute;e qui se d&eacute;clenche, une application qui charge un composant, un utilisateur qui ouvre quelque chose. Sans ce quelque chose, pour le syst&egrave;me c'est un fichier comme un autre."
+ },
+ "art1.p6": {
+  "it": "Detta cos&igrave; sembra ovvia. Ma quando sei dentro da tre ore con la console aperta, l'istinto &egrave; mettere mano allo strumento che controlli, non fermarti a chiederti se il pezzo mancante sia altrove.",
+  "en": "Put that way it sounds obvious. But when you have been at it for three hours with the console open, the instinct is to reach for the tool you control, not to stop and ask whether the missing piece is somewhere else.",
+  "es": "Dicho as&iacute; parece obvio. Pero cuando llevas tres horas con la consola abierta, el instinto es tocar la herramienta que controlas, no pararte a preguntarte si la pieza que falta est&aacute; en otro sitio.",
+  "fr": "Dit comme &ccedil;a, cela para&icirc;t &eacute;vident. Mais quand vous y &ecirc;tes depuis trois heures avec la console ouverte, l'instinct est de toucher &agrave; l'outil que vous ma&icirc;trisez, pas de vous arr&ecirc;ter pour vous demander si la pi&egrave;ce manquante est ailleurs."
+ },
+ "art1.h1": {
+  "it": "Le due met&agrave; di una catena di attacco",
+  "en": "The two halves of an attack chain",
+  "es": "Las dos mitades de una cadena de ataque",
+  "fr": "Les deux moiti&eacute;s d'une cha&icirc;ne d'attaque"
+ },
+ "art1.p7": {
+  "it": "Quello che mi &egrave; rimasto va oltre la macchina. Una catena di attacco ha due met&agrave; distinte: ottenere il permesso di far eseguire qualcosa, e trovare il meccanismo che quel qualcosa lo esegue davvero. Sono problemi separati, e confonderli fa perdere ore.",
+  "en": "What stayed with me goes beyond the machine. An attack chain has two distinct halves: obtaining the permission to have something executed, and finding the mechanism that actually executes it. They are separate problems, and confusing them costs hours.",
+  "es": "Lo que me qued&oacute; va m&aacute;s all&aacute; de la m&aacute;quina. Una cadena de ataque tiene dos mitades distintas: obtener el permiso para hacer ejecutar algo, y encontrar el mecanismo que realmente lo ejecuta. Son problemas separados, y confundirlos cuesta horas.",
+  "fr": "Ce que j'en ai retir&eacute; d&eacute;passe la machine. Une cha&icirc;ne d'attaque a deux moiti&eacute;s distinctes : obtenir la permission de faire ex&eacute;cuter quelque chose, et trouver le m&eacute;canisme qui l'ex&eacute;cute r&eacute;ellement. Ce sont deux probl&egrave;mes s&eacute;par&eacute;s, et les confondre co&ucirc;te des heures."
+ },
+ "art1.p8": {
+  "it": "Nel mio caso la prima met&agrave; passava per BloodyAD sui permessi e Rubeus su Kerberos, cio&egrave; strumenti che agiscono sull'identit&agrave;: chi sei, cosa puoi chiedere, quali ticket riesci a ottenere. Ma un'identit&agrave; con i permessi giusti non &egrave; ancora codice in esecuzione. Serve qualcosa che quel permesso lo trasformi in azione.",
+  "en": "In my case the first half went through BloodyAD on permissions and Rubeus on Kerberos, that is, tools that act on identity: who you are, what you can request, which tickets you manage to obtain. But an identity with the right permissions is not yet code in execution. Something has to turn that permission into action.",
+  "es": "En mi caso la primera mitad pasaba por BloodyAD en los permisos y Rubeus en Kerberos, es decir, herramientas que act&uacute;an sobre la identidad: qui&eacute;n eres, qu&eacute; puedes pedir, qu&eacute; tickets consigues obtener. Pero una identidad con los permisos correctos todav&iacute;a no es c&oacute;digo en ejecuci&oacute;n. Hace falta algo que convierta ese permiso en acci&oacute;n.",
+  "fr": "Dans mon cas, la premi&egrave;re moiti&eacute; passait par BloodyAD sur les permissions et Rubeus sur Kerberos, c'est-&agrave;-dire des outils qui agissent sur l'identit&eacute; : qui vous &ecirc;tes, ce que vous pouvez demander, quels tickets vous parvenez &agrave; obtenir. Mais une identit&eacute; avec les bonnes permissions n'est pas encore du code en ex&eacute;cution. Il faut quelque chose qui transforme cette permission en action."
+ },
+ "art1.h2": {
+  "it": "Perch&eacute; conta anche dal lato difensivo",
+  "en": "Why it matters on the defensive side too",
+  "es": "Por qu&eacute; importa tambi&eacute;n del lado defensivo",
+  "fr": "Pourquoi cela compte aussi c&ocirc;t&eacute; d&eacute;fense"
+ },
+ "art1.p9": {
+  "it": "Vale anche dall'altra parte del tavolo, che &egrave; quella dove voglio lavorare. Se il meccanismo di esecuzione &egrave; ci&ograve; che rende sfruttabile un permesso, allora un SOC non deve guardare solo <em>chi pu&ograve; fare cosa</em>, ma cosa fa partire cosa: servizi che ripartono senza motivo, task pianificati comparsi dal nulla, componenti caricati da percorsi inattesi. Una richiesta Kerberos anomala &egrave; il primo segnale. L'esecuzione &egrave; dove l'attacco diventa visibile.",
+  "en": "It holds on the other side of the table too, which is where I want to work. If the execution mechanism is what makes a permission exploitable, then a SOC must not only look at <em>who can do what</em>, but at what starts what: services restarting for no reason, scheduled tasks appearing out of nowhere, components loaded from unexpected paths. An anomalous Kerberos request is the first signal. Execution is where the attack becomes visible.",
+  "es": "Vale tambi&eacute;n al otro lado de la mesa, que es donde quiero trabajar. Si el mecanismo de ejecuci&oacute;n es lo que hace explotable un permiso, entonces un SOC no debe mirar solo <em>qui&eacute;n puede hacer qu&eacute;</em>, sino qu&eacute; pone en marcha qu&eacute;: servicios que se reinician sin motivo, tareas programadas aparecidas de la nada, componentes cargados desde rutas inesperadas. Una petici&oacute;n Kerberos an&oacute;mala es la primera se&ntilde;al. La ejecuci&oacute;n es donde el ataque se vuelve visible.",
+  "fr": "Cela vaut aussi de l'autre c&ocirc;t&eacute; de la table, celui o&ugrave; je veux travailler. Si le m&eacute;canisme d'ex&eacute;cution est ce qui rend une permission exploitable, alors un SOC ne doit pas seulement regarder <em>qui peut faire quoi</em>, mais ce qui d&eacute;clenche quoi : des services qui red&eacute;marrent sans raison, des t&acirc;ches planifi&eacute;es apparues de nulle part, des composants charg&eacute;s depuis des chemins inattendus. Une requ&ecirc;te Kerberos anormale est le premier signal. L'ex&eacute;cution est l&agrave; o&ugrave; l'attaque devient visible."
+ },
+ "art1.p10": {
+  "it": "Sei ore per capirlo. Ne &egrave; valsa la pena.",
+  "en": "Six hours to understand it. It was worth it.",
+  "es": "Seis horas para entenderlo. Val&iacute;a la pena.",
+  "fr": "Six heures pour le comprendre. &Ccedil;a valait le coup."
+ },
+ "hero.h1": {
+  "it": "Capire come attacca chi attacca, <b>per saperlo difendere</b>",
+  "en": "Understanding how attackers attack, <b>in order to defend against them</b>",
+  "es": "Entender c&oacute;mo ataca quien ataca, <b>para saber defenderlo</b>",
+  "fr": "Comprendre comment attaque l'attaquant, <b>pour savoir le d&eacute;fendre</b>"
+ },
+ "hero.lead": {
+  "it": "Junior SOC Analyst con certificazione eJPT. Monitoraggio, triage delle alert e gestione degli incidenti, con esperienza di laboratorio su SIEM, analisi di log e malware e attacchi ad Active Directory.",
+  "en": "Junior SOC Analyst with an eJPT certification. Monitoring, alert triage and incident handling, with lab experience in SIEM, log and malware analysis and Active Directory attacks.",
+  "es": "Analista SOC Junior con certificaci&oacute;n eJPT. Monitorizaci&oacute;n, triage de alertas y gesti&oacute;n de incidentes, con experiencia de laboratorio en SIEM, an&aacute;lisis de logs y de malware y ataques a Active Directory.",
+  "fr": "Analyste SOC junior certifi&eacute; eJPT. Surveillance, tri des alertes et gestion des incidents, avec une exp&eacute;rience en laboratoire sur SIEM, analyse de logs et de malwares et attaques Active Directory."
+ },
+ "hero.kicker": {
+  "it": "Security Operations &middot; Penetration Testing",
+  "en": "Security Operations &middot; Penetration Testing",
+  "es": "Security Operations &middot; Penetration Testing",
+  "fr": "Security Operations &middot; Test d'intrusion"
+ },
+ "sec.sub.about": {
+  "it": "Chi sono e da dove arrivo",
+  "en": "Who I am and where I come from",
+  "es": "Qui&eacute;n soy y de d&oacute;nde vengo",
+  "fr": "Qui je suis et d'o&ugrave; je viens"
+ },
+ "sec.sub.skills": {
+  "it": "Cosa so fare",
+  "en": "What I can do",
+  "es": "Qu&eacute; s&eacute; hacer",
+  "fr": "Ce que je sais faire"
+ },
+ "sec.sub.tools": {
+  "it": "Uso quotidiano nei lab",
+  "en": "Daily use in the labs",
+  "es": "Uso diario en los labs",
+  "fr": "Usage quotidien en laboratoire"
+ },
+ "sec.sub.cv": {
+  "it": "Scarica il curriculum",
+  "en": "Download the r&eacute;sum&eacute;",
+  "es": "Descarga el curr&iacute;culum",
+  "fr": "T&eacute;l&eacute;charger le CV"
+ },
+ "cta.title": {
+  "it": "Cerco la mia prima posizione come <span>Junior SOC Analyst</span>.",
+  "en": "I am looking for my first role as a <span>Junior SOC Analyst</span>.",
+  "es": "Busco mi primera posici&oacute;n como <span>Analista SOC Junior</span>.",
+  "fr": "Je recherche mon premier poste d'<span>analyste SOC junior</span>."
+ },
+ "footer.loc": {
+  "it": "Bari, Italia &middot; disponibile al trasferimento",
+  "en": "Bari, Italy &middot; available to relocate",
+  "es": "Bari, Italia &middot; disponible para trasladarme",
+  "fr": "Bari, Italie &middot; disponible pour d&eacute;m&eacute;nager"
  }
 };

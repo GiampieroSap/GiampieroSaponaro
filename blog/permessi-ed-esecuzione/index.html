@@ -21,11 +21,21 @@ upgrade-insecure-requests;
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
 </head>
-<body data-page-title="">
+<body data-page-title="art1.title">
+<div class="colorbars"><i></i><i></i><i></i><i></i></div>
 <nav>
 <div class="nav-in">
-<a class="nav-logo" href="../../">Giampiero Saponaro <span>/ BlackUtopia</span></a>
+<a class="nav-logo" href="../../">Giampiero Saponaro<span>Cybersecurity &middot; alias BlackUtopia</span></a>
 <div class="nav-actions">
+<ul class="nav-inline">
+<li><a href="../../" data-i18n="menu.home">Home</a></li>
+<li><a href="../../labs/" data-i18n="menu.labs">Lab &amp; Progetti</a></li>
+<li><a href="../../bootcamp/" data-i18n="menu.bootcamp">Bootcamp EPICODE</a></li>
+<li><a href="../../github/" data-i18n="menu.github">GitHub</a></li>
+<li><a href="../../certs/" data-i18n="menu.certs">Certificazioni</a></li>
+<li class="current"><a href="../../blog/" data-i18n="menu.blog">Blog</a></li>
+<li><a href="../../contact/" data-i18n="menu.contact">Contatti</a></li>
+</ul>
 <div class="lang-switch">
 <button class="lang-btn" aria-label="Cambia lingua" data-i18n-aria="lang.aria" aria-expanded="false">
 <span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">▼</span>
@@ -70,34 +80,34 @@ upgrade-insecure-requests;
 </div>
 <header class="page-head">
 <div class="page-kicker">23 / 08 / 2026</div>
-<h1 class="page-title article-title">Avere il permesso non &egrave; avere l'esecuzione</h1>
+<h1 class="page-title article-title" data-i18n="art1.title">Avere il permesso non &egrave; avere l'esecuzione</h1>
 <a class="back-home" href="../../blog/" data-i18n="post.back">&larr; tutti i post</a>
 </header>
 <section id="labs" class="page-section">
 <article class="article-body">
-<p>Su una macchina Windows in ambiente Active Directory mi sono fermato sei ore sullo stesso punto. Avevo gi&agrave; ottenuto i permessi necessari sull'account con BloodyAD, la parte che sulla carta sembrava la pi&ugrave; difficile. Poi mi sono bloccato su quella che credevo banale: far partire una shell.</p>
+<p data-i18n="art1.p1">Su una macchina Windows in ambiente Active Directory mi sono fermato sei ore sullo stesso punto. Avevo gi&agrave; ottenuto i permessi necessari sull'account con BloodyAD, la parte che sulla carta sembrava la pi&ugrave; difficile. Poi mi sono bloccato su quella che credevo banale: far partire una shell.</p>
 
-<p>Il payload era pronto. Il file era al suo posto. Non succedeva niente.</p>
+<p data-i18n="art1.p2">Il payload era pronto. Il file era al suo posto. Non succedeva niente.</p>
 
-<p>Ho passato le prime ore a dare la colpa al payload. L'ho rigenerato, cambiato formato, cambiato porta, riprovato. Ogni volta lo stesso silenzio dall'altra parte.</p>
+<p data-i18n="art1.p3">Ho passato le prime ore a dare la colpa al payload. L'ho rigenerato, cambiato formato, cambiato porta, riprovato. Ogni volta lo stesso silenzio dall'altra parte.</p>
 
-<p>Il problema era che stavo rispondendo alla domanda sbagliata. Continuavo a chiedermi <em>perch&eacute; il mio payload non funziona</em>, quando la domanda giusta era <strong>chi dovrebbe eseguirlo, e quando</strong>.</p>
+<p data-i18n="art1.p4">Il problema era che stavo rispondendo alla domanda sbagliata. Continuavo a chiedermi <em>perch&eacute; il mio payload non funziona</em>, quando la domanda giusta era <strong>chi dovrebbe eseguirlo, e quando</strong>.</p>
 
-<p>Un payload non &egrave; un programma che si avvia da solo. &Egrave; codice che resta inerte finch&eacute; qualcosa nel sistema bersaglio non lo esegue: un servizio che riparte, un task pianificato che scatta, un'applicazione che carica un componente, un utente che apre qualcosa. Senza quel qualcosa, per il sistema &egrave; un file come un altro.</p>
+<p data-i18n="art1.p5">Un payload non &egrave; un programma che si avvia da solo. &Egrave; codice che resta inerte finch&eacute; qualcosa nel sistema bersaglio non lo esegue: un servizio che riparte, un task pianificato che scatta, un'applicazione che carica un componente, un utente che apre qualcosa. Senza quel qualcosa, per il sistema &egrave; un file come un altro.</p>
 
-<p>Detta cos&igrave; sembra ovvia. Ma quando sei dentro da tre ore con la console aperta, l'istinto &egrave; mettere mano allo strumento che controlli, non fermarti a chiederti se il pezzo mancante sia altrove.</p>
+<p data-i18n="art1.p6">Detta cos&igrave; sembra ovvia. Ma quando sei dentro da tre ore con la console aperta, l'istinto &egrave; mettere mano allo strumento che controlli, non fermarti a chiederti se il pezzo mancante sia altrove.</p>
 
-<h2>Le due met&agrave; di una catena di attacco</h2>
+<h2 data-i18n="art1.h1">Le due met&agrave; di una catena di attacco</h2>
 
-<p>Quello che mi &egrave; rimasto va oltre la macchina. Una catena di attacco ha due met&agrave; distinte: ottenere il permesso di far eseguire qualcosa, e trovare il meccanismo che quel qualcosa lo esegue davvero. Sono problemi separati, e confonderli fa perdere ore.</p>
+<p data-i18n="art1.p7">Quello che mi &egrave; rimasto va oltre la macchina. Una catena di attacco ha due met&agrave; distinte: ottenere il permesso di far eseguire qualcosa, e trovare il meccanismo che quel qualcosa lo esegue davvero. Sono problemi separati, e confonderli fa perdere ore.</p>
 
-<p>Nel mio caso la prima met&agrave; passava per BloodyAD sui permessi e Rubeus su Kerberos, cio&egrave; strumenti che agiscono sull'identit&agrave;: chi sei, cosa puoi chiedere, quali ticket riesci a ottenere. Ma un'identit&agrave; con i permessi giusti non &egrave; ancora codice in esecuzione. Serve qualcosa che quel permesso lo trasformi in azione.</p>
+<p data-i18n="art1.p8">Nel mio caso la prima met&agrave; passava per BloodyAD sui permessi e Rubeus su Kerberos, cio&egrave; strumenti che agiscono sull'identit&agrave;: chi sei, cosa puoi chiedere, quali ticket riesci a ottenere. Ma un'identit&agrave; con i permessi giusti non &egrave; ancora codice in esecuzione. Serve qualcosa che quel permesso lo trasformi in azione.</p>
 
-<h2>Perch&eacute; conta anche dal lato difensivo</h2>
+<h2 data-i18n="art1.h2">Perch&eacute; conta anche dal lato difensivo</h2>
 
-<p>Vale anche dall'altra parte del tavolo, che &egrave; quella dove voglio lavorare. Se il meccanismo di esecuzione &egrave; ci&ograve; che rende sfruttabile un permesso, allora un SOC non deve guardare solo <em>chi pu&ograve; fare cosa</em>, ma cosa fa partire cosa: servizi che ripartono senza motivo, task pianificati comparsi dal nulla, componenti caricati da percorsi inattesi. Una richiesta Kerberos anomala &egrave; il primo segnale. L'esecuzione &egrave; dove l'attacco diventa visibile.</p>
+<p data-i18n="art1.p9">Vale anche dall'altra parte del tavolo, che &egrave; quella dove voglio lavorare. Se il meccanismo di esecuzione &egrave; ci&ograve; che rende sfruttabile un permesso, allora un SOC non deve guardare solo <em>chi pu&ograve; fare cosa</em>, ma cosa fa partire cosa: servizi che ripartono senza motivo, task pianificati comparsi dal nulla, componenti caricati da percorsi inattesi. Una richiesta Kerberos anomala &egrave; il primo segnale. L'esecuzione &egrave; dove l'attacco diventa visibile.</p>
 
-<p>Sei ore per capirlo. Ne &egrave; valsa la pena.</p>
+<p data-i18n="art1.p10">Sei ore per capirlo. Ne &egrave; valsa la pena.</p>
 </article>
 <div class="article-tags">
 <span class="post-tag">Active Directory</span>
@@ -106,10 +116,9 @@ upgrade-insecure-requests;
 <span class="post-tag">Rubeus</span>
 <span class="post-tag">Blue Team</span>
 </div>
-<div class="article-note" data-i18n="post.lang_note">Articolo in italiano. Le altre sezioni del sito sono disponibili in quattro lingue.</div>
 </section>
 <footer>
-<span>&copy; 2026 Giampiero Saponaro</span>
+<span>&copy; 2026 Giampiero Saponaro &middot; <span data-i18n="footer.loc">Bari, Italia &middot; disponibile al trasferimento</span></span>
 <span data-i18n="footer.open">Disponibile</span>
 </footer>
 <script src="../../i18n.js"></script>
